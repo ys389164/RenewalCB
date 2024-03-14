@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery.fullPage.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/jquery.fullPage.js"></script>
+    <script>
+        $(function(){
+            $('#fullpage').fullpage({
+                autoScrolling: true,
+                scrollHorizontally: true,
+                navigation: true,
+                navifationPosition: 'right'
+            });
+        });
+    </script>
+</head>
+<body>
+    <main id="fullpage">
+        <section class="section">
+            <h2>section 1</h2>
+        </section>
+        <section class="section">
+            <h2>section 2</h2>
+        </section>
+        <section class="section">
+            <h2>section 3</h2>
+        </section>
+        <section class="section">
+            <h2>section 4</h2>
+        </section>
+        <footer class="section fp-auto-height"> <!-- footer 크기 조정 함수  -->
+            <h2>footer</h2>
+        </section>
+
+    </main>
+</body>
+</html>
