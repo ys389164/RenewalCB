@@ -1,0 +1,97 @@
+<!-- 
+    width: 1920px 
+    height: 100vh 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>caffe bene</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- swiper css -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper js -->
+    <script src="new.js"></script>
+    
+</head>
+
+<body>
+    <header id="header" class="header"></header>
+    
+    <main id="fullpage">
+        <section class="section">
+            <div id="menu_top">
+                <p id="top_text">CAFFEBENE’S SEASONAL MENU</p>
+                <p id="bottom_text">늘 새롭고 맛있는 카페베네의 신메뉴</p>
+            </div>
+            <div class="menu_select">
+                
+                <a href="new.html" class="menu_selector"><p class="menu_types"><br><br>신메뉴<br><br></p></a>
+                <a href="coffee.html" class="menu_selector"><p class="menu_types"><br><br>커피<br><br></p></a>
+                <a href="beverage.html" class="menu_selector"><p class="menu_types"><br><br>음료<br><br></p></a>
+                <a href="food.html" class="menu_selector"><p class="menu_types"><br><br>푸드<br><br></p></a>
+                <!-- <a href="">MD</a>
+                <a href="">Retail</a> -->
+            </div>
+            <div id="menu">
+                <div class="menu_items" onclick="toggleInfo(this)">
+                    <img src="../imgs/food/20240220566258.png"><br><span>딸기 생크림 케이크</span>
+                    <div class="info">
+                        <p class="menu_title">딸기 생크림 케이크</p><br><hr>
+                        <p class="menu_price">₩8,000</p><hr><br>
+                        <p class="menu_text">층층히 쌓인 상큼한 딸기 과육과 부드럽고 진한 생크림이 조화롭게 어우러진 케이크</p>
+                        
+                    </div>
+                </div>
+                <div class="menu_items" onclick="toggleInfo(this)">
+                    <img src="../imgs/food/20240220255156.png"><br><span>논산딸기 순수우유 케이크</span>
+                    <div class="info">
+                        <p class="menu_title">논산딸기 순수우유 케이크</p><br><hr>
+                        <p class="menu_price">₩8,500</p><hr><br>
+                        <p class="menu_text">신선한 논산 생딸기와 부드럽고 진한 우유 크림이 어우러진 순수우유 케이크</p>
+                    </div>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220994528.png"><br><span>딸기 우유 프라페노</span>
+                    <div class="info">
+                        <p class="menu_title">딸기 우유 프라페노</p><br><hr>
+                        <p class="menu_price">₩6,500</p><hr><br>
+                        <p class="menu_text">시즌 스테디셀러 '논산딸기 순수우유 케이크' 음료 버전으로 상큼한 딸기와 달콤한 밀크쉐이크를 함께 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220470602.png"><br><span>딸기 쿠키앤크림 프라페노</span>
+                    <div class="info">
+                        <p class="menu_title">딸기 쿠키앤크림 프라페노</p><br><hr>
+                        <p class="menu_price">₩6,500</p><hr><br>
+                        <p class="menu_text">상큼한 딸기와 달콤한 쿠키앤크림의 조화와 바삭하게 씹히는 쿠키를 함께 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220875379.png"><br><span>논산 생딸기 라떼</span>
+                    <div class="info">
+                        <p class="menu_title">논산 생딸기 라떼</p><br><hr>
+                        <p class="menu_price">₩6,900</p><hr><br>
+                        <p class="menu_text">논산 생딸기 과육을 가득 올려 딸기 본연의 상큼함을 즐길 수 있는 딸기 라떼</p>
+                    </div>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220479595.png"><br><span>논산 생딸기 주스</span>
+                    <div class="info">
+                        <p class="menu_title">논산 생딸기 주스</p><br><hr>
+                        <p class="menu_price">₩6,700</p><hr><br>
+                        <p class="menu_text">신선한 논산 생딸기를 듬뿍 넣어 갈아 만든 딸기 주스</p>
+                    </div>
+                </div>
+                <div class="menu_items_empty"></div>
+                <div class="menu_items_empty"></div> 
+            </div>
+
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+</body>
+
+</html>
