@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      
+      .result{
+         position: absolute;
+         
+         height: 500px;
+      }
+      .result>img{
+         pointer-events: none;
+
+         height: 100%;
+      }
+      .result::before{
+         position: absolute;
+         content: '';
+
+         right: 0;
+         bottom: 0;
+
+         width: 40%;
+         height: 90%;
+
+         background: #808080;
+
+         z-index: -1;
+      }
+      .result::after{
+         position: absolute;
+         content: '';
+
+         top: 0;
+         left: 0;
+
+         width: 70%;
+         height: 100%;
+
+         background: #00ff00;
+
+         z-index: -2;
+      }
+
+      .result .text{
+         position: absolute;
+         top: 0;
+      }
+   </style>
+</head>
+<body>
+   <div class="wrap">
+      <div class="result">
+         <img src="http://www.caffebene.co.kr/images/franc/b2b-c1.png" alt=""></img>
+
+         <div class="text">
+            fsadfsdqwfas
+         </div>
+      </div>
+   </div>
+</body>
+</html>
