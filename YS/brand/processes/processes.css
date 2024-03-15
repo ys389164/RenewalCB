@@ -37,18 +37,24 @@
 }
 
 .openingProcedure .ProcedureLine {
-  padding: 0 100px 0 100px;
   display: flex;
-  justify-content: space-between;
-
+  justify-content: space-around;
+  font-size: 0.8rem;
 }
 
-.openingProcedure .ProcedureLine.ProcedureLine1{
-  margin-bottom: 50px;
+.openingProcedure .ProcedureLine.ProcedureLine1 {
+  margin-bottom: 85px;
 }
 
-.openingProcedure .ProcedureLine.ProcedureLine2{
-  margin-bottom: 70px;
+.openingProcedure .ProcedureLine.ProcedureLine2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 105px;
+}
+
+.openingProcedure .ProcedureLine .lines {
+  width: 30%;
+  text-align: center;
 }
 
 .openingProcedure .ProcedureLine .cir {
@@ -65,11 +71,34 @@
   display: flex;
   justify-content: center;
   padding-top: 3px;
+
+  font-size: 2em;
+  margin: auto;
+  color: #444;
+
+  position: relative;
 }
 
-.openingProcedure .ProcedureLine .cir{
-  font-size: 2em;
-  color: #444;
+.openingProcedure .ProcedureLine:not(.ProcedureLine2) .cir::before {
+  position: absolute;
+  content: url("../../imgs/processes/cir-arr.png");
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  top: 50%;
+  left: 150%;
+  transform: translate(100%, -45%);
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine2 .cir::before {
+  position: absolute;
+  content: url("../../imgs/processes/cir-arr.png");
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  top: 57%;
+  left: -128%;
+  transform: translate(150%, -45%) rotate(180deg);
 }
 
 .openingProcedure .ProcedureLine .cir1 {
@@ -105,18 +134,38 @@
   border: #00a5b1;
 }
 
-.openingProcedure .ProcedureLine div div h4{
+.openingProcedure .ProcedureLine.ProcedureLine1 .cir.cir3::before{
+  top: 180%;
+  left: 133%;
+  transform: translate(100%, -45%) rotate(90deg);
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine2 .cir.cir6::before{
+  top: 190%;
+  left: -98%;
+  transform: translate(150%, -45%) rotate(90deg);
+}
+
+.openingProcedure .ProcedureLine .cir.cir9::before{
+  content: none;
+  
+}
+
+.openingProcedure .ProcedureLine .cir span {
+  padding-top: 10px;
+}
+
+.openingProcedure .ProcedureLine div div h4 {
   font-size: 1.5rem;
+  margin: 20px 0;
 }
 
-.openingProcedure .ProcedureLine div div p{
-  padding-top: 20px;
-  font-size: 1em;
-  line-height: 1.1;
+.openingProcedure .ProcedureLine div div div p {
+  line-height: 20px;
 }
 
-.openingProcedure .ProcedureLine div div p::before{
-  content: '';
+.openingProcedure .ProcedureLine div div p::before {
+  content: "";
   display: inline-block;
   width: 2px;
   height: 2px;
@@ -124,8 +173,6 @@
   background: #707070;
   vertical-align: middle;
 }
-
-
 
 /* 가맹점 창업 조건 */
 .startUpCondition::before {
