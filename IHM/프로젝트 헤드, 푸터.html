@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      #logoTop{
+        text-align: center;
+        }
+      header {background-color: white; 
+        width:1920px;}
+      .category {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        margin-left:80px;
+        margin-right:80px;}
+      ul{padding: 0px;}
+      .category li {
+        list-style-type: none;
+        text-align: center;
+        padding-bottom:1em;}
+
+/*여기서부터는 footer*/
+      .footerMembers{
+        display:inline-block;
+        vertical-align:top;
+        padding-right:20px;
+      }
+      footer {
+        display:inline-block;
+        vertical-align: bottom;
+        text-align:center;
+        background-color: white;
+        font-weight: bold;
+        width:1920px;}
+      #up{
+        width:35px;}
+      #footFive li{
+        list-style-type:none;
+        text-align: left;
+        color: midnightblue;
+        padding: 10px; width:320px;}
+      #companyInfo li{
+        list-style-type:none; 
+        text-align:left;
+        padding-bottom:10px;}
+      #logoBottom {
+        text-align: center;
+        margin-right: 20px;}
+      #forCustomer {
+        color: #00a090;
+        font-weight: bold;}
+      #footInfo {
+        width: 700;
+        height: 100;
+        font-size: 12px;
+        padding: 10px;}
+      #copyright { color: lightgray;}
+      .hyperlink {
+        display: inline-block;
+        width:32px; 
+        height:38px;}
+      
+    </style>
+    <script>//코멘트용 스크립트
+
+    /*
+    공부한다거나 작업한다고 생각하지 말고,
+    질문할 거리를 찾는다고 생각하자.
+    무엇이 궁금한지, 뭘 모르겠는지.*/
+
+       /*자바스크립트로 만들어야 하는 것
+
+       1. 헤더 카테고리. 마우스를 갖다 대면 리스트가 아래로 내려오면서 서서히 페이드인으로 나오게(아코디언 또는 툴팁?).
+       마우스를 항목 또는 아래로 늘어진 리스트에 대고 있는 동안은 리스트가 사라지면 안된다.
+       평소에는 올라가서 숨겨져 있는 상태.
+       div와 그 안에 들어 있는 ul, li.
+
+       2. 헤더 카테고리의 각 리스트 항목에 마우스를 갖다 댔을 때, 글씨가 굵어지면서 밑줄이 생겨야 한다.
+       아니면 그 부분만 색깔이 바뀌게 하거나.(li.style.backgroundColor, li.style.fontWeight? li.style.font...밑줄은 뭐지?)
+
+       3. 우하단 화살표를 누르면 부드럽게 스크롤이 위로 올라가야한다.(click 함수,scrollTop, window.height)
+
+       4.헤더의 카테고리와 푸터의 카테고리가 각각 다른 웹페이지로 이동될 수 있게 해야 한다.(이건 a href="")
+
+       5.탭으로 내용 나누기. 제이쿼리로 했던 내용이다. 
+       이건 헤더 푸터 말고 각각의 페이지를 제작했을 때 만들어야 하는 것.
+       */
+
+
+    /* navigator 추가
+    
+    $(window).scrollTop() : 스크롤의 높이. 길이 말고 위치(해발고도 n미터 이런 느낌)를 말하는 것. 
+        스크롤이 내려갈수록 숫자가 커진다. 즉, 위치가 낮아질수록 커진다.
+        $(window).height(): 윈도우의 높이. 말 그대로 창의 세로 길이. 늘리면 콘솔 로그에서 길이가 바뀌어서 나온다.
+        $(document).height(): 문서의 높이. 말 그대로 문서의 길이.*/
+    </script>
+    <script>
+      let htwo=document.getElementsByTagName('h2');
+      let youel=document.getElementsByTagName('ul');
+      function headerDown(){
+        htwo.style.display="none";
+        if(htwo.style.display=="none"){
+          youel.slideDown="slow";
+        }else{
+          youel.slideUp="slow";
+        }
+      };
+
+      
+
+      function scrollUp() {//스크롤이 가운데 쯤 왔을 때 가운데 하단에 버튼 생성, 누르면 스크롤이 맨 위로 올라간다(위치가 0이 된다.)
+        if ("#goUp".click == true) return;
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+     <h1><div id="logoTop">
+      <a href=""><img id="logoTop" src="projectimages/카페베네 상단로고.png" /></a>
+    </div></h1> 
+  
+      <div class="category">
+        <h2>CAFE BENNE</h2>
+        <ul>
+          <li>브랜드 스토리</li>
+          <li>베네캣 스토리</li>
+          <li>가장 좋은 카페</li>
+          <li>오픈하고 싶은 카페</li>
+          <li>베네 인터뷰</li>
+          <li>오시는 길</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>MENU</h2>
+        <ul>
+          <li>신메뉴</li>
+          <li>커피</li>
+          <li>음료</li>
+          <li>푸드</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>STORE</h2>
+        <ul>
+          <li>국내 매장</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>CONTENTS</h2>
+        <ul>
+          <li>공지사항</li>
+          <li>커피</li>
+          <li>우리 동네</li>
+          <li>사람들</li>
+          <li>이벤트</li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>BRAND</h2>
+        <ul>
+          <li>개설 절차</li>
+          <li>개설 비용</li>
+          <li>B2B</li>
+          <li>상담 신청</li>
+        </ul>
+      </div>
+    </header>
+
+    
+    
+    <footer>
+      <div id="up" onclick="scrollUp()">
+        <img id="goUp" src="projectimages/gotoheader.png"/>
+      </div>
+
+      <hr style="border: 2px solid black" />
+
+      <div class="footerMembers">
+        <div id="footInfo">
+          <ul id="companyInfo">
+            <li>경기도 양주시 백석읍 권율로1203번길 8-13, 2층</li> 
+            <li>대표이사박그레타</li>
+            <li>사업자등록번호206-86-29161</li>
+            <li>e-mail: benecs@caffebene.co.kr</li> 
+            <li><span id="copyright">
+              Copyright© by Caffebene, All rights reserved.</span></li>
+          </ul>
+        </div>
+      </div>
+      
+    <div class="footerMembers">
+      <img id="logoBottom" src="projectimages/카페베네 로고1.png" >
+    </div>
+
+    <div class="footerMembers">
+      <ul id="footFive">
+        <li>오시는 길</li>
+        <li>제휴문의</li>
+        <li>개인정보처리방침</li>
+        <li>이용약관</li>
+        <li><span id="forCustomer">고객센터1688-4666</span></li>
+      </ul>
+    </div>
+      
+
+    
+      
+
+    <div class="footerMembers">
+      <div class="hyperlink">
+        <a href="https://www.instagram.com/caffebene_official/"
+          ><img src="projectimages/cafebeneinsta.png"/></a>
+      </div>
+      <div class="hyperlink">
+        <a href="https://blog.naver.com/caffebene-official"
+          ><img src="projectimages/cafebeneblog.png"/></a>
+      </div>
+      <br>
+      <div class="hyperlink">
+        <a href="https://www.facebook.com/caffebene"
+          ><img src="projectimages/cafebenefacebook.png"/></a>
+      </div>
+      <div class="hyperlink">
+        <a href="https://www.youtube.com/channel/UCQ7MW5IpWOL9LwQqr_AWQ9A/featured">
+            <img src="projectimages/cafebeneyoutube.png"/></a>
+    </div>
+      
+     
+    </footer>
+  </body>
+</html>

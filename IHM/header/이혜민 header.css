@@ -1,0 +1,18 @@
+#logoTop{
+    text-align: center;
+    }
+  header {background-color: white; 
+    width:1920px;}
+  .category {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-left:80px;
+    margin-right:80px;}
+  ul{padding: 0px;}
+  .category li {
+    list-style-type: none;
+    text-align: center;
+    padding-bottom:1em;}
