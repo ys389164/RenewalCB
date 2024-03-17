@@ -9,11 +9,11 @@
     <meta charset="UTF-8">
     <title>caffe bene</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="coffee.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- swiper css -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper js -->
-    <script src="new.js"></script>
+    <script src="coffee.js"></script>
     
 </head>
 
@@ -38,6 +38,16 @@
                 <a href="food.html" class="menu_selector"><p class="menu_types"><br><br>푸드<br><br></p></a>
                 <!-- <a href="">MD</a>
                 <a href="">Retail</a> -->
+            </div>
+            <div id="select_coffee">
+                <form>
+                    <input type="radio" id="espresso" name="coffee" value="espresso">
+                    <label for="espresso">에스프레소</label>
+                    <input type="radio" id="coldbrew" name="coffee" value="coldbrew">
+                    <label for="coldbrew">콜드브루</label>
+                    <input type="radio" id="decaffein" name="coffee" value="decaffein">
+                    <label for="decaffein">디카페인</label>
+                </form>
             </div>
             <div id="menu">
                 <div class="menu_items" onclick="toggleInfo(this)">
