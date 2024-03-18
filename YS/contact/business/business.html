@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="business.css">
+  </head>
+
+  <body>
+    <header id="header" class="header"></header>
+    <main>
+      <div class="banner">
+        <h2>Advice of opening a franchise store</h2>
+      </div>
+      <article class="subContentContainer">
+        <section class="subTitle">
+          <h3>상담신청 및 FAQ</h3>
+        </section>
+        <section class="pageTabs">
+          <ul>
+            <li><a href="../contact/contact.html">가맹점 상담신청</a></li>
+            <li class="checkedPage"><a href="#self">창업설명회 상담신청</a></li>
+            <li><a href="../faq/faq.html">FAQ</a></li>
+          </ul>
+        </section>
+        <section class="submissionFormWrap">
+          <form action="" class="submissionForm">
+            <div class="submitF">
+              <table class="submissionTable">
+                <tbody>
+                  <tr>
+                    <th>이름</th>
+                    <td>
+                      <input type="text" title="이름" class="name" id="name" name="name" maxlength="10">
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>연락처</th>
+                    <td>
+                      <select id="tell1" class="tel" name="cell1">
+                        <option value="선택">선택</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select>
+                      <span class="span">-</span>
+                      <input type="text" title="연락처" class="tel" id="tell2" name="tell2" maxlength="4">
+                      <span class="span">-</span>
+                      <input type="text" title="연락처" class="tel" id="tell3" name="tell3" maxlength="4">
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>주소</th>
+                    <td class="addbox">
+                        <div><input type="text" title="add" class="addCode" id="addCode" name="add" maxlength="20">
+                            <button type="button" class="addBtn">우편번호검색</button>
+                        </div>
+                      <div><input type="text" class="addhalf" id="addr2" name="addr2" maxlength="100" readonly=""></div>
+                      <div><input type="text" class="addhalf" id="addr3" name="addr3" maxlength="100"></div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>창업 예정지역</th>
+                    <td>
+                      <select title="시/도", id="area1", name="area1" class="area">
+                        <option value="">시/도</option>
+                        <!-- 다른 옵션들, js로 -->
+                      </select>
+                      <select title="구/군", id="area2", name="area2" class="area">
+                        <option value="">구/군</option>
+                        <!-- 다른 옵션들 -->
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>보유점포 유무</th>
+                    <td>
+                      <div class="radipWrap">
+                        <span class="radio">
+                            <input type="radio" id="size1" name="have" value="1">
+                            <label for="size1">보유
+                        </label>
+                        <span class="RT">*보유시 주소를 입력하여 주세요.</span>
+                        </span>
+                        <span class="radio"><input type="radio"  id="size2" name="have" value="2"><label for="size2">미보유</label></span>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>주소</th>
+                    <td class="addbox">
+                        <div><input type="text" title="add" class="haddCode" id="haddCode" name="hadd" maxlength="20">
+                            <button type="button" class="addBtn">우편번호검색</button>
+                        </div>
+                      <div><input type="text" class="addhalf" id="haddr2" name="haddr2" maxlength="100" readonly=""></div>
+                      <div><input type="text" class="addhalf" id="haddr3" name="haddr3" maxlength="100"></div>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <th>창업보유자금</th>
+                    <td>
+                        <input type="text">
+                    </td>
+                  </tr>
+
+
+                  <tr>
+                    <th>기타문의</th>
+                    <td>
+                      <textarea title="내용" name="content" id="content" class="content" cols="30" rows="10" placeholder="문의글을 입력해주세요"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="guideWrap">
+              <h3>개인정보 수집 · 이용에 대한 안내</h3>
+              <div class="details">
+                <p> 원활한 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다. <br></p>
+                <p> 1. 개인정보의 수집 및 이용 목적<br />
+                  가맹점 개설에 관한 상담 서비스 제공을 위한 <br>본인 식별, 상담 내용 전달, 점포 오픈 관련 정보 안내, 의사 소통 경로 확보 및 기타
+                  원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다. <br><br></p>
+                <p> 2. 수집하는 개인정보의 항목<br />이름(한글/한문/영문), 성별, 연령, 휴대폰번호, 이메일주소 <br><br></p>
+                <p> 3. 개인정보의 보유 및 이용시간<br />개인정보의 수집목적 또는 제공받은 목적 달성 시 내규에 준하여 보관 및 파기합니다.<br><br></p>
+                <p> ※개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부하실 경우 접수에 제한이 있습니다. </p>
+              </div>
+            </div>
+
+            <div class="agreeForm">
+              <div> 개인정보 수집,이용에 대한 동의를 하지 않을 경우, 원하시는 서비스를 제공 받으실 수 없습니다. </div>
+              
+              <div class="agreeAudio">
+                <span>
+                  <input type="radio" id="agree1" name="agree1" value="Y" />
+                  <label for="agree1">동의합니다.</label>
+                </span>
+                <span>
+                  <input type="radio" id="disagree1" name="agree1" value="N" />
+                  <label for="disagree1">동의하지 않습니다.</label>
+                </span>
+              </div>
+            </div>
+            <div class="transmissionBtn">
+              <button type="submit">신청</button>
+            </div>
+          </form>
+        </section>
+        <section class="contactInfo">
+          <table class="contactTable">
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>연락처</th>
+                <th>이메일주소</th>
+                <th>담당지역</th>
+                <th>카카오톡 오픈채팅</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>박혜연 과장</td>
+                <td>010-5329-7650</td>
+                <td>ppark@caffebene.co.kr</td>
+                <td>서울, 경기, 강원, 부산, 경남, 대구, 울산, 경북</td>
+                <td><img src="" alt=""></td>
+              </tr>
+              <tr>
+                <td>기회만 부장</td>
+                <td>010-6438-0380</td>
+                <td>2721510@caffebene.co.kr</td>
+                <td>대전, 세종, 광주, 충청, 전라</td>
+                <td><img src="" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+    <footer id="footer" footer></footer>
+  </body>
+
+</html>

@@ -1,0 +1,119 @@
+.banner {
+  width: 100%;
+  background-color: #00a5b1;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  color: white;
+  font-size: 2em;
+}
+
+.subContentContainer {
+  width: 1190px;
+  height: auto;
+  margin: 0 auto;
+
+  padding-bottom: 120px;
+}
+
+.subContentContainer .subTitle {
+  display: flex;
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+.subContentContainer .subTitle h3 {
+  color: #3a466a;
+  font-size: 1.5em;
+  font-weight: 1000;
+  width: inherit;
+}
+
+/* navi */
+.subContentContainer .pageTabs {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.subContentContainer .pageTabs ul {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+}
+
+.subContentContainer .pageTabs ul li {
+  width: calc(100% / 3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subContentContainer .pageTabs ul li a {
+  padding: 30px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: center;
+  width: 100%;
+}
+
+.subContentContainer .pageTabs ul li.checkedPage {
+  color: #3a466a;
+  border-bottom: 4px solid #3a466a;
+}
+
+/* questionList */
+
+.subContentContainer .subContents .questionList ul li button {
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+  outline: none;
+}
+
+.subContentContainer .subContents .questionList ul li button div p {
+  color: rgb(68, 68, 68);
+  padding: 0px 0px 0px 30px;
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.subContentContainer .subContents .questionList .qIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a466a;
+}
+
+.subContentContainer .subContents .questionList .answer {
+  background: rgb(242, 244, 249);
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+  outline: none;
+}
+.subContentContainer .subContents .questionList .aIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3a466a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+}

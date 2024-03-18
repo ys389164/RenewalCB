@@ -1,4 +1,4 @@
-.subTopHeader {
+.banner {
   width: 100%;
   background-color: #00a5b1;
   height: 230px;
@@ -7,25 +7,25 @@
   align-items: center;
 }
 
-.subTopHeader h2 {
+.banner h2 {
   color: white;
   font-size: 2em;
 }
 
-.subContetContainer {
+.subContentContainer {
   width: 1190px;
   height: 100vh;
   margin: 0 auto;
 }
 
-.subContetContainer .subTitle {
+.subContentContainer .subTitle {
   display: flex;
   margin-bottom: 40px;
   padding: 30px 0 20px;
   border-bottom: 1px solid #444;
 }
 
-.subContetContainer .subTitle h3 {
+.subContentContainer .subTitle h3 {
   color: #3a466a;
   font-size: 1.5em;
   font-weight: 1000;

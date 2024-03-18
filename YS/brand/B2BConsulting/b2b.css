@@ -1,4 +1,4 @@
-.subTopHeader {
+.banner {
   width: 100%;
   background-color: #00a5b1;
   height: 230px;
@@ -7,13 +7,13 @@
   align-items: center;
 }
 
-.subTopHeader h2 {
+.banner h2 {
   color: white;
   font-size: 2em;
 }
 
 .subContetContainer {
-  width: 1190px;
+  width: 1920px;
   height: 100vh;
   margin: 0 auto;
 }
