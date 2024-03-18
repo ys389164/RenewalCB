@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+<style>
+p{font-size:10px; color:gray;}
+</style>
+<script>
+
+</script>
 </head>
 <script>
     /*
@@ -22,7 +28,6 @@
     누르면(onclick) 숫자가 다시 설정되고(Math.random) 기존의 숫자는 무효화된다. 옆에
     자동 등록 방지를 위해 숫자를 적어달라는 문구가 있다.
 
-    5. 파일 첨부. 이건 어떻게 하지. ※백엔드?
 
     6. 등록 버튼을 누르면(input type button 또는 button onclick) 입력한 내용이
     카페베네 본사로 이동?(어디랑 이어야 하지? 이건 일단 만들어만 두자.)
@@ -38,15 +43,16 @@
         <option value>거래처 입점 문의</option>
         <option value>물류/구매</option>
         <option value>부동산 점포 추천</option>
-    </select>
-   회사명 <input type="text">
-   이메일 <input type="">@<input type="">
-   제목<input type="text">
-   내용<input type="textarea">
-   파일첨부    <br>
-   ※최저용량:10MB ※파일 양식:jpg, jpeg, png, gif, pdf, ppt, xls, doc
-   자동등록방지 <div></div> <input type=""> 
-   <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p>
+    </select><br>
+   회사명 <input type="text"><br>
+   이메일 <input type="">@<input type=""><br>
+   제목<input type="text"><br>
+   내용<input type="textarea"><br>
+   파일첨부 <input type="file">   <br>
+   <p>※최저용량:10MB ※파일 양식:jpg, jpeg, png, gif, pdf, ppt, xls, doc<br></p>
+   자동등록방지 <div></div> <input type=""> <br>
+   <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p><br>
+   <input type="button" value="등록">
     
 </body>
 </html>
