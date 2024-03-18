@@ -24,9 +24,11 @@ h2 ul li{
   text-align: center;
   padding-right:10px;}
 header {
-  background-color: white; 
+  background-color: white;
+  position:absolute; 
   width:1920px;
   height:123px;}
+nav{position:absolute;}
 #listsCollection{
   text-align:center;
   width: 1916px;
@@ -75,6 +77,12 @@ header {
        */
     </script>
     <script>
+      function innerPage(){
+        let link=document.getElementsByTagName('li');
+        link.style.color="darkgreen";
+        link.style.textDecoration="underline";
+      };
+      li.onmouseover=innerPage();
       
     </script>
   </head>

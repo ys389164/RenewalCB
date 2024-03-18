@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <title>Document</title>
 <style>
+body{text-align: center;}
+h3{
+    font-size:24px;
+    font-weight:bold;
+    color:rgb(65, 65, 109);}
 p{font-size:10px; color:gray;}
+table{
+    text-align: left;
+    font-size:13px;
+    font-weight:bold;
+    width:640px;
+    border-bottom:1px solid black;
+    border-top:1px solid black;}
+td{
+    padding:10px; 
+    }
+select{
+    background-color: rgb(240, 240, 240);
+    width:180px;
+    height:30px;
+    border:0px;
+}
+input{
+    color:white; 
+    background-color: rgb(240, 240, 240);
+    height:30px;
+    border:0px;}
+textarea{
+    background-color: rgb(240, 240, 240);
+    border:0px;}
+#fileSearch{display:none;}
+#submitBtn{
+    width:300px;
+    height:60px;
+    font-size:24px;
+    color:white; 
+    background-color: rgb(65, 65, 109);
+    }
 </style>
 <script>
+function finalCheck(){
+    let code=Math.floor(Math.random()*9+1);
+    for(i=0;i<6;i++){
+        codeNumbers[i]=code;
+        document.write(code);
+    };
+};
+
+let codeNumbers=new Array(6);
+finalCheck();
 
 </script>
 </head>
@@ -20,7 +67,8 @@ p{font-size:10px; color:gray;}
     ''을 입력해주세요라는 경고가 뜬다.(alert) 그리고 아무 일도 일어나지 않는다.
     (return false)
 
-    3.이메일은 형식을 대조해야 한다. 배웠다.
+    3.이메일은 형식을 대조해야 한다. 배웠다. placeholder. 그리고 옵션을 선택하면
+    그 내용이 텍스트 상자 안에 들어가게 해야 한다.
 
     4. 랜덤 숫자(Math.random)로 자동등록방지 숫자 여섯자리를 설정한다. 그리고 
     텍스트에 입력한 숫자와 대조해서 틀리다면(함수명!==value) 숫자가 맞지 않는다는
@@ -28,31 +76,64 @@ p{font-size:10px; color:gray;}
     누르면(onclick) 숫자가 다시 설정되고(Math.random) 기존의 숫자는 무효화된다. 옆에
     자동 등록 방지를 위해 숫자를 적어달라는 문구가 있다.
 
+    5. 파일 버튼을 오른쪽으로 옮긴다. 마우스버튼 올리면 커서가 손 모양으로 
+    변하게. 잘 보면 버튼을 누르든 텍스트를 누르든 파일 선택 창이 나온다.
 
-    6. 등록 버튼을 누르면(input type button 또는 button onclick) 입력한 내용이
-    카페베네 본사로 이동?(어디랑 이어야 하지? 이건 일단 만들어만 두자.)
-    ※백엔드?
+    6. 텍스트와 셀렉트 크기들을 일정하게 맞춘다.
+
+    7. 왼쪽 칸에 있는 글자들 배열과 모양이 바뀌지 않게 한다. 근데
+    position absolute로 두면 모양이 이상해진다. 
+
     */
 </script>
 <body>
-    구분
-    <select>
-        <option value="" selected>선택</option>
-        <option value>협찬/광고</option>
-        <option value>제휴 이벤트</option>
-        <option value>거래처 입점 문의</option>
-        <option value>물류/구매</option>
-        <option value>부동산 점포 추천</option>
-    </select><br>
-   회사명 <input type="text"><br>
-   이메일 <input type="">@<input type=""><br>
-   제목<input type="text"><br>
-   내용<input type="textarea"><br>
-   파일첨부 <input type="file">   <br>
-   <p>※최저용량:10MB ※파일 양식:jpg, jpeg, png, gif, pdf, ppt, xls, doc<br></p>
-   자동등록방지 <div></div> <input type=""> <br>
-   <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p><br>
-   <input type="button" value="등록">
+<h3>제휴 문의
+    <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p></h3>
+<hr><br>
+<table>
+    <tr><td>구분</td>
+        <td><select>
+            <option value="" selected>선택</option>
+            <option value>협찬/광고</option>
+            <option value>제휴 이벤트</option>
+            <option value>거래처 입점 문의</option>
+            <option value>물류/구매</option>
+            <option value>부동산 점포 추천</option>
+        </select><br></td></tr>
+
+    <tr><td>회사명</td>
+        <td><input type="text" size="180"><br></td></tr>
+
+    <tr><td>이메일</td>
+        <td><input type="email">
+        @<input type="email">
+        <select>
+            <option value="직접 선택" selected>직접 선택</option>
+            <option value="naver.com">naver.com</option>
+            <option value="gmail.com">gmail.com</option>
+            <option value="daum.net">daum.net</option>
+            <option value="hotmail.com">hotmail.com</option>
+            <option value="nate.com">nate.com</option>
+            <option value="hanmail.net">hanmail.net</option>
+        </select></td></tr>
+
+    <tr><td>제목</td>
+        <td><input type="text" size="100"></td></tr>
+
+    <tr><td>내용</td>
+        <td><textarea cols="100" rows="10"></textarea></td></tr>
+
+    <tr><td>파일첨부</td>
+        <td><input type="file">
+            <p>※최저용량:10MB ※파일 양식:
+            jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
+
+    <tr><td>자동등록방지</td>
+        <td><div>codeNumbers()</div><input type="text">
+            <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
+</table>
+<br>
+   <div><input id="submitBtn" type="button" value="등록"></div>
     
 </body>
 </html>
