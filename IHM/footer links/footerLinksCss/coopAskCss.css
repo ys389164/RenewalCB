@@ -1,0 +1,38 @@
+body{text-align: center;}
+h3{
+    font-size:24px;
+    font-weight:bold;
+    color:rgb(65, 65, 109);}
+p{font-size:10px; color:gray;}
+table{
+    text-align: left;
+    font-size:13px;
+    font-weight:bold;
+    width:640px;
+    border-bottom:1px solid black;
+    border-top:1px solid black;}
+td{
+    padding:10px; 
+    }
+select{
+    background-color: rgb(240, 240, 240);
+    width:180px;
+    height:30px;
+    border:0px;
+}
+input{
+    color:white; 
+    background-color: rgb(240, 240, 240);
+    height:30px;
+    border:0px;}
+textarea{
+    background-color: rgb(240, 240, 240);
+    border:0px;}
+#fileSearch{display:none;}
+#submitBtn{
+    width:300px;
+    height:60px;
+    font-size:24px;
+    color:white; 
+    background-color: rgb(65, 65, 109);
+    }
