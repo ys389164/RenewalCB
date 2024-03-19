@@ -1,9 +1,18 @@
-body{text-align: center;}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin:0 auto;
+    }/*position을 absolute로 두면 뭘 해도 가운데로 안 온다.*/
 h3{
     font-size:24px;
     font-weight:bold;
     color:rgb(65, 65, 109);}
 p{font-size:10px; color:gray;}
+#bodyForm, #form{
+    width:640px;
+    text-align: center;}
 table{
     text-align: left;
     font-size:13px;
@@ -13,26 +22,32 @@ table{
     border-top:1px solid black;}
 td{
     padding:10px; 
-    }
+    border-bottom:1px solid lightgray; 
+    border-left:none;}
 select{
+    cursor:pointer;
     background-color: rgb(240, 240, 240);
-    width:180px;
+    width:120px;
     height:30px;
     border:0px;
 }
 input{
-    color:white; 
     background-color: rgb(240, 240, 240);
     height:30px;
     border:0px;}
-textarea{
+input[type=text], textarea{
+    width:400px;
     background-color: rgb(240, 240, 240);
     border:0px;}
-#fileSearch{display:none;}
+input[type=email]{width:120px;}
+#fileSearch{
+    cursor:pointer;
+}
+
 #submitBtn{
+    color:white;
     width:300px;
     height:60px;
-    font-size:24px;
-    color:white; 
+    font-size:24px; 
     background-color: rgb(65, 65, 109);
     }

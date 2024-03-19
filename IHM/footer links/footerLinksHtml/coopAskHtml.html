@@ -4,57 +4,63 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-
 </head>
 
 <body>
-<h3>제휴 문의
-    <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p></h3>
-<hr><br>
-<table>
-    <tr><td>구분</td>
-        <td><select>
-            <option value="" selected>선택</option>
-            <option value>협찬/광고</option>
-            <option value>제휴 이벤트</option>
-            <option value>거래처 입점 문의</option>
-            <option value>물류/구매</option>
-            <option value>부동산 점포 추천</option>
-        </select><br></td></tr>
 
-    <tr><td>회사명</td>
-        <td><input type="text" size="180"><br></td></tr>
+<div id="bodyForm">
+    <h3>제휴 문의
+        <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p></h3>
+    <hr><br>
+    <div id="form">
+        <table>
+            <tr><td class="name">구분</td>
+                <td class="text"><select>
+                    <option value="" selected>선택</option>
+                    <option value>협찬/광고</option>
+                    <option value>제휴 이벤트</option>
+                    <option value>거래처 입점 문의</option>
+                    <option value>물류/구매</option>
+                    <option value>부동산 점포 추천</option>
+                </select><br></td></tr>
+        
+            <tr><td class="name">회사명</td>
+                <td class="text"><input type="text" size="90"><br></td></tr>
+        
+            <tr><td class="name">이메일</td>
+                <td class="text"><input type="email" placeholder="id">
+                @<input type="email" placeholder="option value">
+                <select>
+                    <option value="직접 선택" selected>직접 선택</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                </select></td></tr>
+        
+            <tr><td class="name">제목</td>
+                <td class="text"><input type="text"></td></tr>
+        
+            <tr><td class="name">내용</td>
+                <td class="text"><textarea rows="10"></textarea></td></tr>
+        
+            <tr><td class="name">파일첨부</td>
+                <td class="text"><label><input id="fileSearch" type="file"></label>
+                    <p>※최저용량:10MB ※파일 양식:
+                    jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
+        
+            <tr><td class="name">자동등록방지</td>
+                <td class="text"><div>codeNumbers()</div><input type="password">
+                    <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
+        </table>
+    </div>
+    
+    <br>
+       <div><input id="submitBtn" type="button" value="등록"></div>
+</div>
 
-    <tr><td>이메일</td>
-        <td><input type="email">
-        @<input type="email">
-        <select>
-            <option value="직접 선택" selected>직접 선택</option>
-            <option value="naver.com">naver.com</option>
-            <option value="gmail.com">gmail.com</option>
-            <option value="daum.net">daum.net</option>
-            <option value="hotmail.com">hotmail.com</option>
-            <option value="nate.com">nate.com</option>
-            <option value="hanmail.net">hanmail.net</option>
-        </select></td></tr>
-
-    <tr><td>제목</td>
-        <td><input type="text" size="100"></td></tr>
-
-    <tr><td>내용</td>
-        <td><textarea cols="100" rows="10"></textarea></td></tr>
-
-    <tr><td>파일첨부</td>
-        <td><input type="file">
-            <p>※최저용량:10MB ※파일 양식:
-            jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
-
-    <tr><td>자동등록방지</td>
-        <td><div>codeNumbers()</div><input type="text">
-            <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
-</table>
-<br>
-   <div><input id="submitBtn" type="button" value="등록"></div>
     
 </body>
 </html>
