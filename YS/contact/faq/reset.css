@@ -62,3 +62,7 @@ button{
 	overflow:visible;
 	cursor:pointer
 }
+
+html {
+	scroll-behavior: smooth;
+  }

@@ -31,21 +31,73 @@
         <section class="subContents">
           <div class="questionList">
             <ul id="qaList">
-              
+              <li>
+                <button type="button" onclick="onClickEvt(this)">
+                  <div class="qIcon">Q</div>
+                  <div>
+                    <p class="qText">
+                      타인에게 점포 양도와 인수가
+                      가능한가요?
+                    </p>
+                  </div>
+                </button>
+                <div class="answer">
+                  <div class="answerWrap">
+                    <div class="aIcon">A</div>
+                    <div>
+                      <div class="aText">
+                        <p>
+                          점포 양도는 본사와 협의 하에 가능합니다. 인수자는
+                          교육비/경영기술 노하우 전수비와 계약이행 보증금을
+                          납부하여야 하며,
+                        </p>
+                        <p>
+                          본사와의 협의 없이 명의변경 시에는 가맹계약 해지 사유가
+                          됩니다. (단 직계존비속, 배우자간 승계, 법인명의 변경
+                          등은 가맹비와 교육비 면제)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <button type="button" onclick="onClickEvt(this)">
+                  <div class="qIcon">Q</div>
+                  <div>
+                    <p class="qText">
+                      타인에게 점포 양도와 인수가
+                      가능한가요?
+                    </p>
+                  </div>
+                </button>
+                <div class="answer">
+                  <div class="answerWrap">
+                    <div class="aIcon">A</div>
+                    <div>
+                      <div class="aText">
+                        <p>
+                          점포 양도는 본사와 협의 하에 가능합니다. 인수자는
+                          교육비/경영기술 노하우 전수비와 계약이행 보증금을
+                          납부하여야 하며,
+                        </p>
+                        <p>
+                          본사와의 협의 없이 명의변경 시에는 가맹계약 해지 사유가
+                          됩니다. (단 직계존비속, 배우자간 승계, 법인명의 변경
+                          등은 가맹비와 교육비 면제)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
 
           <div class="paging">
-            <a href="?pg=1" class="firstPage" onclick="getPageNumber(event)" id="firstPage"></a>
-            <a href="?pg=1" class="prevPage" onclick="getPageNumber(event)" id="prevPage"></a>
-          
-            <span class="pages">
-              <a href="?pg=1" class="page1" onclick="getPageNumber(event)" id="page1">1</a>
-              <a href="?pg=2" class="page2" onclick="getPageNumber(event)" id="page2">2</a>
-            </span>
-          
-            <a href="?pg=2" class="nextPage" onclick="getPageNumber(event)" id="nextPage"></a>
-            <a href="?pg=2" class="lastPage" onclick="getPageNumber(event)" id="lastPage"></a>
+            <button type="button" onclick="createDOM(1)">1</button>
+            <button type="button" onclick="createDOM(2)">2</button>
           </div>
           
         </section>

@@ -94,36 +94,28 @@
 }
 
 /* A 부분 */
-.subContentContainer .subContents .questionList .answer{
-  display: none;
-  animation: slideIn 0.3s ease-in-out forwards;
+.subContentContainer .subContents .questionList button + .answer{
+  overflow: hidden;
+  
+  width: 100%;
+  height: auto;
+  max-height: 0px;
+
+  background: rgb(242, 244, 249);
+
+  transition: 0.2s linear;
 }
 
-.subContentContainer .subContents .questionList ul li button.on + .answer {
-  background: rgb(242, 244, 249);
+.subContentContainer .subContents .questionList button.on + .answer {
+  max-height: 200px;
+}
+
+.subContentContainer .subContents .questionList .answer .answerWrap{
   display: flex;
   align-items: center;
-  width: 100%;
   padding: 20px 30px;
-
-  animation: slideOut 3s ease-in, linear;
 }
 
-
-@keyframes slideOut {
-  0% {
-    height: 0%;
-  }
-  25% {
-    height: 25%;
-  }
-  75% {
-    height: 75%;
-  }
-  100% {
-    height: 100%;
-  }
-}
 
 .subContentContainer .subContents .questionList .aIcon {
   display: flex;
@@ -175,14 +167,12 @@
   margin-top: 50px;
 }
 
-.subContentContainer .subContents .paging a{
-  display: block;
-  float: left;
-  box-sizing: border-box;
+.subContentContainer .subContents .paging button{
   width: 30px;
   height: 30px;
-
   margin: 0 15px;
+
+  font-size: 1.5rem;
 }
 
 .subContentContainer .subContents .paging .firstPage{
@@ -204,13 +194,4 @@
 .subContentContainer .subContents .paging .firstPage,
 .subContentContainer .subContents .paging .prevPage{
   transform: rotate(-180deg);
-}
-
-.subContentContainer .subContents .paging span a{
-  display: block;
-  position: relative;
-  top: -4px;
-  margin: 0 0 0 10px;
-  font-size: 1.5rem;
-  /* color: #c4c4c4; */
 }
