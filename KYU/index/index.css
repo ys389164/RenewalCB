@@ -1,18 +1,134 @@
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.header {
+    height: 123px;
+    /* width: 1920px; */
+}
+
+html {
+    overflow: hidden;
+}
+/* 
+html, body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+} */
+.page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.page:first-child {
+    width: 100%;
+    height: calc(100vh - 123px)  ;
+    position: relative;
+}
+
+
 .swiper-wrapper {
     width: 300vw; 
     transition: transform 0.5s;
+    /* border: 2px solid black; */
 }
 
 .swiper-slide {
     width: 100vw; 
-
     float: left;
 }
 
-.swiper-slide img {
+#menu_section {
+    display: flex;
+    /* border: 2px solid black; */
+}
+
+.swiper-container img {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
     max-height: auto;
 }
+
+#text_menu {
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+h2 {
+    margin:20px 0px 20px 100px;
+    font-family: 'MICEGothic Bold';
+    font-size: 50px;
+}
+
+.swiper-wrapper_2 {
+    width: 500px;
+    height: 700px;
+    /* margin-left: 70px; */
+    position: absolute;
+    left: 70px;
+    top: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.swiper-wrapper_2 img {
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+#menu {
+    /* border: 2px solid black; */
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu_items {
+    text-align: center;
+    background-color: beige;
+    /* background-color: rgb(235, 235, 235); */
+    margin: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 260px;
+    height: 300px;
+    position: relative;
+    display: inline-block;
+
+    /* box-sizing: border-box; */
+}
+
+.menu_items img {
+    width: 200px;
+}
+
+.menu_items span {
+    font-family: 'MICEGothic Bold';
+}
+
+.menu_items_empty {
+    text-align: center;
+    margin: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 260px;
+}
+
