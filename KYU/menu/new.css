@@ -5,13 +5,18 @@
     font-style: normal;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .header {
     height: 123px;
-    width: 1920px; /* 고정된 폭 */
+    /* width: 1920px; */
 }
 
 #menu_top {
     background-color: #00A5B1;
+    /* opacity: 0.9; */
     height: 200px; 
 }
 
@@ -29,12 +34,12 @@
 #bottom_text {
     padding-top: 20px;
     font-size: 18px;
+    /* font-weight: 100; */
 }
 
 .menu_select {
     text-align: center;
     border-bottom: 0.5px solid lightgray;
-    /* margin-bottom: 30px; */
 }
 
 .menu_selector {
@@ -46,27 +51,39 @@
 
 .menu_types {
     width: 200px;
+    /* height: 50px; */
     display: inline-block;
     margin-bottom: 15px;
 }
 
 #menu {
+    width: 1400px; 
     display: flex;
     flex-wrap: wrap;
+    /* padding: 100px; */
+    /* margin: 0 auto; */
+    margin-left: 300px;
+    margin-right: 300px;
     justify-content: center;
-    margin: 0 auto; /* 가운데 정렬 */
-    width: 1400px; /* 고정된 폭 */
+    /* flex-wrap: wrap; */
     /* border-top: black 1px solid; */
 }
+
+
 
 .menu_items {
     text-align: center;
     background-color: beige;
+    /* background-color: rgb(235, 235, 235); */
     margin: 30px;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     width: 260px;
-    height: 300px; /* 높이 설정 */
-    position: relative; /* 상대 위치 설정 */
+    height: 300px;
+    position: relative;
+    display: inline-block;
+
+    /* box-sizing: border-box; */
 }
 
 .menu_items img {
@@ -98,11 +115,74 @@
     height: 100%;
 }
 
-.menu_title {
+.menu_nutrient {
+    position: absolute;
+    display: inline-block;
+    /* border: 2px solid; */
+    cursor: pointer;
+    font-size: 12px;
+    /* margin-top:55px; */
+    padding: 10px;
+    width: 110px;
+    left: 120px;
+    top: 20px;
+}
+
+.nutrient {
+    position: relative;
+    height: 40%;
+    text-align: right !important; 
+}
+
+.nutrient_info {
+    display: flex;
+    justify-content: center;
+    font-family: 'MICEGothic Bold';
+    position: absolute; /* 절대 위치 지정 */
+    top: 0; /* 부모 요소 상단에 위치하도록 지정 */
+    left: 0; /* 부모 요소 왼쪽에 위치하도록 지정 */
+    background-color: white; /* 배경색을 흰색으로 지정 */
+    padding: 10px;
+    /* border: 1px solid black; */
+    z-index: 1; /* 다른 요소들 위에 나타나도록 z-index 지정 */
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse; /* 테이블 셀 경계를 병합하여 경계를 없앰 */
+}
+
+tr th {
+    padding: 20px;
+}
+
+td, th {
+    padding: 5px; /* 위 아래로 10px의 간격을 설정 */
+}
+
+th {
     font-size: 20px;
 }
 
+td {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+
+.menu_title {
+    /* border: 1px solid; */
+    height: 60px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu_text {
+    /* border: 1px solid; */
+    height: 75px;
     font-size: 15px;
     text-align: left;
     line-height: 1.2;
@@ -112,5 +192,6 @@
     text-align: right;
 }
 
-
-
+/* #menu_warning {
+    text-align: right;
+} */
