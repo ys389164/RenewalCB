@@ -43,8 +43,8 @@ input[type=email]{width:120px;}
 #fileSearch{
     cursor:pointer;
 }
-
 #submitBtn{
+    cursor:pointer;
     color:white;
     width:300px;
     height:60px;

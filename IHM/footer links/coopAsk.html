@@ -49,8 +49,8 @@ input[type=email]{width:120px;}
 #fileSearch{
     cursor:pointer;
 }
-
 #submitBtn{
+    cursor:pointer;
     color:white;
     width:300px;
     height:60px;
@@ -59,13 +59,14 @@ input[type=email]{width:120px;}
     }
 </style>
 <script>
+    
+    
+
+
 </script>
 </head>
 <script>
     /*
-    1.구분창이 선택하지 않았을 경우(구분 selected) 
-    구분을 선택해달라는 경고가 뜬다.(alert)그리고 아무 일도 일어나지
-    않는다(return false)
 
     2.회사명, 이메일, 제목, 내용, 자동등록방지 번호를 입력하지 않았을 경우
     ''을 입력해주세요라는 경고가 뜬다.(alert) 그리고 아무 일도 일어나지 않는다.
@@ -91,7 +92,7 @@ input[type=email]{width:120px;}
     */
 </script>
 <body>
-<script>
+<script>//전체적으로 쓰일 것 같으면 var로 선언.
     /*function finalCheck(){
     let code=Math.floor(Math.random()*9+1);
     for(i=0;i<6;i++){
@@ -101,6 +102,32 @@ input[type=email]{width:120px;}
 };
     let codeNumbers=new Array(6);
     finalCheck();*/
+
+document.addEventListener('DOMContentLoaded', function(){
+    let btn=document.getElementById('submitBtn');
+    btn.addEventListener("click", function(){
+        let select=document.getElementById('strawberry');
+        let sele=select.value;
+        if(sele==="none"){
+        alert('어떤 일로 문의하셨는지 선택해주세요');
+        }else{
+            return false;
+        }
+        });
+        });//선택 안 하면 경고창이 나오는 함수.
+    
+let btn=document.getElementById('submitBtn');
+btn.addEventListenter("click", function(){
+    let letter=getElementByTagName('input');
+    let password=getElementById('checknum');
+    let correctNum=//난수 함수의 변수 적기
+    if(letter.value==""){
+        alert('내용을 전부 입력해 주세요');
+    }if(password.length<6||password!==correctNum){//조건을 이렇게 쓰는 게 맞나?
+        alert('번호가 틀렸습니다.')
+    }
+});//텍스트를 입력하지 않으면 경고창이 뜨는 함수.
+    
 </script>
 <div id="bodyForm">
     <h3>제휴 문의
@@ -108,24 +135,24 @@ input[type=email]{width:120px;}
     <hr><br>
     <div id="form">
         <table>
-            <tr><td class="name">구분</td>
-                <td class="text"><select>
-                    <option value="" selected>선택</option>
-                    <option value>협찬/광고</option>
-                    <option value>제휴 이벤트</option>
-                    <option value>거래처 입점 문의</option>
-                    <option value>물류/구매</option>
-                    <option value>부동산 점포 추천</option>
+            <tr><td id="choose">구분</td>
+                <td class="text"><select id="strawberry">
+                    <option value="none" selected>선택</option>
+                    <option value="ad">협찬/광고</option>
+                    <option value="collaboration">제휴 이벤트</option>
+                    <option value="retail">거래처 입점 문의</option>
+                    <option value="buy">물류/구매</option>
+                    <option value="place">부동산 점포 추천</option>
                 </select><br></td></tr>
         
-            <tr><td class="name">회사명</td>
+            <tr><td id="company">회사명</td>
                 <td class="text"><input type="text" size="90"><br></td></tr>
         
-            <tr><td class="name">이메일</td>
+            <tr><td id="mail">이메일</td>
                 <td class="text"><input type="email" placeholder="id">
                 @<input type="email" placeholder="option value">
                 <select>
-                    <option value="직접 선택" selected>직접 선택</option>
+                    <option value="write" selected>직접 입력</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
                     <option value="daum.net">daum.net</option>
@@ -134,18 +161,18 @@ input[type=email]{width:120px;}
                     <option value="hanmail.net">hanmail.net</option>
                 </select></td></tr>
         
-            <tr><td class="name">제목</td>
+            <tr><td id="title">제목</td>
                 <td class="text"><input type="text"></td></tr>
         
-            <tr><td class="name">내용</td>
+            <tr><td id="content">내용</td>
                 <td class="text"><textarea rows="10"></textarea></td></tr>
         
-            <tr><td class="name">파일첨부</td>
+            <tr><td id="files">파일첨부</td>
                 <td class="text"><label><input id="fileSearch" type="file"></label>
                     <p>※최저용량:10MB ※파일 양식:
                     jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
         
-            <tr><td class="name">자동등록방지</td>
+            <tr><td id="checknum">자동등록방지</td>
                 <td class="text"><div>codeNumbers()</div><input type="password">
                     <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
         </table>
