@@ -48,8 +48,9 @@ table {
 	border-spacing: 0;
 }
 
-a:link, a:valid, a:active, a:hover{
+a:link, a:valid, a:active, a:hover, a:visited{
     text-decoration: none;
+	color: black;
 }
 
 button{
