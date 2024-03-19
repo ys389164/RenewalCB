@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin:0 auto;
+    }/*position을 absolute로 두면 뭘 해도 가운데로 안 온다.*/
+h3{
+    font-size:24px;
+    font-weight:bold;
+    color:rgb(65, 65, 109);}
+p{font-size:10px; color:gray;}
+#bodyForm, #form{
+    width:640px;
+    text-align: center;}
+table{
+    text-align: left;
+    font-size:13px;
+    font-weight:bold;
+    width:640px;
+    border-bottom:1px solid black;
+    border-top:1px solid black;}
+td{
+    padding:10px; 
+    border-bottom:1px solid lightgray; 
+    border-left:none;}
+select{
+    cursor:pointer;
+    background-color: rgb(240, 240, 240);
+    width:120px;
+    height:30px;
+    border:0px;
+}
+input{
+    background-color: rgb(240, 240, 240);
+    height:30px;
+    border:0px;}
+input[type=text], textarea{
+    width:400px;
+    background-color: rgb(240, 240, 240);
+    border:0px;}
+input[type=email]{width:120px;}
+#fileSearch{
+    cursor:pointer;
+}
+#submitBtn{
+    cursor:pointer;
+    color:white;
+    width:300px;
+    height:60px;
+    font-size:24px; 
+    background-color: rgb(65, 65, 109);
+    }
+</style>
+<script>
+    
+    
+
+
+</script>
+</head>
+<script>
+    /*
+
+    2.회사명, 이메일, 제목, 내용, 자동등록방지 번호를 입력하지 않았을 경우
+    ''을 입력해주세요라는 경고가 뜬다.(alert) 그리고 아무 일도 일어나지 않는다.
+    (return false)
+
+    3.이메일은 형식을 대조해야 한다. 배웠다. placeholder. 그리고 옵션을 선택하면
+    그 내용이 텍스트 상자 안에 들어가게 해야 한다.
+
+    4. 랜덤 숫자(Math.random)로 자동등록방지 숫자 여섯자리를 설정한다. 그리고 
+    텍스트에 입력한 숫자와 대조해서 틀리다면(함수명!==value) 숫자가 맞지 않는다는
+    경고창이 뜨고(alert), 아무 일도 일어나지 않는다(return false). 새로고침 버튼을
+    누르면(onclick) 숫자가 다시 설정되고(Math.random) 기존의 숫자는 무효화된다. 옆에
+    자동 등록 방지를 위해 숫자를 적어달라는 문구가 있다.
+
+    5. 파일 버튼을 오른쪽으로 옮긴다. 마우스버튼 올리면 커서가 손 모양으로 
+    변하게. 잘 보면 버튼을 누르든 텍스트를 누르든 파일 선택 창이 나온다.
+
+    8. 기타: 표 자세히 보면 이름이랑 텍스트 부분 사이에 틈이 있다. 그걸 없애야 함.
+    마지막 부분만 borderbottom을 빼는 방법이 있나?
+
+    6,7 빼고 다 자바스크립트.
+
+    */
+</script>
+<body>
+<script>//전체적으로 쓰일 것 같으면 var로 선언.
+    /*function finalCheck(){
+    let code=Math.floor(Math.random()*9+1);
+    for(i=0;i<6;i++){
+        codeNumbers=code[i];
+        document.write(codeNumbers);
+    };
+};
+    let codeNumbers=new Array(6);
+    finalCheck();*/
+
+document.addEventListener('DOMContentLoaded', function(){
+    let btn=document.getElementById('submitBtn');
+    btn.addEventListener("click", function(){
+        let select=document.getElementById('strawberry');
+        let sele=select.value;
+        if(sele==="none"){
+        alert('어떤 일로 문의하셨는지 선택해주세요');
+        }else{
+            return false;
+        }
+        });
+        });//선택 안 하면 경고창이 나오는 함수.
+    
+let btn=document.getElementById('submitBtn');
+btn.addEventListenter("click", function(){
+    let letter=getElementByTagName('input');
+    let password=getElementById('checknum');
+    let correctNum=//난수 함수의 변수 적기
+    if(letter.value==""){
+        alert('내용을 전부 입력해 주세요');
+    }if(password.length<6||password!==correctNum){//조건을 이렇게 쓰는 게 맞나?
+        alert('번호가 틀렸습니다.')
+    }
+});//텍스트를 입력하지 않으면 경고창이 뜨는 함수.
+    
+</script>
+<div id="bodyForm">
+    <h3>제휴 문의
+        <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p></h3>
+    <hr><br>
+    <div id="form">
+        <table>
+            <tr><td id="choose">구분</td>
+                <td class="text"><select id="strawberry">
+                    <option value="none" selected>선택</option>
+                    <option value="ad">협찬/광고</option>
+                    <option value="collaboration">제휴 이벤트</option>
+                    <option value="retail">거래처 입점 문의</option>
+                    <option value="buy">물류/구매</option>
+                    <option value="place">부동산 점포 추천</option>
+                </select><br></td></tr>
+        
+            <tr><td id="company">회사명</td>
+                <td class="text"><input type="text" size="90"><br></td></tr>
+        
+            <tr><td id="mail">이메일</td>
+                <td class="text"><input type="email" placeholder="id">
+                @<input type="email" placeholder="option value">
+                <select>
+                    <option value="write" selected>직접 입력</option>
+                    <option value="naver.com">naver.com</option>
+                    <option value="gmail.com">gmail.com</option>
+                    <option value="daum.net">daum.net</option>
+                    <option value="hotmail.com">hotmail.com</option>
+                    <option value="nate.com">nate.com</option>
+                    <option value="hanmail.net">hanmail.net</option>
+                </select></td></tr>
+        
+            <tr><td id="title">제목</td>
+                <td class="text"><input type="text"></td></tr>
+        
+            <tr><td id="content">내용</td>
+                <td class="text"><textarea rows="10"></textarea></td></tr>
+        
+            <tr><td id="files">파일첨부</td>
+                <td class="text"><label><input id="fileSearch" type="file"></label>
+                    <p>※최저용량:10MB ※파일 양식:
+                    jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
+        
+            <tr><td id="checknum">자동등록방지</td>
+                <td class="text"><div>codeNumbers()</div><input type="password">
+                    <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
+        </table>
+    </div>
+    
+    <br>
+       <div><input id="submitBtn" type="button" value="등록"></div>
+</div>
+
+    
+</body>
+</html>
