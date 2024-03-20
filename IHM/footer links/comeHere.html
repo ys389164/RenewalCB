@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <title>Document</title>
 <style>
+body{
+    font-size: 18px;
+    font-weight:bold;}
+h3{
+    font-size:24px;
+    color:rgb(65, 65, 109);}
+div{
+    display:block;
+    height:300px;}
+span{
+    font-size: 18px;
+    font-weight:bold;
+    color:rgb(65, 65, 109);
+}
+tr td{
+    font-size: 16px;
+    padding:10px;}
 #cafeMap{float:left;}
+#plant{float:right;}
+
 </style>
 <script>
     /*
@@ -16,14 +35,30 @@
 </script>
 </head>
 <body>
+<h3>개인정보 취급방침</h3>
+<hr>
+<div>
     <img id="cafeMap" src="projectimages/카페베네 본사위치.png">
-    카페베네 본사 주소: 경기도 양주시 백석읍 권율로1203번길 8-13, 2층
-    고객센터: 1688-4666
-    대중교통: 지하철로 뚝섬역에서 내린 뒤 6번출구로 나와서 이동.
+    <table>
+        <tr><td><span>카페베네 본사 주소:</span> 경기도 양주시 백석읍 권율로1203번길 8-13, 2층</td></tr>
+        <tr><td><span>고객센터:</span> 1688-4666</td></tr>
+        <tr><td><span>대중교통:</span> 지하철로 뚝섬역에서 내린 뒤 6번출구로 나와서 이동.</td></tr>
+    </table>
+    
+</div>
+    
 
-    부산영업소:	부산광역시 해운대구 센텀서로30, 22층(우동,KNN타워)
-    대전영업소:	대전광역시 동구 한밭대로 1297번길 9, 종근당빌딩 702호
-    로스팅 플랜트:	경기도 양주시 백석읍 권율로 1203번길 8-13
-    양주센터:	경기도 양주시 백석읍 권율로 1203번길 8-13
+<div>
+    <table>
+        <tr><td><span>부산영업소:</span>	부산광역시 해운대구 센텀서로30, 22층(우동,KNN타워)</td></tr>
+        <tr><td><span>대전영업소:</span>	대전광역시 동구 한밭대로 1297번길 9, 종근당빌딩 702호</td></tr>
+        <tr><td><span>로스팅 플랜트:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</td></tr>
+        <tr><td><span>양주센터:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</td></tr>
+    </table>
+    
+    <img id="plant" src="projectimages/카페베네 로스팅 플랜트.png">
+    
+</div>
+    
 </body>
 </html>

@@ -120,10 +120,10 @@ let btn=document.getElementById('submitBtn');
 btn.addEventListenter("click", function(){
     let letter=getElementByTagName('input');
     let password=getElementById('checknum');
-    let correctNum=//난수 함수의 변수 적기
-    if(letter.value==""){
-        alert('내용을 전부 입력해 주세요');
-    }if(password.length<6||password!==correctNum){//조건을 이렇게 쓰는 게 맞나?
+    let code=Math.floor(Math.random()*9+1);//난수 함수의 변수 적기
+    if(letter.value==''){
+        alert('자동등록방지 번호를 입력해 주세요');
+    }if(password.length<6||password!==code){//조건을 이렇게 쓰는 게 맞나?
         alert('번호가 틀렸습니다.')
     }
 });//텍스트를 입력하지 않으면 경고창이 뜨는 함수.
