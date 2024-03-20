@@ -114,7 +114,7 @@
                     <td class="addbox">
                       <div>
                         <input type="text" title="우편번호" class="haddCode" id="haddCode">
-                        <button type="button" class="addBtn" onclick="searchAdd2()">우편번호검색</button>
+                        <button type="button" class="addBtn" onclick="searchAdd2('보유점포')">우편번호검색</button>
                       </div>
                       <div><input type="text" class="addhalf" id="haddMain" readonly=""></div>
                       <div><input type="text" title="상세주소" class="addhalf" id="haddSub"></div>
@@ -153,11 +153,11 @@
               <div class="agreeAudio">
                 <span>
                   <input type="radio" id="agree" name="agree" value="Y" />
-                  <label for="agree1">동의합니다.</label>
+                  <label for="agree">동의합니다.</label>
                 </span>
                 <span>
                   <input type="radio" id="disagree" name="agree" value="N" />
-                  <label for="disagree1">동의하지 않습니다.</label>
+                  <label for="disagree">동의하지 않습니다.</label>
                 </span>
               </div>
             </div>
@@ -200,8 +200,6 @@
     <footer id="footer" footer></footer>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>;
     <script src="business.js"></script>
-    <script src="mailNumber.js"></script>
-    <script src="region.js"></script>
   </body>
 
 </html>
