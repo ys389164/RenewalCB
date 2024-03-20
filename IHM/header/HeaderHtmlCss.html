@@ -16,6 +16,7 @@ h2 ul{
   background-color:lightseagreen;
 }
 h2 ul li{
+  cursor: pointer;
   display:inline-block;
   width:300px;
   padding:0px;
@@ -46,6 +47,7 @@ nav{position:absolute;}
   }
 .lists ul{padding-left:0px;}
 .lists li {
+  cursor: pointer;
   list-style-type: none;
   text-align: center;
   padding-bottom:1em;
@@ -58,42 +60,82 @@ nav{position:absolute;}
 
        /*자바스크립트로 만들어야 하는 것
 
-       1. 헤더 카테고리(h2 ul li 태그). 마우스를 갖다 대면(onmouseover) 리스트(id=listsCollection)가 
-       아래로 내려오면서(slideDown) 서서히 페이드인(slow)으로 나오게(아코디언 또는 툴팁?).
-       마우스를 항목(h2 ul li 태그) 또는 아래로 늘어진 리스트에(id=listsCollection) 대고 있는 동안은(onmouseover) 리스트가 사라지면 안된다.
+       1. 헤더 카테고리(h2 ul li 태그). 
+       마우스를 갖다 대면(onmouseover) 리스트(id=listsCollection)가 
+       아래로 내려오면서(slideDown) 서서히 페이드인(slow)으로 나오게
+       (아코디언 또는 툴팁?).
+       마우스를 항목(h2 ul li 태그) 또는 
+       아래로 늘어진 리스트에(id=listsCollection) 
+       대고 있는 동안은(onmouseover) 리스트가 사라지면 안된다.
        평소에는 올라가서 숨겨져 있는 상태.(hide)
        div와 그 안에 들어 있는 ul, li.
 
-       2. 헤더 상위 카테고리에 마우스를 갖다 대면(onmouseover) 배경색과 글씨색(backgroundColor, color)이 천천히 바뀐다. 애니메이션?
-
-       3. 헤더 카테고리의 각 리스트 항목에 마우스를 갖다 댔을 때(onmouseover), 글씨가 굵어지면서(fontWeight:bold) 밑줄(text-decoration)이 생겨야 한다.
-       아니면 그 부분만 색깔이 바뀌게 하거나.(li.style.backgroundColor, li.style.fontWeight? li.style.font...밑줄은 뭐지?)
-
-       4.헤더의 카테고리와 푸터의 카테고리가 각각 다른 웹페이지로 이동될 수 있게 해야 한다.(이건 a href="", script로도 가능)
+       4.헤더의 카테고리와 푸터의 카테고리가 
+       각각 다른 웹페이지로 이동될 수 있게 해야 한다.
+       (이건 a href="", script로도 가능)
 
        
-
-       6.navigator 추가
        */
     </script>
-    <script>
+    <script>//리스트 마우스오버 함수
+      let menus=[];//배열 쓰기 전에 반드시 초기화 먼저
+      let links;//menus, links는 하위 리스트 색 바꾸기
+      let upperMenu;
+      let upLists;//upperMenu, upLists는 상위 카테고리 색 바꾸기
+
       function innerPage(){
-        let link=document.getElementsByTagName('li');
-        link.style.color="darkgreen";
-        link.style.textDecoration="underline";
+        for(j=0;j<5;j++){
+        menus[j]=document.getElementById("menu"+j);
+        links=menus[j].children;
+        for(i=0;i<links.length;i++){
+          if(links[i].nodeType===1){
+            links[i].addEventListener("mouseover",over);
+            links[i].addEventListener("mouseout",out);
+          }//조건문. 자식요소가 html 태그가 맞다면 이벤트 함수 적용
+        }//반복문. menu[i]의 자식요소(li)들에게 일괄적으로 적용
+        };//반복문. menu0부터 menu4까지 반복문으로 정의.
+
+        upperMenu=document.getElementById("topMenu");//h2 ul을 가리킨다.
+        upLists=upperMenu.children;//li들이다
+        for(i=0;i<upLists.length;i++){//li의 개수만큼 반복
+          if(upLists[i].nodeType===1){
+            upLists[i].addEventListener("mouseover", here);
+            upLists[i].addEventListener("mouseout", bye);
+          }
+        };
+      };//여기까지가 innerPage 함수. 
+
+      function over(){
+        this.style.color="teal";
+        this.style.textDecoration="underline";
       };
-      li.onmouseover=innerPage();
-      
+      function out(){
+        this.style.color="black";
+        this.style.textDecoration="none";
+      };//여기까지, 이 두개가 하위 리스트 색 바꾸는 함수
+
+      function here(){
+        this.style.color="lightcyan";
+      };
+      function bye(){
+        this.style.color="black";
+      };//이 나머지 두개는 상위 카테고리 글씨 색 바꾸는 함수
+
+    </script>
+
+    <script>//아코디언 함수. mouseover, mouseout. topMenu, listsCollection
+    let a=document.getElementById("topMenu");
+    let b=document.getElementById("listsCollection");
     </script>
   </head>
-  <body>
+  <body onload="innerPage()">
     <header>
      <h1><div id="logoTop">
       <a href=""><img id="logoTop" src="projectimages/카페베네 상단로고.png" /></a>
     </div></h1> 
     </header>
       <nav>
-        <h2><ul>
+        <h2><ul id="topMenu">
           <li>CAFE BENNE</li>
           <li>MENU</li>
           <li>STORE</li>
@@ -103,7 +145,7 @@ nav{position:absolute;}
     
         <div id="listsCollection">
           <div class="lists">
-            <ul>
+            <ul id="menu0">
               <li>브랜드 스토리</li>
               <li>베네캣 스토리</li>
               <li>가장 좋은 카페</li>
@@ -114,7 +156,7 @@ nav{position:absolute;}
           </div>
     
           <div class="lists">
-            <ul>
+            <ul id="menu1">
               <li>신메뉴</li>
               <li>커피</li>
               <li>음료</li>
@@ -123,13 +165,13 @@ nav{position:absolute;}
           </div>
     
           <div class="lists">
-            <ul>
+            <ul id="menu2">
               <li>국내 매장</li>
             </ul>
           </div>
     
           <div class="lists">
-            <ul>
+            <ul id="menu3">
               <li>공지사항</li>
               <li>커피</li>
               <li>우리 동네</li>
@@ -139,7 +181,7 @@ nav{position:absolute;}
           </div>
     
           <div class="lists">
-            <ul>
+            <ul id="menu4">
               <li>개설 절차</li>
               <li>개설 비용</li>
               <li>B2B</li>
