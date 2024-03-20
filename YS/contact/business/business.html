@@ -38,11 +38,10 @@
                       <input type="text" title="이름" class="name" id="name" name="name" maxlength="10">
                     </td>
                   </tr>
-
                   <tr>
                     <th>연락처</th>
                     <td>
-                      <select id="tell1" class="tel" name="cell1">
+                      <select title="연락처" id="tell1" class="tel" name="cell1">
                         <option value="선택">선택</option>
                         <option value="010">010</option>
                         <option value="011">011</option>
@@ -57,105 +56,113 @@
                       <input type="text" title="연락처" class="tel" id="tell3" name="tell3" maxlength="4">
                     </td>
                   </tr>
-
                   <tr>
                     <th>주소</th>
                     <td class="addbox">
-                        <div><input type="text" title="add" class="addCode" id="addCode" name="add" maxlength="20">
-                            <button type="button" class="addBtn">우편번호검색</button>
-                        </div>
-                      <div><input type="text" class="addhalf" id="addr2" name="addr2" maxlength="100" readonly=""></div>
-                      <div><input type="text" class="addhalf" id="addr3" name="addr3" maxlength="100"></div>
+                      <div>
+                        <input type="text" title="우편번호" id="addCode" class="addCode" max="20">
+                        <button type="button" class="addBtn" onclick="searchAdd()">우편번호검색</button>
+                      </div>
+                      <div><input type="text" class="addhalf" id="addMain" readonly=""></div>
+                      <div><input type="text" title="상세주소" class="addhalf" id="addSub"></div>
                     </td>
                   </tr>
-
                   <tr>
                     <th>창업 예정지역</th>
                     <td>
-                      <select title="시/도", id="area1", name="area1" class="area">
-                        <option value="">시/도</option>
-                        <!-- 다른 옵션들, js로 -->
+                      <select title="지역", id="area1", class="area">
+                        <option value="시/도">시/도</option>
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="인천광역시">인천광역시</option>
+                        <option value="대전광역시">대전광역시</option>
+                        <option value="광주광역시">광주광역시</option>
+                        <option value="대구광역시">대구광역시</option>
+                        <option value="울산광역시">울산광역시</option>
+                        <option value="부산광역시">부산광역시</option>
+                        <option value="세종특별자치시">세종특별자치시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="충청남도">충청남도</option>
+                        <option value="충청북도">충청북도</option>
+                        <option value="전라남도">전라남도</option>
+                        <option value="전라북도">전라북도</option>
+                        <option value="경상남도">경상남도</option>
+                        <option value="경상북도">경상북도</option>
+                        <option value="제주도">제주도</option>
                       </select>
-                      <select title="구/군", id="area2", name="area2" class="area">
+                      <select title="상세지역", id="area2", class="area">
                         <option value="">구/군</option>
-                        <!-- 다른 옵션들 -->
                       </select>
                     </td>
                   </tr>
-
                   <tr>
                     <th>보유점포 유무</th>
                     <td>
-                      <div class="radipWrap">
+                      <div class="radioWrap">
                         <span class="radio">
-                            <input type="radio" id="size1" name="have" value="1">
-                            <label for="size1">보유
-                        </label>
-                        <span class="RT">*보유시 주소를 입력하여 주세요.</span>
+                          <input type="radio" title="보유점포" id="have" name="have" value="1">
+                          <label for="have">보유 </label>
+                          <span class="RT">*보유시 주소를 입력하여 주세요.</span>
                         </span>
-                        <span class="radio"><input type="radio"  id="size2" name="have" value="2"><label for="size2">미보유</label></span>
+                        <span class="radio"><input type="radio" title="보유점포" id="nonHave" name="have" value="2"><label
+                            for="nonHave">미보유</label></span>
                       </div>
                     </td>
                   </tr>
-
                   <tr>
-                    <th>주소</th>
+                    <th>보유점포 주소</th>
                     <td class="addbox">
-                        <div><input type="text" title="add" class="haddCode" id="haddCode" name="hadd" maxlength="20">
-                            <button type="button" class="addBtn">우편번호검색</button>
-                        </div>
-                      <div><input type="text" class="addhalf" id="haddr2" name="haddr2" maxlength="100" readonly=""></div>
-                      <div><input type="text" class="addhalf" id="haddr3" name="haddr3" maxlength="100"></div>
+                      <div>
+                        <input type="text" title="우편번호" class="haddCode" id="haddCode">
+                        <button type="button" class="addBtn" onclick="searchAdd2('보유점포')">우편번호검색</button>
+                      </div>
+                      <div><input type="text" class="addhalf" id="haddMain" readonly=""></div>
+                      <div><input type="text" title="상세주소" class="addhalf" id="haddSub"></div>
                     </td>
                   </tr>
-                  
                   <tr>
                     <th>창업보유자금</th>
                     <td>
-                        <input type="text">
+                      <input type="text" title="보유자금" id="money" class="money">
+                      <span class="RT">*만원 기준입니다.</span>
                     </td>
                   </tr>
-
-
                   <tr>
                     <th>기타문의</th>
                     <td>
-                      <textarea title="내용" name="content" id="content" class="content" cols="30" rows="10" placeholder="문의글을 입력해주세요"></textarea>
+                      <textarea title="내용" name="content" id="content" class="content" cols="30" rows="10"
+                        placeholder="문의글을 입력해주세요"></textarea>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            
             <div class="guideWrap">
               <h3>개인정보 수집 · 이용에 대한 안내</h3>
               <div class="details">
                 <p> 원활한 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다. <br></p>
-                <p> 1. 개인정보의 수집 및 이용 목적<br />
-                  가맹점 개설에 관한 상담 서비스 제공을 위한 <br>본인 식별, 상담 내용 전달, 점포 오픈 관련 정보 안내, 의사 소통 경로 확보 및 기타
-                  원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다. <br><br></p>
+                <p> 1. 개인정보의 수집 및 이용 목적<br /> 가맹점 개설에 관한 상담 서비스 제공을 위한 <br>본인 식별, 상담 내용 전달, 점포 오픈 관련 정보 안내, 의사 소통 경로 확보
+                  및 기타 원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다. <br><br></p>
                 <p> 2. 수집하는 개인정보의 항목<br />이름(한글/한문/영문), 성별, 연령, 휴대폰번호, 이메일주소 <br><br></p>
                 <p> 3. 개인정보의 보유 및 이용시간<br />개인정보의 수집목적 또는 제공받은 목적 달성 시 내규에 준하여 보관 및 파기합니다.<br><br></p>
                 <p> ※개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부하실 경우 접수에 제한이 있습니다. </p>
               </div>
             </div>
-
             <div class="agreeForm">
               <div> 개인정보 수집,이용에 대한 동의를 하지 않을 경우, 원하시는 서비스를 제공 받으실 수 없습니다. </div>
-              
               <div class="agreeAudio">
                 <span>
-                  <input type="radio" id="agree1" name="agree1" value="Y" />
-                  <label for="agree1">동의합니다.</label>
+                  <input type="radio" id="agree" name="agree" value="Y" />
+                  <label for="agree">동의합니다.</label>
                 </span>
                 <span>
-                  <input type="radio" id="disagree1" name="agree1" value="N" />
-                  <label for="disagree1">동의하지 않습니다.</label>
+                  <input type="radio" id="disagree" name="agree" value="N" />
+                  <label for="disagree">동의하지 않습니다.</label>
                 </span>
               </div>
             </div>
             <div class="transmissionBtn">
-              <button type="submit">신청</button>
+              <button type="submit" id="submit">신청</button>
             </div>
           </form>
         </section>
@@ -191,7 +198,7 @@
       </article>
     </main>
     <footer id="footer" footer></footer>
-
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>;
     <script src="business.js"></script>
   </body>
 

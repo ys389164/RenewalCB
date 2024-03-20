@@ -92,7 +92,6 @@
 
 .submissionTable td{
     width: auto;
-    display: flex;
     padding-left: 0;
     text-align: left;
     padding: 20px 0 20px 30px;
@@ -152,15 +151,15 @@
     margin-right: 10px;
 }
 
-.submissionTable td .radipWrap{
+.submissionTable td .radioWrap{
     margin: 5px 0;
 }
-.submissionTable td .radipWrap .radio {
+.submissionTable td .radioWrap .radio {
     margin-right: 60px;
     display: inline-block;
 }
 
-.submissionTable td .radipWrap .radio input + label {
+.submissionTable td .radioWrap .radio input + label {
     position: relative;
     line-height: 22px;
     color: #999;
