@@ -1,47 +1,12 @@
-// document.querySelector('.button2').addEventListener('click', function(){
-//     document.querySelector('.container').style.transform = 'translate(-100vw)';
-// });
-
 $(function(){
-    // $('#fullpage').fullpage({
-    //     autoScrolling: true,
-    //     scrollHorizontally: true,
-    //     // navigation: true,
-    //     // navifationPosition: 'right'
-    // });
+    var mainSwiper = new Swiper('.swiper0', {
+        direction: 'vertical',
+        // speed: 1000,
+        mousewheel: true,
+        // scrollbar: hide
+    });
 
-
-    // document.querySelector('.button1').addEventListener('click', function(){
-    //     document.querySelector('.container').style.transform = 'translate(0vw)';
-    // });
-    // document.querySelector('.button2').addEventListener('click', function(){
-    //     document.querySelector('.container').style.transform = 'translate(-100vw)';
-    // });
-    // document.querySelector('.button3').addEventListener('click', function(){
-    //     document.querySelector('.container').style.transform = 'translate(-200vw)';
-    // });
-
-    var mHtml = $("html");
-    var page = 1;
-
-
-    mHtml.animate({scrollTop : 0},10);
-
-    $(window).on("wheel", function(e) {
-        if(mHtml.is(":animated")) return;
-        if(e.originalEvent.deltaY > 0) {
-            if(page == 4) return;
-            page++;
-        } else if(e.originalEvent.deltaY < 0) {
-            if(page == 1) return;
-            page--;
-        }
-        var posTop =(page-1) * $(window).height();
-        mHtml.animate({scrollTop : posTop});
-    })
-
-
-    const mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.swiper1', {
         direction: 'horizontal', // 수평 방향 슬라이드
         loop: true, // 무한 루프
         autoplay: {
@@ -55,7 +20,7 @@ $(function(){
         // }
     });
 
-    const mySwiper_2 = new Swiper('.swiper-wrapper_2', {
+    var mySwiper_2 = new Swiper('.swiper2', {
         direction: 'horizontal', // 수평 방향 슬라이드
         loop: true, // 무한 루프
         autoplay: {

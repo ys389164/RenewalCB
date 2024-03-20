@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
 }
 
 #select_coffee {
-    width: 600px;
+    width: 800px;
     text-align: center;
     font-family: 'MICEGothic Bold';
     border: 1px solid lightgray;

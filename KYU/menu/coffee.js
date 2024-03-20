@@ -3,23 +3,25 @@
 $(function(){
     const checkboxes = $('#select_coffee input[type="checkbox"]');
     const menuItems = $('.menu_items');
+    const menuEmpty = $('.menu_items_empty');
 
     checkboxes.on('change', function() {
         const selectedCoffees = checkboxes.filter(':checked').map(function() {
             return this.value;
         }).get();
         
-        if (selectedCoffees.length === 0) {
-            menuItems.show();
-        } else {
-            menuItems.hide(); // 모든 메뉴 숨기기
-            menuItems.each(function() {
-                const menuItemTypes = $(this).data('type').split(' ');
-                if (selectedCoffees.every(coffee => menuItemTypes.includes(coffee))) {
-                    $(this).show(); // 선택된 모든 커피에 해당되는 메뉴만 보이기
-                }
-            });
-        }
+        // 선택된 커피 유형에 해당하는 메뉴 아이템 보이기
+        menuItems.hide().each(function() {
+            const menuItemTypes = $(this).data('type').split(' ');
+            if (selectedCoffees.every(coffee => menuItemTypes.includes(coffee))) {
+                $(this).show();
+            }
+        });
+
+        // 빈 메뉴 항목 보이거나 숨기기
+        const emptyMenuCount = Math.max(4 - selectedCoffees.length, 0); // 보여져야 할 빈 메뉴 항목의 개수 계산
+        menuEmpty.hide(); // 모든 빈 메뉴 항목 숨기기
+        menuEmpty.slice(0, emptyMenuCount).show(); // 선택된 유형의 메뉴 개수에 맞게 빈 메뉴 항목 보이기
     });
 
     $(".nutrient_info").hide();
