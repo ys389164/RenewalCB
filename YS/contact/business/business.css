@@ -104,7 +104,7 @@
       display: inline-block;
       height: 40px;
       padding: 10px;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       color: #222;
       box-sizing: border-box;
       line-height: 18px;
@@ -170,35 +170,39 @@
   }
   
   /* 보유점포 유무 */
-  .submissionTable td .radipWrap{
+  .submissionTable td .radioWrap{
       margin: 5px 0;
   }
-  .submissionTable td .radipWrap .radio {
+  .submissionTable td .radioWrap .radio {
       margin-right: 60px;
       display: inline-block;
   }
 
   
-  .submissionTable td .radipWrap .radio input + label {
+  .submissionTable td .radioWrap .radio input + label {
     position: relative;
     line-height: 22px;
     color: #999;
     cursor: pointer;
 }
 
-.submissionTable td .radipWrap .radio .RT {
+.submissionTable td .radioWrap .radio .RT {
     color: #af2f2f;;
     margin-left: 10px;
     font-size: 0.8rem;
 }
 
-
-  
+.submissionTable td .RT{
+    color: #af2f2f;;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+  /* 기타문의 */
   .submissionTable td textarea.content{
       width: 100%;
       border: 1px solid #cccccc;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
       color: #222;
   
   }
