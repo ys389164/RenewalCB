@@ -92,7 +92,7 @@ input[type=email]{width:120px;}
     */
 </script>
 <body>
-<script>//전체적으로 쓰일 것 같으면 var로 선언.
+<script>//선택되지 않으면 경고창 나오는 함수
     /*function finalCheck(){
     let code=Math.floor(Math.random()*9+1);
     for(i=0;i<6;i++){
@@ -129,6 +129,16 @@ btn.addEventListenter("click", function(){
 });//텍스트를 입력하지 않으면 경고창이 뜨는 함수.
     
 </script>
+<script>
+const type=document.getElementById('mailType');
+const choose=document.getElementById('emailChoose');
+choose.addEventListener("change",() => {
+    let selectedValue=choose.value;
+    type.innerHTML="";
+    type.value=selectedValue;
+});
+
+</script>
 <div id="bodyForm">
     <h3>제휴 문의
         <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p></h3>
@@ -150,8 +160,8 @@ btn.addEventListenter("click", function(){
         
             <tr><td id="mail">이메일</td>
                 <td class="text"><input type="email" placeholder="id">
-                @<input type="email" placeholder="option value">
-                <select>
+                @<input type="email" id="mailType" placeholder="option value">
+                <select id="emailChoose">
                     <option value="write" selected>직접 입력</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
