@@ -1,5 +1,6 @@
+/* banner */
 .banner {
-  width: 100%;
+  width: 1920px;
   background-color: #00a5b1;
   height: 230px;
   display: flex;
@@ -11,7 +12,6 @@
   color: white;
   font-size: 2em;
 }
-
 .subContentContainer {
   width: 1190px;
   height: auto;
