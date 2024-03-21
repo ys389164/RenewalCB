@@ -28,23 +28,23 @@
             <div class="menu_select">  
                 <a href="new.html" class="menu_selector"><p class="menu_types"><br><br>신메뉴<br><br></p></a>
                 <a href="coffee.html" class="menu_selector"><p class="menu_types"><br><br>커피<br><br></p></a>
-                <a href="beverage.html" class="menu_selector"><p class="menu_types"><br><br>음료<br><br></p></a>
+                <a href="beverage.html" class="menu_selector" style="border-bottom: 3px solid black;"><p class="menu_types"><br><br>음료<br><br></p></a>
                 <a href="food.html" class="menu_selector"><p class="menu_types"><br><br>푸드<br><br></p></a>
                 <!-- <a href="">MD</a>
                 <a href="">Retail</a> -->
             </div>
             <div id="select_beverage">
                 <form>
-                    <input type="checkbox" id="latte" name="beverage" value="latte" onclick="handleCoffeeChange('latte')">
+                    <input type="radio" id="latte" name="beverage" value="latte" onclick="handleCoffeeChange('latte')">
                     <label for="espresso">라떼</label>
 
-                    <input type="checkbox" id="frappeno" name="beverage" value="frappeno" onclick="handleCoffeeChange('frappeno')">
+                    <input type="radio" id="frappeno" name="beverage" value="frappeno" onclick="handleCoffeeChange('frappeno')">
                     <label for="coldbrew">프라페노</label>
 
-                    <input type="checkbox" id="juiceade" name="beverage" value="juiceade" onclick="handleCoffeeChange('juiceade')">
+                    <input type="radio" id="juiceade" name="beverage" value="juiceade" onclick="handleCoffeeChange('juiceade')">
                     <label for="decaffein">주스&에이드</label>
 
-                    <input type="checkbox" id="tea" name="beverage" value="tea" onclick="handleCoffeeChange('tea')">
+                    <input type="radio" id="tea" name="beverage" value="tea" onclick="handleCoffeeChange('tea')">
                     <label for="decaffein">티</label>
                 </form>
             </div>
@@ -180,6 +180,9 @@
                         <p class="menu_text">문경에서 자란 오미자의 새콤달콤함이 어우러진 논알콜 레드 뱅쇼</p>
                     </div>
                 </div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
             </div>
         </section>
     </main>

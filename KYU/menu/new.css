@@ -42,8 +42,12 @@ body::-webkit-scrollbar {
     border-bottom: 0.5px solid lightgray;
 }
 
+.menu_types {
+    height: 47px;
+}
+
 .menu_selector {
-    text-decoration: none;
+    text-decoration: none;      
     color: black;
     font-family: 'MICEGothic Bold';
     font-size: 15px;
@@ -127,6 +131,11 @@ body::-webkit-scrollbar {
     left: 120px;
     top: 20px;
 }
+
+.menu_nutrient:hover {
+    font-size: 12.5px;
+}
+
 
 .nutrient {
     position: relative;
