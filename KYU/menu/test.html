@@ -5,27 +5,67 @@
     <meta charset="utf-8" />
     <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="test.css">
     
-    <script src="text.js"></script>
 </head>
 
 <body>
-    <swiper-container class="mySwiper swiper-v" pagination="true" pagination-clickable="true" space-between="50" direction="vertical">
-        <swiper-slide>
-            <swiper-container class="mySwiper2 swiper-h" pagination="true" pagination-clickable="true" space-between="50">
-                <swiper-slide>Vertical Slide 1</swiper-slide>
-                <swiper-slide>Vertical Slide 2</swiper-slide>
-                <swiper-slide>Vertical Slide 3</swiper-slide>
-                <swiper-slide>Vertical Slide 4</swiper-slide>
-                <swiper-slide>Vertical Slide 5</swiper-slide>
-            </swiper-container>
-        </swiper-slide>
-        <swiper-slide>Horizontal Slide 2</swiper-slide>
-        <swiper-slide>Horizontal Slide 3</swiper-slide>
-        <swiper-slide>Horizontal Slide 4</swiper-slide>
-    </swiper-container>    
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <header id="header" class="header"></header>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide new"><img src="../imgs/banner/20240220243205.jpg"></div>
+                    <div class="swiper-slide new"><img src="../imgs/banner/20230816239199.jpg"></div>
+                    <div class="swiper-slide new"><img src="../imgs/banner/20230816576456.jpg"></div>
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </div>
+        <div class="swiper-slide">
+            <a href="new.html"><h2>MENU</h2></a>
+            <div class="swiper mySwiper2" id="menu_section">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20240220718093.jpg"></div>
+                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20230816688838.jpg"></div>
+                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20230816290486.jpg"></div>
+                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20220831657562.jpg"></div>
+                </div>
+            </div>
+            <div id="menu">
+                <div class="menu_items">
+                    <img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span>
+                </div>
+                <div class="menu_items">
+                    <img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span>
+                </div>
+            </div>
+        </div>
+            
+        <div class="swiper-slide">창업</div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <footer id="footer" class="footer"></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
