@@ -1,5 +1,6 @@
+/* banner */
 .banner {
-    width: 100%;
+    width: 1920px;
     background-color: #00a5b1;
     height: 230px;
     display: flex;
@@ -281,6 +282,7 @@
       width: 100%;
       border-bottom: 1px solid #444;
       border-spacing: 0;
+      text-align: center;
   }
   
   .contactInfo .contactTable thead th{
@@ -298,3 +300,7 @@
       font-size: 1rem;
       line-height: 1.6;
   }
+
+  .contactInfo .contactTable tbody td img{
+    width: 90px;
+}

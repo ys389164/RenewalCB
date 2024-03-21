@@ -1,5 +1,6 @@
+/* banner */
 .banner {
-  width: 100%;
+  width: 1920px;
   background-color: #00a5b1;
   height: 230px;
   display: flex;
@@ -12,70 +13,353 @@
   font-size: 2em;
 }
 
+/* contents, title */
 .subContetContainer {
-  width: 1920px;
-  height: 100vh;
+  width: 1190px;
+  height: auto;
   margin: 0 auto;
+  position: relative;
+  padding-bottom: 120px;
 }
 
-.subTitle1 {
+.subTitle {
   display: flex;
   margin-bottom: 40px;
   padding: 30px 0 20px;
   border-bottom: 1px solid #444;
 }
 
-.subTitle1 h3 {
+.subTitle h3 {
   color: #3a466a;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 1000;
 }
 
-.subContent1 {
+/* section 1 contents */
+.subContent1 .concerting {
   position: relative;
-  height: 500px;
+  width: 1190px;
 }
 
-.subContent1 :before {
+.subContent1 .concerting .txts {
+  padding: 50px 0 0 40px;
+  font-size: 18px;
+  color: #3a466a;
+  font-weight: 500;
+  line-height: 1;
+  z-index: 10;
+}
+
+.subContent1 .concerting .txts p:last-child {
+  margin-top: 40px;
+}
+
+.subContent1 .concerting .b2bStoreImg {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 0 auto;
+  width: 1190px;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.subContent1:before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 0%;
+  width: 900px;
+  height: 700px;
+  background: #f2f2f2;
+}
+
+.subContent1:after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: 0;
+  width: 400px;
+  height: 500px;
+  background: #3a466a;
+}
+
+/* section 2 */
+.subContent2 {
+  position: relative;
+  margin-top: 520px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.subContent2 .services .back {
+  display: flex;
+  justify-content: center;
+}
+
+.subContent2 .services .back div {
+  width: 120px;
+  height: 120px;
+  background: #f2f2f2 url("../../imgs/B2B/b2b-ico1.png") no-repeat 50% 50%;
+  border-radius: 50%;
+}
+
+.subContent2 .services .back .img2 {
+  background-image: url("../../imgs/B2B/b2b-ico2.png");
+}
+
+.subContent2 .services .back .img3 {
+  background-image: url("../../imgs/B2B/b2b-ico3.png");
+}
+
+.subContent2 .services .back .img4 {
+  background-image: url("../../imgs/B2B/b2b-ico4.png");
+}
+
+.subContent2 .services h4{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 30px 0 20px;
+  color: #3a466a;
+}
+
+.subContent2 .services p{
+  font-size: 1rem;
+  line-height: 1.3;
+  color: #707070;
+}
+
+/* section3 */
+.subContent3{
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+.subContent3 .wrap1, .subContent3 .wrap3{
+  background: #e8e8e8;
+  width: 710px;
+  height: 200px;
+  border-radius: 200px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.subContent3 .wrap1{
+  padding: 40px 0 0 130px;
+}
+.subContent3 .wrap2 img{
+    position: absolute;
+    top: 40%;
+    left: 47%;
+}
+.subContent3 .wrap3{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 165, 177, 0.14);
+  padding: 45px 0 0 300px;
+}
+
+.subContent3 ul li{
+  position: relative;
+  padding-left: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.subContent3 .wrap1 p{
+  font-size: 1rem;
+  color: #444;
+}
+
+.subContent3 span{
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  margin-right: 10px;
+  background: #b7b7b7;
+  border-radius: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.subContent3 ul li:before{
   content: '';
   position: absolute;
-  top: 0;
+  top: 40%;
   left: 0;
-  width: 900px;
-  height: 600px;
-  background: #f2f2f2;
-  z-index: -1;
+  width: 5px;
+  height: 5px;
+  background: #3a466a;
+  border-radius: 100%;
 }
 
-.subContent1 :after {
-    content: '';
-    position: absolute;
-    top: 130px;
-    right: 0;
-    width: 400px;
-    height: 500px;
-    background: #3a466a;
-    z-index: -2;
+.subContent3 .wrap3 ul li:before{
+  background: #00a5b1;
 }
 
-/* .txts {
-  padding: 50px 0 0 50px;
-  font-size: 1em;
-  color: #3a466a;
+/* section4 개설절차 */
+.openingProcedure {
+  background: url("../../imgs/B2B/b2b-bg-line.png") no-repeat 80px 50px;
+}
+
+.openingProcedure .ProcedureLine {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  font-size: 0.8rem;
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine1 {
+  margin-top: 20px;
+  padding-top: 20px;
+  
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.openingProcedure .ProcedureLine .lines {
+  width: 30%;
+  text-align: center;
+}
+
+.openingProcedure .ProcedureLine .cir {
+  box-sizing: border-box;
+  border: 3px solid #707070;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #707070;
   font-weight: 700;
-} */
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 
-.txts p {
-  padding-bottom: 30px;
+  font-size: 2em;
+  margin: auto;
+  color: #fff;
+
+  position: relative;
 }
 
-.b2b-c1Img {
+.openingProcedure .ProcedureLine:not(.ProcedureLine2) .cir::before {
   position: absolute;
-  top: 147px;
-  left: 0;
-  z-index: 1;
+  content: url("../../imgs/processes/cir-arr.png");
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  top: 45%;
+  left: 240%;
+  transform: translate(100%, -45%);
 }
 
-/* #00A5B1
-#3a466a
-#f2f2f2 */
+.openingProcedure .ProcedureLine.ProcedureLine2 .cir::before {
+  position: absolute;
+  content: url("../../imgs/processes/cir-arr.png");
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  top: 67%;
+  left: -280%;
+  transform: translate(150%, -45%) rotate(180deg);
+}
+
+.openingProcedure .ProcedureLine .cir1 {
+  background-color: #3a466a;
+  border: #3a466a;
+}
+
+.openingProcedure .ProcedureLine .cir9 {
+  background-color: #00a5b1;
+  border: #00a5b1;
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine1 .cir.cir3::before{
+  top: 200%;
+  left: 200%;
+  transform: translate(100%, -45%) rotate(90deg);
+}
+
+.openingProcedure .ProcedureLine.ProcedureLine2 .cir.cir6::before{
+  top: 200%;
+  left: -240%;
+  transform: translate(150%, -45%) rotate(90deg);
+}
+
+.openingProcedure .ProcedureLine .cir.cir9::before{
+  content: none;
+}
+
+.openingProcedure .ProcedureLine .cir span {
+  padding-top: 10px;
+}
+
+.openingProcedure .ProcedureLine div div h4 {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.openingProcedure .ProcedureLine div div div p {
+  line-height: 20px;
+}
+
+/* section5 contact */
+.subContent5 .contactTable{
+  width: 100%;
+  border-bottom: 1px solid #444;
+  border-spacing: 0;
+  text-align: center;
+}
+
+.subContent5 .contactTable thead th{
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #b7b7b7;
+  font-size: 1rem;
+  padding: 20px 0;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.subContent5 .contactTable tbody td{
+  padding: 20px 0;
+  border-top: 1px solid #f0f0f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.subContent5 .contactTable tbody td img{
+  width: 90px;
+}
+
+.subContent5 .btn {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.subContent5 .btn a {
+  width: 300px;
+  background: #00a5b1;
+  color: #fff;
+  min-width: 200px;
+  height: 50px;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.subContent5 .btn a:visited {
+  text-decoration: none;
+}
