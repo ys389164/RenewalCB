@@ -1,18 +1,55 @@
+h2{margin:0px;}
+h2 ul{
+  list-style-type:none;
+  text-align:center;
+  margin-bottom:10px;
+  padding:0px;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-bottom:0px;
+  background-color:lightseagreen;
+}
+h2 ul li{
+  cursor: pointer;
+  display:inline-block;
+  width:300px;
+  padding:0px;
+  }
 #logoTop{
-    text-align: center;
-    }
-  header {background-color: white; 
-    width:1920px;}
-  .category {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    margin-left:80px;
-    margin-right:80px;}
-  ul{padding: 0px;}
-  .category li {
-    list-style-type: none;
-    text-align: center;
-    padding-bottom:1em;}
+  text-align: center;
+  padding-right:10px;}
+header {
+  background-color: white;
+  position:absolute; 
+  width:1920px;
+  height:123px;}
+nav{
+  position:absolute;
+  width:1920px;
+  height:123px;}
+#listsCollection{
+  text-align:center;
+  width: 1916px;
+  height: 310px;
+  margin:0px;
+  background-color:paleturquoise;
+  border: 2px solid lightgray;
+  opacity: 0.7;
+  display: none;
+  
+}
+
+.lists {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  width: 300px;
+  }
+.lists ul{padding-left:0px;}
+.lists li {
+  cursor: pointer;
+  list-style-type: none;
+  text-align: center;
+  padding-bottom:1em;
+  font-weight:bold;
+  }
