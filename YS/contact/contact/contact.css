@@ -1,16 +1,17 @@
+/* banner */
 .banner {
-  width: 100%;
-  background-color: #00a5b1;
-  height: 230px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner h2 {
-  color: white;
-  font-size: 2em;
-}
+    width: 1920px;
+    background-color: #00a5b1;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner h2 {
+    color: white;
+    font-size: 2em;
+  }
 
 .subContentContainer {
   width: 1190px;
@@ -250,6 +251,7 @@ input[type="radio"]:focus, input[type="radio"]:checked {
     width: 100%;
     border-bottom: 1px solid #444;
     border-spacing: 0;
+    text-align: center;
 }
 
 .contactInfo .contactTable thead th{
@@ -266,4 +268,8 @@ input[type="radio"]:focus, input[type="radio"]:checked {
     border-top: 1px solid #f0f0f0;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+.contactInfo .contactTable tbody td img{
+    width: 90px;
 }
