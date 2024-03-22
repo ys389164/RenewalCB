@@ -1,0 +1,81 @@
+main{
+    border: 1px solid;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    height: 123px;
+    background: #3a466a30;
+}
+
+.footer{
+    height: 211px;
+    background: #3a466a30;
+}
+
+main .title, 
+main .date,
+main .contents{
+    width: 1190px;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* 경로 */
+main .path{
+
+    padding: 10px;
+
+    background: #00000035;
+
+    color: #ffffff;
+
+    margin-bottom: 80px;
+}
+main .path p{
+    width: 1190px;
+
+    margin: 0 auto;
+}
+main .path p a{
+    color: #fff;
+}
+
+/* 제목 */
+main .title{
+    text-align: center;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    color: #3a466a;
+}
+/* 날짜 */
+main .date{
+    text-align: center;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    color: #808080;
+
+    padding-bottom: 30px;
+}
+/* 이미지 */
+main .contents img{
+    display: block;
+    width: 700px;
+
+    margin: 0 auto;
+    margin: 50px auto;
+}
+/* 내용 */
+main .contents p{
+    text-align: center;
+
+    padding-bottom: 30px;
+
+    font-size: 0.9rem;
+}
