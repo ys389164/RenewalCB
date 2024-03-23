@@ -42,3 +42,7 @@ var swiper = new Swiper(".mySwiper", {
       clickable: true,
     },
   });
+
+  function redirectToMenuPage(url) {
+      window.location.href = url;
+  }

@@ -86,10 +86,6 @@ a {
     text-decoration: none;
 }
 
-h2 {
-    margin: 0px !important;
-}
-
 #menu {
     width: 1200px;
     height: 760px;
@@ -104,13 +100,17 @@ h2 {
 
 .menu_items {
     text-align: center;
-    background-color: beige;
+    /* background-color: beige; */
     margin: 30px;
     padding: 40px;
     width: 200px;
     height: 240px;
     position: relative;
     display: inline-block;
+}
+
+.menu_items:hover {
+    cursor: pointer;
 }
 
 .menu_items img{
@@ -145,4 +145,22 @@ h2 {
     width: 100%;
     height: auto;
 
+}
+
+
+#page2_title {
+    margin: 0px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    font-family: 'MICEGothic Bold';
+    font-size: 50px;
+}
+
+#page2_content {
+    position: absolute;
+    left: 100px;
+    top: 170px;
+    font-family: 'MICEGothic Bold';
+    font-size: 20px;
 }

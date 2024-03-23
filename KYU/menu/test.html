@@ -3,16 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>caffe bene</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="test.css">
-    
+    <link rel="stylesheet" href="../index/index.css">
 </head>
 
 <body>
     <header id="header" class="header"></header>
-
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -25,47 +24,59 @@
                 <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </div>
-        <div class="swiper-slide">
-            <a href="new.html"><h2>MENU</h2></a>
-            <div class="swiper mySwiper2" id="menu_section">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20240220718093.jpg"></div>
-                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20230816688838.jpg"></div>
-                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20230816290486.jpg"></div>
-                    <div class="swiper-slide menu"><img src="../imgs/nbanner/20220831657562.jpg"></div>
+            <div class="swiper-slide">
+                <div>
+                    <p id="page2_title">CAFFEBENE’S 봄시즌 신메뉴</p>
+                    <p id="page2_content">논산에서 온 싱그러운 딸기</p>
                 </div>
-            </div>
-            <div id="menu">
-                <div class="menu_items">
-                    <img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span>
-                </div>
-                <div class="menu_items">
-                    <img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span>
-                </div>
-                <div class="menu_items">
-                    <img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span>
-                </div>
-                <div class="menu_items">
-                    <img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span>
-                </div>
-                <div class="menu_items">
-                    <img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span>
-                </div>
-                <div class="menu_items">
-                    <img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span>
+                <div class="swiper newMenuSwiper">
+                    <div class="swiper-wrapper" id="menu">
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span></div>
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span></div>
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span></div>
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span></div>
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span></div>
+                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
             
-        <div class="swiper-slide">창업</div>
+        <div class="swiper-slide">
+            <a href=""><h2>창업</h2></a>
+            <div class="swiper mySwiper3" id="startup_section">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-1.jpg">
+                    </div>
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-2.jpg">
+                    </div>
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-3.jpg">
+                    </div>
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-4.jpg">
+                    </div>
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-5.jpg">
+                    </div>
+                    <div class="swiper-slide startup">
+                        <img src="../imgs/startup/wish-sd1-6.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- <div class="swiper-pagination"></div> -->
     </div>
 
     <footer id="footer" class="footer"></footer>
-    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="test.js"></script>
+    <!-- <script src="../index/index.js"></script> -->
 </body>
 
 </html>
