@@ -1,0 +1,50 @@
+@font-face{
+    font-family: 'MICEGothic';
+    src:
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+    }
+    body{
+    font-family:'MICEGothic';
+    font-size:18px;
+    }
+    h4{
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    color:midnightblue;
+    }
+    h5{
+    font-size: 25px;
+    color:lightseagreen;
+    }
+    h6{
+    font-size:20px;
+    color:darkcyan;
+    }
+    li{padding-bottom:10px;}
+    ul > li{
+    counter-increment: custom-counter;
+    list-style-type:none;
+    }
+    ul > li:before{content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
+    ol li{list-style-type:lower-alpha;
+    }
+    table{
+    border-bottom:1px solid black; 
+    text-align: center;
+    }
+    td{
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    width:500px;
+    height:100px;
+    }
+    #tdOne{
+    border-bottom:10px solid midnightblue;
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    }

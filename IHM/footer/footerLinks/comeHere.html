@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <title>Document</title>
 <style>
+@font-face{
+font-family: 'MICEGothic';
+src:
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+}
 body{
-    font-size: 18px;
-    font-weight:bold;}
+font-family:'MICEGothic';
+font-size:18px;
+}
 h3{
-    font-size:24px;
-    color:rgb(65, 65, 109);}
+font-size:24px;
+color:midnightblue;
+}
 div{
-    display:block;
-    height:300px;}
+display:block;
+height:300px;
+}
 span{
-    font-size: 18px;
-    font-weight:bold;
-    color:rgb(65, 65, 109);
+font-size: 18px;
+font-weight:bold;
+color:midnightblue;
 }
 tr td{
-    font-size: 16px;
-    padding:10px;}
-#cafeMap{float:left;}
-#plant{float:right;}
+font-size: 16px;
+padding:10px;
+}
+img{
+width:350px; 
+height:280px;
+}
+#cafeMap{
+float:left;
+}
+#plant, #plant2{
+float:right;
+}
 
 </style>
 <script>
@@ -38,7 +56,7 @@ tr td{
 <h3>개인정보 취급방침</h3>
 <hr>
 <div>
-    <img id="cafeMap" src="projectimages/카페베네 본사위치.png">
+    <img id="cafeMap" src="projectimages/caffebenePlace.png">
     <table>
         <tr><td><span>카페베네 본사 주소:</span> 경기도 양주시 백석읍 권율로1203번길 8-13, 2층</td></tr>
         <tr><td><span>고객센터:</span> 1688-4666</td></tr>
@@ -56,7 +74,8 @@ tr td{
         <tr><td><span>양주센터:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</td></tr>
     </table>
     
-    <img id="plant" src="projectimages/카페베네 로스팅 플랜트.png">
+    <img id="plant" src="projectimages/caffebeneRoastingPlant.png">
+    <img id="plant2" src="projectimages/roastingplant.jpg">
     
 </div>
     

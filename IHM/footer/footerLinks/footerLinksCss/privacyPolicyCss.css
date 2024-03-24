@@ -1,17 +1,57 @@
-body{
-        font-size: 11px;
-        font-weight:bold;}
-    h3{
-        font-size:24px;
-        color:rgb(65, 65, 109);}
+@font-face{
+    font-family: 'MICEGothic';
+    src:
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+    }
+    body{
+    font-family:'MICEGothic';
+    font-size:18px;
+    }
     h4{
-        font-size: 20px;
-        font-weight:bold;
-        color:darkturquoise;}
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    color:midnightblue;
+    }
+    h6{
+    font-size:20px;
+    color:darkcyan;
+    }
+    li{padding-bottom:10px;}
+    ul>li{
+    list-style-type:square;
+    }
+    .here{
+    list-style-type:none;
+    }
     table{
-        border-bottom:1px solid black; 
-        text-align: center;}
+    border-bottom:1px solid black; 
+    text-align: center;
+    }
+    td{
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    width:500px;
+    height:100px;
+    }
+    #tdOne{
+    border-bottom:10px solid midnightblue;
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    }
+   
+    #thirdParty{
+    border-bottom:1px solid black; 
+    text-align: center;
+    }
     th{
-        background-color:rgb(65, 65, 109);
-        color:white;}
-    tr{border-bottom: 1px solid gray;}
+    background-color:rgb(65, 65, 109);
+    color:white;
+    }
+    tr{
+    border-bottom: 1px solid gray;
+    }
