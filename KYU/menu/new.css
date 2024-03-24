@@ -90,6 +90,11 @@ body::-webkit-scrollbar {
     /* box-sizing: border-box; */
 }
 
+.menu_items:hover {
+    cursor: pointer;
+    border: 2px solid black;
+}
+
 .menu_items img {
     width: 200px;
 }
