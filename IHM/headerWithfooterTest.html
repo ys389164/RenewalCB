@@ -89,6 +89,59 @@ nav{
   a{
     text-decoration:none; 
     color:black;}
+
+    /*여기서부터는 footer*/
+    .footerMembers{
+        display:inline-block;
+        vertical-align:top;
+        margin-left:8%;
+        margin-right:8%;}
+    footer {
+        display:inline-block;
+        vertical-align: bottom;
+        text-align:center;
+        background-color: white;
+        font-weight: bold;
+        width:1920px;}
+    a{text-decoration: none;}
+    #borderLine{}
+    #goUp{
+      cursor:pointer;
+      display:block;
+      position:relative;
+      top:-20px;
+      float:right;
+    }
+    hr{display:block; top:20px;}
+    #footFive li{
+        list-style-type:none;
+        text-align: left;
+        color: midnightblue;
+        padding: 10px; width:320px;}
+    #companyInfo li{
+        list-style-type:none; 
+        text-align:left;
+        padding-bottom:10px;}
+    #logoTwo {
+        text-align: center;
+        margin-right: 20px;}
+    #forCustomerService {
+        color: #00a090;
+        font-weight: bold;}
+    #footInfo {
+        width: 700;
+        height: 100;
+        font-size: 12px;
+        padding: 10px;}
+    #copyright { color: lightgray;}
+    .hyperlink {
+        display: inline-block;
+        margin:5px;
+        width:32px; 
+        height:38px;}
+    #sns{
+        text-align:center;
+        padding-right:77px;}
       
 </style>
     <script>//코멘트용 스크립트
@@ -232,7 +285,61 @@ nav{
         </nav>
     </header>
     
-
+    <footer>
+        <div id="borderLine">
+          <img id="goUp" src="projectimages/gotoheader.png"/>
+          <hr style="border: 2px solid black" />
+        </div>
+        
+    
+          <div class="footerMembers">
+            <div id="footInfo">
+              <ul id="companyInfo">
+                <li>경기도 양주시 백석읍 권율로1203번길 8-13, 2층</li> 
+                <li>대표이사박그레타</li>
+                <li>사업자등록번호206-86-29161</li>
+                <li>e-mail: benecs@caffebene.co.kr</li> 
+                <li><span id="copyright">
+                  Copyright© by Caffebene, All rights reserved.</span></li>
+              </ul>
+            </div>
+          </div>
+          
+        <div class="footerMembers">
+          <a href="http://www.caffebene.co.kr/"><img id="logoTwo" src="projectimages/caffebeneLogoBottom.png" ></a>
+        </div>
+    
+        <div class="footerMembers">
+          <ul id="footFive">
+            <a href="footerLinks/comeHere.html"><li>오시는 길</li></a>
+            <a href="footerLinks/coopAsk.html"><li>제휴문의</li></a>
+            <a href="footerLinks/privacyPolicy.html"><li>개인정보처리방침</li></a>
+            <a href="footerLinks/userPolicyBenecard.html"><li>이용약관</li></a>
+            <li><span id="forCustomerService">고객센터1688-4666</span></li>
+          </ul>
+        </div>
+          
+         <div id="sns">
+          <div class="hyperlink">
+            <a href="https://www.instagram.com/caffebene_official/">
+              <img src="projectimages/caffebeneinsta.png"/></a>
+          </div>
+          <div class="hyperlink">
+            <a href="https://blog.naver.com/caffebene-official">
+              <img src="projectimages/caffebeneblog.png"/></a>
+          </div>
+          <br>
+          <div class="hyperlink">
+            <a href="https://www.facebook.com/caffebene">
+              <img src="projectimages/caffebenefacebook.png"/></a>
+          </div>
+          <div class="hyperlink">
+            <a href="https://www.youtube.com/channel/UCQ7MW5IpWOL9LwQqr_AWQ9A/featured">
+                <img src="projectimages/caffebeneyoutube.png"/></a>
+        </div>
+          
+         
+        </footer>
  
 
   </body>
