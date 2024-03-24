@@ -1,39 +1,54 @@
+/*여기서부터는 footer*/
+html{scroll-behavior:smooth;}/*나중에 헤더 부분에 추가할 것*/
 .footerMembers{
     display:inline-block;
     vertical-align:top;
-    padding-right:20px;
-  }
-  footer {
+    margin-left:8%;
+    margin-right:8%;}
+footer {
     display:inline-block;
     vertical-align: bottom;
     text-align:center;
     background-color: white;
     font-weight: bold;
     width:1920px;}
-  #up{
-    width:35px;}
-  #footFive li{
+a{text-decoration: none;}
+#goUp{/*여기야!*/
+  cursor:pointer;
+  border-radius: 50%;
+  border:5px solid lightseagreen;
+  display:none;
+  position:fixed;
+  right:20px;
+  bottom:100px;
+  }
+hr{display:block; top:20px;}
+#footFive li{
     list-style-type:none;
     text-align: left;
     color: midnightblue;
     padding: 10px; width:320px;}
-  #companyInfo li{
+#companyInfo li{
     list-style-type:none; 
     text-align:left;
     padding-bottom:10px;}
-  #logoBottom {
+#logoTwo {
     text-align: center;
     margin-right: 20px;}
-  #forCustomer {
+#forCustomerService {
     color: #00a090;
     font-weight: bold;}
-  #footInfo {
+#footInfo {
     width: 700;
     height: 100;
     font-size: 12px;
     padding: 10px;}
-  #copyright { color: lightgray;}
-  .hyperlink {
+#copyright { color: lightgray;}
+.hyperlink {
     display: inline-block;
+    margin:5px;
     width:32px; 
     height:38px;}
+#sns{
+    text-align:center;
+    padding-right:77px;}
