@@ -2,27 +2,48 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>come here</title>
 <style>
-body{
-    font-size: 18px;
-    font-weight:bold;}
-h3{
-    font-size:24px;
-    color:rgb(65, 65, 109);}
-div{
-    display:block;
-    height:300px;}
-span{
-    font-size: 18px;
-    font-weight:bold;
-    color:rgb(65, 65, 109);
+@font-face{
+font-family: 'MICEGothic';
+src:
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
 }
-tr td{
-    font-size: 16px;
-    padding:10px;}
-#cafeMap{float:left;}
-#plant{float:right;}
+body{
+font-family:'MICEGothic';
+font-size:20px;
+}
+h3{
+text-align: center;
+font-size:24px;
+color:midnightblue;
+}
+div{
+display:block;
+height:300px;
+}
+span{
+font-size: 18px;
+font-weight:bold;
+color:midnightblue;
+}
+li{
+list-style-type:none;
+font-size: 16px; 
+padding:20px;}
+img{
+width:350px; 
+height:280px;
+}
+#cafeMap{
+float:left;
+}
+#plant, #plant2{
+float:right;
+}
+#caffebeneWhere{float:right;}
+#othersWhere{float:left;}
 
 </style>
 <script>
@@ -35,30 +56,33 @@ tr td{
 </script>
 </head>
 <body>
-<h3>개인정보 취급방침</h3>
+<h3>오시는 길</h3>
 <hr>
-<div>
-    <img id="cafeMap" src="projectimages/카페베네 본사위치.png">
-    <table>
-        <tr><td><span>카페베네 본사 주소:</span> 경기도 양주시 백석읍 권율로1203번길 8-13, 2층</td></tr>
-        <tr><td><span>고객센터:</span> 1688-4666</td></tr>
-        <tr><td><span>대중교통:</span> 지하철로 뚝섬역에서 내린 뒤 6번출구로 나와서 이동.</td></tr>
-    </table>
-    
+
+<img id="cafeMap" src="projectimages/caffebenePlace.png">
+<div id="caffebeneWhere">
+    <ul>
+        <li><span>카페베네 본사 주소:</span>경기도 양주시 백석읍 권율로1203번길 8-13, 2층</li>
+        <li><span>고객센터:</span> 1688-4666</li>
+        <li><span>대중교통:</span> 지하철로 뚝섬역에서 내린 뒤 6번출구로 나와서 이동.</li>
+    </ul>   
 </div>
     
 
-<div>
-    <table>
-        <tr><td><span>부산영업소:</span>	부산광역시 해운대구 센텀서로30, 22층(우동,KNN타워)</td></tr>
-        <tr><td><span>대전영업소:</span>	대전광역시 동구 한밭대로 1297번길 9, 종근당빌딩 702호</td></tr>
-        <tr><td><span>로스팅 플랜트:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</td></tr>
-        <tr><td><span>양주센터:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</td></tr>
+<div id="othersWhere">
+    <ul>
+        <li><span>부산영업소:</span>	부산광역시 해운대구 센텀서로30, 22층(우동,KNN타워)</li>
+        <li><span>대전영업소:</span>	대전광역시 동구 한밭대로 1297번길 9, 종근당빌딩 702호</li>
+        <li><span>로스팅 플랜트:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</li>
+        <li><span>양주센터:</span>	경기도 양주시 백석읍 권율로 1203번길 8-13</li>
+    </ul>
     </table>
-    
-    <img id="plant" src="projectimages/카페베네 로스팅 플랜트.png">
-    
 </div>
+    
+    <img id="plant" src="projectimages/caffebeneRoastingPlant.png">
+    <img id="plant2" src="projectimages/roastingplant.jpg">
+    
+
     
 </body>
 </html>
