@@ -1,3 +1,24 @@
+window.addEventListener('load', () => {
+    callJSON('./store_info.json', function(jsonResponse) {
+        jsonArr = jsonResponse;
+        pageBtnEvt(1);
+    });
+});
+
+// Json 호출
+function callJSON(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            let jsonResponse = JSON.parse(xhr.responseText)
+            callback(jsonResponse);
+        }
+    };
+    xhr.send();
+}
+
+
 /* ↓ 지도 API ↓ */
 // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
@@ -5,13 +26,15 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
         level: 4 // 지도의 확대 레벨
+
     };  
 
 // 지도를 생성합니다    
 var map = new kakao.maps.Map(mapContainer, mapOption); 
 // 장소 검색 객체를 생성합니다
 var ps = new kakao.maps.services.Places(); 
-
+map.setMinLevel(4);
+map.setMaxLevel(13);
 
 // 키워드로 장소를 검색합니다
 ps.keywordSearch('카페베네', placesSearchCB);
@@ -47,11 +70,32 @@ function displayMarker(place) {
         position: new kakao.maps.LatLng(place.y, place.x) ,
         image: markerImage
     });
+    
 
+    // let Jsonplace = jsonArr[marker.idx]
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-        infowindow.setContent('<div id="marker_img" style="position:relative; width:150px; text-align:center; padding:5px; font-size:0.9em; border:2px solid #3a466a; border-radius:50px; background:#ffffff;color:#3a466a">' + place.place_name + '</div>');
+
+        if(place.place_name === place.store_name){
+            
+        }
+        infowindow.setContent(`<div id="marker_img">
+                                <h4>${place.place_name}</h4>
+                                <div class="icons">있는대로 넣기</div>
+                                <div>${place.address_name}</div>
+                                <div>${place.phone}</div>
+                                </div>`);
+
+                                // <h4>매장명</h4>
+                                // <div class="icons">있는대로 넣기</div>
+                                // <p class="addr">주소</p>
+                                // <p class="phone">전화</p>
+                                // <div class="icons">
+                                //     <span class="s-ico1">휴게</span>
+                                //     <span class="s-ico4">주차</span>		
+                                //     <span class="s-ico5">와이파이</span>	
+                                // </div>
         $(function(){
             $('#marker_img').parent().css({'border':'0', 'background':'0'});
             $('#marker_img').parent().parent().css({'border':'0', 'background':'0'});
