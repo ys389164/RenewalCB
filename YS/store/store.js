@@ -1,9 +1,26 @@
-const pagination =document.querySelector('.pagination .pagingNumWrap');
-callJSON('./store_info.json',pagination)
-let jsonArr;
-window.addEventListener('load',()=>{
-    pageBtnEvt(1)
-})
+const pagination = document.querySelector('.pagination .pagingNumWrap');
+
+window.addEventListener('load', () => {
+    callJSON('./store_info.json', function(jsonResponse) {
+        jsonArr = jsonResponse;
+        pageBtnEvt(1);
+    });
+});
+
+// Json 호출
+function callJSON(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            let jsonResponse = JSON.parse(xhr.responseText);
+            callback(jsonResponse);
+        }
+    };
+    xhr.send();
+}
+
+
 
 // 버튼 호출
 const setPagenation = (str,arr=jsonArr) => {
@@ -51,7 +68,6 @@ const pageBtnEvt = (num, arr=jsonArr) => {
     let mapList_li_Tag = ''
 
     for(let x=0; x<5; x++){
-        console.log(arr);
         mapList_li_Tag += `
         <li onclick="storeDetailinfo('${arr[num*5+x-5].store_name}')">
             <div class="listItemWrap">
