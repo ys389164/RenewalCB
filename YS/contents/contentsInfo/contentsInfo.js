@@ -18,6 +18,8 @@ let menuInfo;
                 return menuInfo = saveDataList[x]
             }
         }
+
+
     }
 })()
 
@@ -45,6 +47,7 @@ const bindingTypeOne = () => {
 }
 
 window.onload=()=>{
-    console.log(menuInfo);
-    dataBinding();
+    setTimeout(()=>{
+        dataBinding();
+    }, 10);
 }

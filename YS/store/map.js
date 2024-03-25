@@ -58,7 +58,7 @@ function placesSearchCB (data, status, pagination) {
 }
 // 지도에 마커를 표시하는 함수입니다
 function displayMarker(place) {
-    var imageSrc = "../imgs/localStore/s-pin.png"; // 마커이미지의 주소입니다
+    var imageSrc = "/YS/imgs/localStore/s-pin.png"; // 마커이미지의 주소입니다
     imageSize = new kakao.maps.Size(55, 70); // 마커이미지의 크기입니다
 
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
@@ -76,30 +76,45 @@ function displayMarker(place) {
     // 마커에 클릭이벤트를 등록합니다
     kakao.maps.event.addListener(marker, 'click', function() {
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-
-        if(place.place_name === place.store_name){
-            
+        
+        const newIconObject = jsonArr.filter(item=>{return place.place_name.includes(item.store_name)}).map(item=>{return item.icons});
+        const newIconOneArr = newIconObject.join('').split(',');
+        const iconPathArr = changeIconPath(newIconOneArr)
+        let iconElement = ''
+        for(let x=0; x<iconPathArr.length; x++){
+            iconElement += `<img src="${iconPathArr[x]}" alt="${newIconOneArr[x]}" />`
         }
+
         infowindow.setContent(`<div id="marker_img">
                                 <h4>${place.place_name}</h4>
-                                <div class="icons">있는대로 넣기</div>
+                                <div class="icons">${iconElement}</div>
                                 <div>${place.address_name}</div>
                                 <div>${place.phone}</div>
                                 </div>`);
-
-                                // <h4>매장명</h4>
-                                // <div class="icons">있는대로 넣기</div>
-                                // <p class="addr">주소</p>
-                                // <p class="phone">전화</p>
-                                // <div class="icons">
-                                //     <span class="s-ico1">휴게</span>
-                                //     <span class="s-ico4">주차</span>		
-                                //     <span class="s-ico5">와이파이</span>	
-                                // </div>
         $(function(){
             $('#marker_img').parent().css({'border':'0', 'background':'0'});
             $('#marker_img').parent().parent().css({'border':'0', 'background':'0'});
         });
         infowindow.open(map, marker);
     });
+}
+
+// Text를 경로로 바꾸기
+const changeIconPath = (iconArr) => {
+    const newIconArr = ["휴게","회의","흡연","주차","와이파이","배달"];
+    const newIconPathArr = ["/YS/imgs/localStore/s-ico1.png","/YS/imgs/localStore/s-ico2.png","/YS/imgs/localStore/s-ico3.png","/YS/imgs/localStore/s-ico4.png","/YS/imgs/localStore/s-ico5.png","/YS/imgs/localStore/s-ico6.png"];
+
+    const resultArr= [];
+    for(let x=0; x<iconArr.length; x++){
+        const savePathIdx = newIconArr.indexOf(iconArr[x]);
+        resultArr.push(newIconPathArr[savePathIdx]);
+    }
+    
+    return resultArr[0] === undefined ? [] : resultArr;
+}
+
+window.onload=()=>{
+    setTimeout(()=>{
+        displayMarker();
+    }, 10);
 }
