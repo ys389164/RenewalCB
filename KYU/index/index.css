@@ -27,7 +27,7 @@ body {
     height: 100%;
 }
 
-.swiper-slide {
+.mySwiper2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -36,7 +36,7 @@ body {
     align-items: center;
 }
 
-.swiper-slide img {
+.mySwiper2 .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -148,19 +148,3 @@ a {
 }
 
 
-#page2_title {
-    margin: 0px;
-    position: absolute;
-    left: 100px;
-    top: 100px;
-    font-family: 'MICEGothic Bold';
-    font-size: 50px;
-}
-
-#page2_content {
-    position: absolute;
-    left: 100px;
-    top: 170px;
-    font-family: 'MICEGothic Bold';
-    font-size: 20px;
-}

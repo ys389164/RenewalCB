@@ -92,7 +92,7 @@ body::-webkit-scrollbar {
 
 .menu_items:hover {
     cursor: pointer;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .menu_items img {
