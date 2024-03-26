@@ -17,6 +17,13 @@ body{
     font-size: 20px;
     overflow:hidden;
 }
+@keyframes slide{
+    0%{}
+    25%{}
+    50%{}
+    75%{}
+    100%{}
+}
 #allTopPic{/*중간 배너. 스르륵 넘어간다*/
     /*position:absolute;
     right:33%;
@@ -30,6 +37,12 @@ body{
   z-index: 999;
   width: 1920px;
   height: 123px;
+
+  animation-name: slide;
+  animation-duration: ;
+  animation-iteration-count:infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
 }
 div{
     width:700px;
