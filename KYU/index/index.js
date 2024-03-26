@@ -18,10 +18,6 @@ var swiper2 = new Swiper(".mySwiper2", {
     delay: 5000,
     disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
 
 var swiper = new Swiper(".mySwiper3", {
@@ -41,47 +37,6 @@ var swiper = new Swiper(".mySwiper3", {
 function redirectToMenuPage(url) {
     window.location.href = url;
 }
-
-var swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
-  slidesPerView: 1,
-  mousewheel: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-var swiper2 = new Swiper(".mySwiper2", {
-  direction: "horizontal",
-  effect: "fade",
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-var swiper3 = new Swiper(".mySwiper3", {
-  effect: "fade",
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 7000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-
 
 var swiper5 = new Swiper(".newMenuSwiper", {
   effect: "flip",
@@ -268,3 +223,16 @@ let slide7 = document.querySelector("#text5_title");
 let slide7_2 = document.querySelector("#text5_content");
 observer7.observe(slide7);
 observer7.observe(slide7_2);
+
+let imgObserver5 = new IntersectionObserver((e)=>{
+  e.forEach((s)=>{
+    if(s.isIntersecting){
+      s.target.style.animation = "imgShow 2s";
+    }
+    else{
+      s.target.style.animation = "imgHide 2s";
+    }
+  })
+})
+let imgSlide5 = document.querySelector("#footer_img");
+imgObserver5.observe(imgSlide5);

@@ -245,3 +245,7 @@ td {
 /* #menu_warning {
     text-align: right;
 } */
+
+hr {
+    margin: 8px 0px;
+}
