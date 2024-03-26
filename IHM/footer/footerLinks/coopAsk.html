@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <title>Document</title>
 <style>
+@font-face{
+font-family: 'MICEGothic';
+src:
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+}
 body{
+    font-family:'MICEGothic';
     display:flex;
     justify-content: center;
     align-items: center;
@@ -38,6 +45,7 @@ select{
     border:0px;
 }
 input{
+    font-size:15px;
     background-color: rgb(240, 240, 240);
     height:30px;
     border:0px;}
@@ -45,10 +53,56 @@ input[type=text], textarea{
     width:400px;
     background-color: rgb(240, 240, 240);
     border:0px;}
-input[type=email]{width:120px;}
-#fileSearch{
-    cursor:pointer;
+input[type=email]{
+    width:120px;
 }
+input[type=password]{
+    width:6em;
+    display:flex;
+    margin-right:3px;
+}
+label{position:relative;}
+#BtnCover{
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    left:400px;
+    letter-spacing: 3px;
+    color:white;
+    background-color: gray;
+    z-index: 90;
+}
+#fileBtn{
+    position:absolute;
+    width:100px;
+    height:30px;
+    left:400px;
+}
+#fileName{
+    display:flex;
+    align-items: center;
+    position:absolute;
+    width:400px;
+    height:30px;
+    background-color: rgb(240, 240, 240);
+}
+#sixcode{display:flex;}
+#sixNum{
+    font-size:15px;
+    letter-spacing:2px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:6em;
+    height:30px;
+    margin-right:10px;
+    text-align: center;
+    background-color: gray; 
+    color:white; 
+    }
 #submitBtn{
     cursor:pointer;
     color:white;
@@ -58,85 +112,134 @@ input[type=email]{width:120px;}
     background-color: rgb(65, 65, 109);
     }
 </style>
-<script>
-    
-    
 
 
-</script>
 </head>
-<script>
+<script>//코멘트용 스크립트
     /*
 
-    2.회사명, 이메일, 제목, 내용, 자동등록방지 번호를 입력하지 않았을 경우
+    2.회사명, 이메일, 제목, 내용을 입력하지 않았을 경우
     ''을 입력해주세요라는 경고가 뜬다.(alert) 그리고 아무 일도 일어나지 않는다.
     (return false)
 
-    3.이메일은 형식을 대조해야 한다. 배웠다. placeholder. 그리고 옵션을 선택하면
-    그 내용이 텍스트 상자 안에 들어가게 해야 한다.
 
-    4. 랜덤 숫자(Math.random)로 자동등록방지 숫자 여섯자리를 설정한다. 그리고 
-    텍스트에 입력한 숫자와 대조해서 틀리다면(함수명!==value) 숫자가 맞지 않는다는
-    경고창이 뜨고(alert), 아무 일도 일어나지 않는다(return false). 새로고침 버튼을
-    누르면(onclick) 숫자가 다시 설정되고(Math.random) 기존의 숫자는 무효화된다. 옆에
-    자동 등록 방지를 위해 숫자를 적어달라는 문구가 있다.
-
-    5. 파일 버튼을 오른쪽으로 옮긴다. 마우스버튼 올리면 커서가 손 모양으로 
-    변하게. 잘 보면 버튼을 누르든 텍스트를 누르든 파일 선택 창이 나온다.
-
-    8. 기타: 표 자세히 보면 이름이랑 텍스트 부분 사이에 틈이 있다. 그걸 없애야 함.
-    마지막 부분만 borderbottom을 빼는 방법이 있나?
-
-    6,7 빼고 다 자바스크립트.
+    4. 파일첨부 부분에서 확장자가 jpg, jpeg, png, gif, pdf, ppt, xls, doc이 
+    아닐 경우 '확장자를 확인해주세요' 라는 경고가 뜬다.
+    파일이름의 뒤 네 글자 또는 다섯글자를 비교하면 되나?
 
     */
 </script>
 <body>
-<script>//선택되지 않으면 경고창 나오는 함수
-    /*function finalCheck(){
-    let code=Math.floor(Math.random()*9+1);
-    for(i=0;i<6;i++){
-        codeNumbers=code[i];
-        document.write(codeNumbers);
-    };
-};
-    let codeNumbers=new Array(6);
-    finalCheck();*/
+<script>
+
+//회사명, 이메일, 제목, 내용 중 하나라도 입력하지 않으면 경고창 나오는 함수.
+/*document.addEventListener('DOMContentLoaded', function(){
+    let complete=document.getElementById('submitBtn');
+
+complete.addEventListener("click", (e)=>{
+    if(askCheck()){
+        alert("등록이 완료되었습니다.");
+        return;
+    }
+});
+
+function askCheck(){
+    let select=document.getElementById('strawberry');
+    let comp=document.getElementById('company');
+    let mailOne=document.getElementById('email1');
+    let mailTwo=document.getElementById('email2');
+    let firstTitle=document.getElementById('title');
+    let secondContent=document.getElementById('content');
+
+    let letter=document.getElementById('userType');
+    let writtenCode=letter.value;//내가 입력한 숫자
+    let password=document.getElementById('sixNum');
+    let Check=password.textContent;//임의로 나온 숫자
+
+    if(select.value==="none"){
+        alert('어떤 일로 문의하셨는지 선택해주세요');
+        return false;
+    }
+    if(!comp.value){
+        alert('회사명을 입력해 주세요.');   
+        return false;
+    }
+    if(!mailOne.value){
+        alert('이메일을 입력해 주세요.');   
+        return false;
+    }
+    if(!mailTwo.value){
+        alert('이메일을 입력해 주세요.');   
+        return false;
+    }
+    if(!firstTitle.value){
+        alert('제목을 입력해 주세요.'); 
+        return false;
+    }
+    if(!secondContent.value){
+        alert('내용을 입력해 주세요.'); 
+        return false;
+    }
+    if(writtenCode===""){
+        alert('자동등록방지 번호를 입력해 주세요');
+        return false;
+    }else if(writtenCode.length<6||writtenCode!==Check){
+        alert('번호가 틀렸습니다.');
+        return false;
+    }
+    return true;
+};  
+        });
+
 
 document.addEventListener('DOMContentLoaded', function(){
-    let btn=document.getElementById('submitBtn');
-    btn.addEventListener("click", function(){
-        let select=document.getElementById('strawberry');
-        let sele=select.value;
-        if(sele==="none"){
-        alert('어떤 일로 문의하셨는지 선택해주세요');
-        }else{
-            return false;
-        }
-        });
-        });//선택 안 하면 경고창이 나오는 함수.
-    
-let btn=document.getElementById('submitBtn');
-btn.addEventListenter("click", function(){
-    let letter=getElementByTagName('input');
-    let password=getElementById('checknum');
-    let code=Math.floor(Math.random()*9+1);//난수 함수의 변수 적기
-    if(letter.value==''){
-        alert('자동등록방지 번호를 입력해 주세요');
-    }if(password.length<6||password!==code){//조건을 이렇게 쓰는 게 맞나?
-        alert('번호가 틀렸습니다.')
+    function finalCheck(){
+        let codeNumbers=[];
+    for(i=0;i<6;i++){
+        let code=Math.floor(Math.random()*9+1);
+        codeNumbers.push(code);
     }
-});//텍스트를 입력하지 않으면 경고창이 뜨는 함수.
-    
-</script>
-<script>
-const type=document.getElementById('mailType');
-const choose=document.getElementById('emailChoose');
+    return codeNumbers.join('');
+    }
+        let sixNum=document.getElementById('sixNum');
+        let Check=finalCheck();
+        sixNum.textContent=Check;
+    });*/
+
+//셀렉트로 메일 형식 선택하면 텍스트에 입력되고 메일로 간주되는 함수(미완)
+
+let type=document.getElementById('email2');
+let choose=document.getElementById('emailChoose');
+let selectedEmail=choose.children;//option
+
 choose.addEventListener("change",() => {
-    let selectedValue=choose.value;
-    type.innerHTML="";
-    type.value=selectedValue;
+    for(i=0;i<selectedEmail.length;i++){
+    
+    if(selectedEmail[i].nodeType===1){
+    type.textContent=selectedEmail[i].value;
+    type.value=selectedEmail[i].value;
+    }
+    }
+    
 });
+
+
+    
+//#fileRoute 안에 내가 선택한 파일 경로가 출력된다.
+/*function DIYfileBtn(){
+    let DIYBtn=document.getElementById('fileBtn');//원래 input file. 여기 이름이 표시됨
+    let DIYText=document.getElementById('fileName');//여기에 표시하고 싶다.
+
+    DIYBtn.addEventListener("change",function(){
+        let filefile=DIYBtn.files[0].name;
+        DIYText.textContent=filefile;
+    });
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        DIYfileBtn();
+    });*/
+
+
 
 </script>
 <div id="bodyForm">
@@ -155,12 +258,12 @@ choose.addEventListener("change",() => {
                     <option value="place">부동산 점포 추천</option>
                 </select><br></td></tr>
         
-            <tr><td id="company">회사명</td>
-                <td class="text"><input type="text" size="90"><br></td></tr>
+            <tr><td >회사명</td>
+                <td><input id="company" type="text" size="90"><br></td></tr>
         
             <tr><td id="mail">이메일</td>
-                <td class="text"><input type="email" placeholder="id">
-                @<input type="email" id="mailType" placeholder="option value">
+                <td><input id="email1" type="email" placeholder="id">
+                @<input type="email" id="email2" placeholder="">
                 <select id="emailChoose">
                     <option value="write" selected>직접 입력</option>
                     <option value="naver.com">naver.com</option>
@@ -171,19 +274,21 @@ choose.addEventListener("change",() => {
                     <option value="hanmail.net">hanmail.net</option>
                 </select></td></tr>
         
-            <tr><td id="title">제목</td>
-                <td class="text"><input type="text"></td></tr>
+            <tr><td>제목</td>
+                <td><input id="title" type="text"></td></tr>
         
-            <tr><td id="content">내용</td>
-                <td class="text"><textarea rows="10"></textarea></td></tr>
+            <tr><td>내용</td>
+                <td><textarea id="content" rows="10"></textarea></td></tr>
         
             <tr><td id="files">파일첨부</td>
-                <td class="text"><label><input id="fileSearch" type="file"></label>
-                    <p>※최저용량:10MB ※파일 양식:
+                <td><label>
+                    <div id="fileName"></div>
+                    <div id="BtnCover">찾아보기</div><input id="fileBtn" type="file"></label>
+                    <p><br><br><br>※최저용량:10MB ※파일 양식:
                     jpg, jpeg, png, gif, pdf, ppt, xls, doc</p></td></tr>
         
             <tr><td id="checknum">자동등록방지</td>
-                <td class="text"><div>codeNumbers()</div><input type="password">
+                <td id="sixcode"><div id="sixNum"></div><input id="userType" type="password">
                     <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p></td></tr>
         </table>
     </div>
