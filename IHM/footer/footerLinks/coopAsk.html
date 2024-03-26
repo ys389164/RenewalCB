@@ -113,6 +113,7 @@ label{position:relative;}
     }
 </style>
 
+
 </head>
 <script>//코멘트용 스크립트
     /*
@@ -130,80 +131,68 @@ label{position:relative;}
 </script>
 <body>
 <script>
-/*let companyName;
-let email;
-let title;
-let content;
-
-//구분을 선택하지 않으면 경고창 나오는 함수
-document.addEventListener('DOMContentLoaded', function(){
-    let btn=document.getElementById('submitBtn');
-    btn.addEventListener("click", function(){
-        let select=document.getElementById('strawberry');
-        let sele=select.value;
-        if(sele==="none"){
-        alert('어떤 일로 문의하셨는지 선택해주세요');
-        }else{
-            return false;
-        }
-        });
-        });*/
 
 //회사명, 이메일, 제목, 내용 중 하나라도 입력하지 않으면 경고창 나오는 함수.
-document.addEventListener('DOMContentLoaded', function(){
-    let complete=document.getElementById('submitBtn')
+/*document.addEventListener('DOMContentLoaded', function(){
+    let complete=document.getElementById('submitBtn');
 
-    function askCheck(){
-        let comp=document.getElementById('company').value;
-        let mail=document.getElementById('email').value;
-        let firstTitle=document.getElementById('title').value;
-        let secondContent=document.getElementById('content').value;
-
-        if(!comp.trim()){//내용이 비어 있다.
-            alert('회사명을 입력해 주세요.');
-            return false;//다른 경고문은 안 나오고 이 경고문만 나온다.
-        }else if(!mail.trim()){
-            alert('이메일 주소를 입력해 주세요');
-            return false;
-        }else if(!firstTitle.trim()){
-            alert('제목을 입력해 주세요.');
-            return false;
-        }else if(!secondContent.trim()){
-            alert('내용을 입력해 주세요.');
-            return false;
-        }else{
-            alert('등록이 완료되었습니다.');
-            return true;
-        }
-    };//여기까지가 askCheck 함수.
-
-    complete.addEventListener("click", function(event){
-        event.preventDefault();//기본 동작, 즉 제출을 방지한다.
-        if(askCheck()){
-            document.getElementById('form').submit();
-            }
-        
-            
-    });//등록 버튼을 누르면 저 함수가 나온다.
-    
+complete.addEventListener("click", (e)=>{
+    if(askCheck()){
+        alert("등록이 완료되었습니다.");
+        return;
+    }
 });
 
-   
-            
+function askCheck(){
+    let select=document.getElementById('strawberry');
+    let comp=document.getElementById('company');
+    let mailOne=document.getElementById('email1');
+    let mailTwo=document.getElementById('email2');
+    let firstTitle=document.getElementById('title');
+    let secondContent=document.getElementById('content');
+
+    let letter=document.getElementById('userType');
+    let writtenCode=letter.value;//내가 입력한 숫자
+    let password=document.getElementById('sixNum');
+    let Check=password.textContent;//임의로 나온 숫자
+
+    if(select.value==="none"){
+        alert('어떤 일로 문의하셨는지 선택해주세요');
+        return false;
+    }
+    if(!comp.value){
+        alert('회사명을 입력해 주세요.');   
+        return false;
+    }
+    if(!mailOne.value){
+        alert('이메일을 입력해 주세요.');   
+        return false;
+    }
+    if(!mailTwo.value){
+        alert('이메일을 입력해 주세요.');   
+        return false;
+    }
+    if(!firstTitle.value){
+        alert('제목을 입력해 주세요.'); 
+        return false;
+    }
+    if(!secondContent.value){
+        alert('내용을 입력해 주세요.'); 
+        return false;
+    }
+    if(writtenCode===""){
+        alert('자동등록방지 번호를 입력해 주세요');
+        return false;
+    }else if(writtenCode.length<6||writtenCode!==Check){
+        alert('번호가 틀렸습니다.');
+        return false;
+    }
+    return true;
+};  
+        });
 
 
-
-//셀렉트로 메일 형식 선택하면 텍스트에 입력되는 함수(미완)
-/*const type=document.getElementById('mailType');
-const choose=document.getElementById('emailChoose');
-choose.addEventListener("change",() => {
-    let selectedValue=choose.value;
-    type.innerHTML="";
-    type.value=selectedValue;
-});*/
-
-//자동방지숫자 랜덤으로 여섯개 나오는 함수.  
-/*document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
     function finalCheck(){
         let codeNumbers=[];
     for(i=0;i<6;i++){
@@ -215,39 +204,40 @@ choose.addEventListener("change",() => {
         let sixNum=document.getElementById('sixNum');
         let Check=finalCheck();
         sixNum.textContent=Check;
-        });
+    });*/
 
+//셀렉트로 메일 형식 선택하면 텍스트에 입력되고 메일로 간주되는 함수(미완)
+
+let type=document.getElementById('email2');
+let choose=document.getElementById('emailChoose');
+let selectedEmail=choose.children;//option
+
+choose.addEventListener("change",() => {
+    for(i=0;i<selectedEmail.length;i++){
     
-//자동방지숫자를 입력하지 않으면 경고창이 나오는 함수
-document.addEventListener('DOMContentLoaded', function(){
-    let btn=document.getElementById('submitBtn');
-    btn.addEventListener("click", function(){
-        let letter=document.getElementById('userType');
-        let writtenCode=letter.value;//내가 입력한 숫자
-        let password=document.getElementById('sixNum');
-        let Check=password.textContent;//임의로 나온 숫자
+    if(selectedEmail[i].nodeType===1){
+    type.textContent=selectedEmail[i].value;
+    type.value=selectedEmail[i].value;
+    }
+    }
+    
+});
 
-        if(writtenCode===""){
-            alert('자동등록방지 번호를 입력해 주세요');
-        }else if(writtenCode.length<6||writtenCode!==Check){
-            alert('번호가 틀렸습니다.')
-        }
-        });
-        });
+
     
 //#fileRoute 안에 내가 선택한 파일 경로가 출력된다.
-function DIYfileBtn(){
-        let DIYBtn=document.getElementById('fileBtn');//원래 input file. 여기 이름이 표시됨
-        let DIYText=document.getElementById('fileName');//여기에 표시하고 싶다.
+/*function DIYfileBtn(){
+    let DIYBtn=document.getElementById('fileBtn');//원래 input file. 여기 이름이 표시됨
+    let DIYText=document.getElementById('fileName');//여기에 표시하고 싶다.
 
-        DIYBtn.addEventListener("change",function(){
-            let filefile=DIYBtn.files[0].name;
-            DIYText.textContent=filefile;
-        });
-        }
-        document.addEventListener('DOMContentLoaded', function(){
-            DIYfileBtn();
-        });*/
+    DIYBtn.addEventListener("change",function(){
+        let filefile=DIYBtn.files[0].name;
+        DIYText.textContent=filefile;
+    });
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        DIYfileBtn();
+    });*/
 
 
 
@@ -268,12 +258,12 @@ function DIYfileBtn(){
                     <option value="place">부동산 점포 추천</option>
                 </select><br></td></tr>
         
-            <tr><td id="company">회사명</td>
-                <td><input type="text" size="90"><br></td></tr>
+            <tr><td >회사명</td>
+                <td><input id="company" type="text" size="90"><br></td></tr>
         
             <tr><td id="mail">이메일</td>
-                <td><input type="email" placeholder="id">
-                @<input type="email" id="mailType" placeholder="option value">
+                <td><input id="email1" type="email" placeholder="id">
+                @<input type="email" id="email2" placeholder="">
                 <select id="emailChoose">
                     <option value="write" selected>직접 입력</option>
                     <option value="naver.com">naver.com</option>
@@ -284,11 +274,11 @@ function DIYfileBtn(){
                     <option value="hanmail.net">hanmail.net</option>
                 </select></td></tr>
         
-            <tr><td id="title">제목</td>
-                <td><input type="text"></td></tr>
+            <tr><td>제목</td>
+                <td><input id="title" type="text"></td></tr>
         
-            <tr><td id="content">내용</td>
-                <td><textarea rows="10"></textarea></td></tr>
+            <tr><td>내용</td>
+                <td><textarea id="content" rows="10"></textarea></td></tr>
         
             <tr><td id="files">파일첨부</td>
                 <td><label>
