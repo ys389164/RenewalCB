@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 300px;
+      height: 300px;
+      padding: 50px;
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper newMenuSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../imgs/food/20240220566258.png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../imgs/food/20240220255156.png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../imgs/drink/20240220994528.png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../imgs/drink/20240220470602.png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../imgs/drink/20240220875379.png" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../imgs/drink/20240220479595.png" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".newMenuSwiper", {
+        effect: "flip",
+        grabCursor: true,
+        // pagination: {
+        //     el: ".swiper-pagination",
+        // },
+        // navigation: {
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+  </script>
+</body>
+
+</html>

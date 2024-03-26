@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="./contentsInfo.css">
+    <link rel="stylesheet" href="/IHM/header/header.css">
+    <link rel="stylesheet" href="/IHM/footer/footer.css">
     <title>게시판 상세페이지</title>
 </head>
 <body>
-    <header id="header" class="header">헤더영역</header>
+    <header id="header" class="header"></header>
     <main>
-        <div class="path">
-            <p></p>
-        </div>
+        <p class="path"></p>
         <h2 class="title"></h2>
         <p class="date"></p>
-
         <div class="contents"></div>
+
+        <div class="btn">
+            <a href="/YS/contents/contents.html">목록</a>
+          </div>
     </main>
-    <div id="footer" class="footer">푸터영역</div>
+    <div id="footer" class="footer"></div>
     <script src="./contentsInfo.js"></script>
+    <script src="/common/callHTML.js"></script>
 </body>
 </html>

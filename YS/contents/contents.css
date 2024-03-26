@@ -1,11 +1,6 @@
-.header {
-  height: 123px;
+main{
+    padding-bottom: 120px;
 }
-
-/* banner */
-/* main{
-    width: 1920px;
-} */
 .banner {
   width: 1920px;
   background-color: #00a5b1;

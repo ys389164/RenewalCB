@@ -1,81 +1,91 @@
-main{
-    border: 1px solid;
+main {
+  padding-bottom: 120px;
 }
 
-.header{
-    position: sticky;
-    top: 0;
-    height: 123px;
-    background: #3a466a30;
-}
-
-.footer{
-    height: 211px;
-    background: #3a466a30;
-}
-
-main .title, 
+main .title,
 main .date,
-main .contents{
-    width: 1190px;
+main .contents,
+main .btn {
+  width: 1190px;
 
-    margin: 0 auto;
-    margin-bottom: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 /* 경로 */
-main .path{
+main .path {
+  margin-top: 10px;
+  padding: 10px;
 
-    padding: 10px;
+  background: #00000035;
 
-    background: #00000035;
+  color: #ffffff;
 
-    color: #ffffff;
-
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
-main .path p{
-    width: 1190px;
+main .path p {
+  width: 1190px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
-main .path p a{
-    color: #fff;
+main .path p a {
+  color: #fff;
 }
 
 /* 제목 */
-main .title{
-    text-align: center;
+main .title {
+  text-align: center;
 
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 
-    color: #3a466a;
+  color: #3a466a;
 }
 /* 날짜 */
-main .date{
-    text-align: center;
+main .date {
+  text-align: center;
 
-    font-size: 0.95rem;
-    font-weight: bold;
+  font-size: 0.95rem;
+  font-weight: bold;
 
-    color: #808080;
+  color: #808080;
 
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 /* 이미지 */
-main .contents img{
-    display: block;
-    width: 700px;
+main .contents img {
+  display: block;
+  width: 700px;
 
-    margin: 0 auto;
-    margin: 50px auto;
+  margin: 50px auto;
 }
 /* 내용 */
-main .contents p{
-    text-align: center;
+main .contents p {
+  text-align: center;
 
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 
-    font-size: 0.9rem;
+  font-size: 0.9rem;
+}
+
+/* 목록 버튼 */
+main .btn {
+  text-align: center;
+}
+
+.btn a {
+  width: 300px;
+  background: #00a5b1;
+  color: #fff;
+  min-width: 200px;
+  height: 50px;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.btn a:hover {
+  box-shadow: -2px -2px lightseagreen, 2px 2px lightseagreen,
+    -2px 2px lightseagreen, 2px -2px lightseagreen;
 }
