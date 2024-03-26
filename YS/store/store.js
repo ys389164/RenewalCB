@@ -1,219 +1,153 @@
-// 마커를 담을 배열입니다
-var markers = [];
+const pagination = document.querySelector('.pagination .pagingNumWrap');
 
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
+window.addEventListener('load', () => {
+    callJSON('./store_info.json', function(jsonResponse) {
+        jsonArr = jsonResponse;
+        pageBtnEvt(1);
+    });
+});
 
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption);
-
-// 장소 검색 객체를 생성합니다
-var ps = new kakao.maps.services.Places();
-
-// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
-var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
-
-// 키워드로 장소를 검색합니다
-searchPlaces();
-
-// 키워드 검색을 요청하는 함수입니다
-function searchPlaces() {
-
-    var keyword = document.getElementById('keyword').value;
-
-    if (!keyword.replace(/^\s+|\s+$/g, '')) {
-        alert('키워드를 입력해주세요!');
-        return false;
-    }
-
-    // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-    ps.keywordSearch(keyword, placesSearchCB);
-}
-
-// 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
-function placesSearchCB(data, status, pagination) {
-    if (status === kakao.maps.services.Status.OK) {
-
-        // 정상적으로 검색이 완료됐으면
-        // 검색 목록과 마커를 표출합니다
-        displayPlaces(data);
-
-        // 페이지 번호를 표출합니다
-        displayPagination(pagination);
-
-    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
-
-        alert('검색 결과가 존재하지 않습니다.');
-        return;
-
-    } else if (status === kakao.maps.services.Status.ERROR) {
-
-        alert('검색 결과 중 오류가 발생했습니다.');
-        return;
-
-    }
-}
-
-// 검색 결과 목록과 마커를 표출하는 함수입니다
-function displayPlaces(places) {
-
-    var listEl = document.getElementById('placesList'),
-        menuEl = document.getElementById('menu_wrap'),
-        fragment = document.createDocumentFragment(),
-        bounds = new kakao.maps.LatLngBounds(),
-        listStr = '';
-
-    // 검색 결과 목록에 추가된 항목들을 제거합니다
-    removeAllChildNods(listEl);
-
-    // 지도에 표시되고 있는 마커를 제거합니다
-    removeMarker();
-
-    for (var i = 0; i < places.length; i++) {
-
-        // 마커를 생성하고 지도에 표시합니다
-        var placePosition = new kakao.maps.LatLng(places[i].y, places[i].x),
-            marker = addMarker(places[i]),
-            itemEl = getListItem(i, places[i]); // 검색 결과 항목 Element를 생성합니다
-
-        // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
-        // LatLngBounds 객체에 좌표를 추가합니다
-        bounds.extend(placePosition);
-
-        // 마커와 검색결과 항목에 mouseover 했을때
-        // 해당 장소에 인포윈도우에 장소명을 표시합니다
-        // mouseout 했을 때는 인포윈도우를 닫습니다
-        (function (marker, title) {
-            kakao.maps.event.addListener(marker, 'mouseover', function () {
-                displayInfowindow(marker, title);
-            });
-
-            // kakao.maps.event.addListener(marker, 'mouseout', function () {
-            //     infowindow.close();
-            // });
-
-            itemEl.onmouseover = function () {
-                displayInfowindow(marker, title);
-            };
-
-            // itemEl.onmouseout = function () {
-            //     infowindow.close();
-            // };
-        })(marker, places[i].place_name);
-
-        fragment.appendChild(itemEl);
-    }
-
-    // 검색결과 항목들을 검색결과 목록 Element에 추가합니다
-    listEl.appendChild(fragment);
-    menuEl.scrollTop = 0;
-
-    // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-    map.setBounds(bounds);
-}
-
-// 검색결과 항목을 Element로 반환하는 함수입니다
-function getListItem(index, places) {
-
-    var el = document.createElement('li'),
-        itemStr = '<div class="info">' +
-            '   <h5>' + places.place_name + '</h5>';
-
-    if (places.road_address_name) {
-        itemStr += '    <span>' + places.road_address_name + '</span>' +
-            '   <span class="jibun gray">' + places.address_name + '</span>';
-    } else {
-        itemStr += '    <span>' + places.address_name + '</span>';
-    }
-
-    itemStr += '  <span class="tel">' + places.phone + '</span>' +
-        '</div>';
-
-    el.innerHTML = itemStr;
-    el.className = 'item';
-
-    return el;
-}
-
-// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
-function addMarker(place) {
-    var imageSrc = '../imgs/localStore/s-pin.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
-        imageSize = new kakao.maps.Size(76, 95),  // 마커 이미지의 크기
-        // imgOptions = {
-        //     spriteSize: new kakao.maps.Size(76, 95), // 스프라이트 이미지의 크기
-        //     spriteOrigin: new kakao.maps.Point(0, (idx * 46) + 10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
-        //     offset: new kakao.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
-        // },
-        markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-        var marker = new kakao.maps.Marker({
-            map:map,
-            position: new kakao.maps.LatLng(place.y, place.x), // 마커의 위치
-            image: markerImage
-        });
-        
-        displayInfowindow(marker, place.place_name)
-    // marker.setMap(map); // 지도 위에 마커를 표출합니다
-    // markers.push(marker);  // 배열에 생성된 마커를 추가합니다
-
-    return marker;
-}
-
-// 지도 위에 표시되고 있는 마커를 모두 제거합니다
-function removeMarker() {
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(null);
-    }
-    markers = [];
-}
-
-// 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
-function displayPagination(pagination) {
-    var paginationEl = document.getElementById('pagination'),
-        fragment = document.createDocumentFragment(),
-        i;
-
-    // 기존에 추가된 페이지번호를 삭제합니다
-    while (paginationEl.hasChildNodes()) {
-        paginationEl.removeChild(paginationEl.lastChild);
-    }
-
-    for (i = 1; i <= pagination.last; i++) {
-        var el = document.createElement('a');
-        el.href = "#";
-        el.innerHTML = i;
-
-        if (i === pagination.current) {
-            el.className = 'on';
-        } else {
-            el.onclick = (function (i) {
-                return function () {
-                    pagination.gotoPage(i);
-                }
-            })(i);
+// Json 호출
+function callJSON(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            let jsonResponse = JSON.parse(xhr.responseText);
+            callback(jsonResponse);
         }
+    };
+    xhr.send();
+}
 
-        fragment.appendChild(el);
+
+
+// 버튼 호출
+const setPagenation = (str,arr=jsonArr) => {
+    if(str === 'next'){
+        nextBtnEvt(arr)
+        return;
     }
-    paginationEl.appendChild(fragment);
+    prevBtnEvt(arr);
 }
 
-// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
-// 인포윈도우에 장소명을 표시합니다
-//tag 작성하기
-function displayInfowindow(marker, title) {
-    console.log(title);
-    var content = `<div style="padding:5px;z-index:1;">${title}</div>`;
+// 다음버튼
+const nextBtnEvt = (arr) => {
+    const maxLength = Math.ceil(arr.length/5)
+    const firstTagVal = Number(pagination.children[0].dataset.value)
 
-    infowindow.setContent(content);
-    infowindow.open(map, marker);
+    if(firstTagVal < maxLength-5){
+        pagination.innerHTML = ''
+        let paging = ''
+        for(let x=0; x<5; x++ ){
+            if(firstTagVal+5+x <= maxLength)
+            paging+= `<div class="page-item" data-value="${firstTagVal+5+x}"><a class="page-link active" href="#" onclick="pageBtnEvt(${firstTagVal+5+x})">${firstTagVal+5+x}</a></div>`
+        }
+        pagination.innerHTML=paging;
+    }
 }
 
-// 검색결과 목록의 자식 Element를 제거하는 함수입니다
-function removeAllChildNods(el) {
-    while (el.hasChildNodes()) {
-        el.removeChild(el.lastChild);
+// 이전버튼
+const prevBtnEvt = (arr) => {
+    const firstTagVal = Number(pagination.children[0].dataset.value)
+
+    if(firstTagVal > 1){
+        pagination.innerHTML = ''
+        let paging = ''
+        for(let x=0; x<5; x++ ){
+            paging+= `<div class="page-item" data-value="${firstTagVal-5+x}"><a class="page-link active" href="#" onclick="pageBtnEvt(${firstTagVal-5+x})">${firstTagVal-5+x}</a></div>`
+        }
+        pagination.innerHTML=paging;
+    }
+}
+
+// 페이지네이션 버튼 이벤트
+const pageBtnEvt = (num, arr=jsonArr) => {
+    const map_wrapPlacesList = document.querySelector('.map_wrap #placesList');
+    map_wrapPlacesList.innerHTML='';
+    let mapList_li_Tag = ''
+
+    for(let x=0; x<5; x++){
+        mapList_li_Tag += `
+        <li onclick="storeDetailinfo('${arr[num*5+x-5].store_name}')">
+            <div class="listItemWrap">
+                <div class="itemTitle">
+                    ${arr[num*5+x-5].store_name}
+                </div>
+                <div class="telNum">
+                    ${arr[num*5+x-5].phone}
+                </div>
+                <div class="address">
+                    ${arr[num*5+x-5].address}
+                </div>
+            </div>
+        </li>`
+    }
+    map_wrapPlacesList.innerHTML=mapList_li_Tag;
+};
+
+// 매장 자세히보기
+const storeDetailinfo = (storeName) => {
+    ps.keywordSearch(`카페베네 ${storeName}`, placesSearchCB);
+}
+
+// 매장 리스트
+const searchStoreList = () => {
+    const keyword = document.getElementById('keyword');
+    const newJsonArr = jsonArr.filter(item => { return item.store_name.includes(keyword.value) });
+
+    ps.keywordSearch(`카페베네 ${keyword.value}`, placesSearchCB);
+    setStoreList(newJsonArr)
+    setStorePagenation(newJsonArr)
+}
+
+// 매장 검색시 리스트 새로만들기
+const setStoreList = (arr) => {
+    const map_wrapPlacesList = document.querySelector('.map_wrap #placesList');
+    map_wrapPlacesList.innerHTML='';
+    
+    let mapList_li_Tag = ''
+    for(let x=0; x<arr.length; x++){
+        mapList_li_Tag += `
+            <li onclick="storeDetailinfo('${arr[x].store_name}')">
+                <div class="listItemWrap">
+                    <div class="itemTitle">
+                        ${arr[x].store_name}
+                    </div>
+                    <div class="telNum">
+                        ${arr[x].phone}
+                    </div>
+                    <div class="address">
+                        ${arr[x].address}
+                    </div>
+                </div>
+            </li>
+        `
+    }
+    map_wrapPlacesList.innerHTML=mapList_li_Tag;
+}
+
+// 매장 검색시 페이지네이션 새로 만들기
+const setStorePagenation = (arr) => {
+    pagination.innerHTML = ''
+
+    if(arr.length<5){
+        document.querySelector('.prevEvt').classList.add('hidden')
+        document.querySelector('.nextEvt').classList.add('hidden')
+    }
+    if(arr.length>=5){
+        document.querySelector('.prevEvt').classList.remove('hidden')
+        document.querySelector('.nextEvt').classList.remove('hidden')
+    }
+    
+    if(arr.length > 5){
+        for(let x=0; x<5; x++){
+            pagination.innerHTML+=`<div class="page-item" data-value="${x+1}"><a class="page-link" href="#" onclick="pageBtnEvt(${x+1})">${x+1}</a></div>`
+        }
+        return;
+    }
+    for(let x=0; x<arr.length; x++){
+        console.log(arr);
+        pagination.innerHTML+=`<div class="page-item" data-value="${x+1}"><a class="page-link" href="#" onclick="pageBtnEvt(${x+1},${arr})">${x+1}</a></div>`
     }
 }

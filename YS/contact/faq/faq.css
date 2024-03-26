@@ -1,5 +1,6 @@
+/* banner */
 .banner {
-  width: 100%;
+  width: 1920px;
   background-color: #00a5b1;
   height: 230px;
   display: flex;
@@ -11,7 +12,6 @@
   color: white;
   font-size: 2em;
 }
-
 .subContentContainer {
   width: 1190px;
   height: auto;
@@ -108,6 +108,7 @@
 
 .subContentContainer .subContents .questionList button.on + .answer {
   max-height: 200px;
+  box-shadow: inset 0px 1px 1px #00000080;
 }
 
 .subContentContainer .subContents .questionList .answer .answerWrap{
@@ -150,8 +151,8 @@
   height: 30px;
   border-radius: 0px;
   position: absolute;
-  right: 10%;
-  margin: -7px 0 0;
+  /* right: 10%; */
+  margin: -20px 0 0 1000px;
 }
 
 /* 클릭시 이미지 ^ 로 변경 */
