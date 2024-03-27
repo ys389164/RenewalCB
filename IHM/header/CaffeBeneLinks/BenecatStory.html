@@ -11,12 +11,11 @@
     url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format("woff2");
 }
 body{
-    /* display:flex;
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     text-align: left;
-    width:50%;
     font-family:'MICEGothic';
 }
 
@@ -34,8 +33,28 @@ body{
     width:500px;
     height:350px;
 } */
+#Benecat{
+
+}
+#BenecatProfile{
+    display:flex;
+    width:380x;
+    height:224px;
+}
+#BenecatData{
+    width:310px;
+    height:250px;
+}
+tr{
+    width:410px;
+    padding:5px;
+}
+ul{
+    width:410px;
+    padding:0px;
+}
 ul li{
-    display:inline;
+    display:block;
     padding:10px;
     list-style-type:none;
 }
@@ -162,15 +181,21 @@ ul li{
     text-align: left;
 }
 #benecatPoem{
+    display:inline-block;
+    transform:translateX(-30px);
     width:260px;
     height:975px;
     line-height:2em;
 }
 #threeColorCat{
+    display:inline-block;
+    transform:translateX(300px);
     width:498px;
     height:710px;
 }
 #wallPic{
+    display:inline-block;
+    transform:translate(-300px,630px);
     width:441px;
     height:265px;
 }
@@ -178,7 +203,7 @@ ul li{
 </head>
 <body>
     <div id="BenecatProfile">
-        <img src="projectimages/bene-cat1.png">
+        <img id="Benecat" src="projectimages/bene-cat1.png">
         <!-- <table>
             <tr><th>베네캣 Profile</th></tr>
             <tr><td><span class="name">이름</span></td><td>베네캣</td>
@@ -190,15 +215,27 @@ ul li{
             <tr><td><span class="name">좋아하는 것</span></td><td>새로운 동네 산책하기</td></tr>
             <tr><td><span class="name">싫어하는 것</span></td><td>비 오는 날, 눈 쌓인 날(=산책하기 힘든 날)</td></tr>
         </table> -->
-        <ul>
-            <li><span class="name">이름</span> 베네캣</li>
-            <li><span class="name">나이</span>3살</li>
-            <li><span class="name">무게</span>비밀</li>
-            <li><span class="name">성격</span>산책 매니아</li>
-            <li><span class="name">주활동지역</span>성수동</li>
-            <li><span class="name">좋아하는 것</span>새로운 동네 산책하기</li>
-            <li><span class="name">싫어하는 것</span>비 오는 날, 눈 쌓인 날(=산책하기 힘든 날)</li>
-        </ul>
+        <div id="BenecatData">
+            <!-- <ul>
+                <li><span class="name">이름</span> 베네캣</li>
+                <li><span class="name">나이</span>3살</li>
+                <li><span class="name">무게</span>비밀</li>
+                <li><span class="name">성격</span>산책 매니아</li>
+                <li><span class="name">주활동지역</span>성수동</li>
+            </ul> -->
+            <table>
+                <tr><td><span class="name">이름</span> 베네캣</td>
+                    <td><span class="name">나이</span>3살</td>
+                    <td><span class="name">무게</span>비밀</td></tr>
+                <tr><td><span class="name">성격</span>산책 매니아</td>
+                    <td><span class="name">주활동지역</span>성수동</td></tr>
+            </table>
+            <ul>
+                <li><span class="name">좋아하는 것</span>새로운 동네 산책하기</li>
+                <li><span class="name">싫어하는 것</span>비 오는 날, 눈 쌓인 날(=산책하기 힘든 날)</li>
+            </ul>
+        </div>
+        
     </div>
     
 
