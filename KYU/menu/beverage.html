@@ -14,6 +14,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper js -->
     <script src="beverage.js"></script>
+    <link rel="stylesheet" href="/IHM/header/header.css">
+    <link rel="stylesheet" href="/IHM/footer/footer.css">
+    <script src="/common/callHTML.js"></script>
 </head>
 
 <body>
@@ -35,6 +38,9 @@
             </div>
             <div id="select_beverage">
                 <form>
+                    <input type="radio" id="all" name="beverage" value="all" onclick="handleCoffeeChange('all')" checked>
+                    <label for="all">전체</label>
+
                     <input type="radio" id="latte" name="beverage" value="latte" onclick="handleCoffeeChange('latte')">
                     <label for="espresso">라떼</label>
 
@@ -48,6 +54,7 @@
                     <label for="decaffein">티</label>
                 </form>
             </div>
+
             <div id="menu">
                 <div class="menu_items" data-type="frappeno">
                     <img src="../imgs/drink/20240220994528.png"><br><span>딸기 우유 프라페노</span><br>
@@ -55,6 +62,19 @@
                         <p class="menu_title">딸기 우유 프라페노</p><br><hr>
                         <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">시즌 스테디셀러 '논산딸기 순수우유 케이크' 음료 버전으로 상큼한 딸기와 달콤한 밀크쉐이크를 함께 즐길 수 있는 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="frappeno">
@@ -63,6 +83,19 @@
                         <p class="menu_title">딸기 쿠키앤크림 프라페노</p><br><hr>
                         <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">상큼한 딸기와 달콤한 쿠키앤크림의 조화와 바삭하게 씹히는 쿠키를 함께 즐길 수 있는 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="latte">
@@ -71,6 +104,19 @@
                         <p class="menu_title">논산 생딸기 라떼</p><br><hr>
                         <p class="menu_price">R | 6,900 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">논산 생딸기 과육을 가득 올려 딸기 본연의 상큼함을 즐길 수 있는 딸기 라떼</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="juiceade">
@@ -79,15 +125,42 @@
                         <p class="menu_title">논산 생딸기 주스</p><br><hr>
                         <p class="menu_price">R | 6,700 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">신선한 논산 생딸기를 듬뿍 넣어 갈아 만든 딸기 주스</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
 
+                <!-- 2번째 줄 -->
                 <div class="menu_items" data-type="juiceade">
                     <img src="../imgs/drink/20240220994528.png"><br><span>키위 망고 젤라또 에이드</span><br>
                     <div class="info">
                         <p class="menu_title">키위 망고 젤라또 에이드</p><br><hr>
                         <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">상큼한 키위와 새콤달콤한 망고 젤라또가 어우러진 청량 가득한 젤라또 에이드</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="juiceade">
@@ -96,6 +169,19 @@
                         <p class="menu_title">모히또 에이드</p><br><hr>
                         <p class="menu_price">R | 6,300 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">상큼한 레몬, 라임과 상쾌한 민트 향이 가득한 무알콜 모히또 에이드</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td>><td>450</td></tr>
+                            <tr><td>열량 (kcal)</td><td>143</td></tr>
+                            <tr><td>당류 (g)</td><td>28</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(1%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(1%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>2(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="juiceade">
@@ -104,6 +190,19 @@
                         <p class="menu_title">문경오미자<br>샹그리아 에이드</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">문경에서 자란 오미자의 새콤달콤함이 어우러진 레드 뱅쇼를 청량감 있게 즐길 수 있는 에이드</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td>><td>450</td></tr>
+                            <tr><td>열량 (kcal)</td><td>204</td></tr>
+                            <tr><td>당류 (g)</td><td>44</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>1(1%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>17(1%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="juiceade">
@@ -112,15 +211,42 @@
                         <p class="menu_title">제주청귤 에이드</p><br><hr>
                         <p class="menu_price">R | 5,800 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">제주에서 자란 청귤의 상큼함을 청량감 있게 즐길 수 있는 에이드</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td>><td>450</td></tr>
+                            <tr><td>열량 (kcal)</td><td>259</td></tr>
+                            <tr><td>당류 (g)</td><td>57</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(1%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>61(3%)</td></tr>
+                        </table>
                     </div>
                 </div>
 
+                <!-- 3번째 줄 -->
                 <div class="menu_items" data-type="frappeno">
                     <img src="../imgs/drink/20230711977037.png"><br><span>우리배 프라페노</span><br>
                     <div class="info">
                         <p class="menu_title">우리배 프라페노</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">국산 배로 만들어 더욱 신선하고 청량감 있게 즐길 수 있는 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="frappeno">
@@ -129,6 +255,19 @@
                         <p class="menu_title">성주참외 프라페노</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">경북 성주 참외 본연의 신선함을 100% 그대로 갈아 담아 시원하고 달달한 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="frappeno">
@@ -137,6 +276,19 @@
                         <p class="menu_title">논산수박 프라페노</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">달콤하게 잘 익은 충남 논산 수박을 통째로 갈은 시원한 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="latte">
@@ -145,15 +297,42 @@
                         <p class="menu_title">애플망고 연유 보틀 라떼</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">새콤달콤한 애플망고와 달콤한 연유를 함께 즐길 수 있는 애플망고 연유 라떼</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
 
+                <!-- 4번째 줄 -->
                 <div class="menu_items" data-type="frappeno">
-                    <img src="../imgs/drink/20230302362212.png"><br><span>애플망고 리얼 요거트 젤라또 프라페노</span><br>
+                    <img src="../imgs/drink/20230302362212.png"><br><span>애플망고 리얼 요거트<br>젤라또 프라페노</span><br>
                     <div class="info">
                         <p class="menu_title">애플망고 리얼<br>요거트 젤라또 프라페노</p><br><hr>
                         <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">새콤달콤한 애플망고와 리얼 요거트, 요거트 젤라또가 어우러진 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="frappeno">
@@ -162,6 +341,19 @@
                         <p class="menu_title">애플망고 치즈<br>젤라또 프라페노</p><br><hr>
                         <p class="menu_price">R | 6,700 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">망고 젤라또와 필라델피아 치즈 케이크 큐브를 더해 새콤달콤한 애플망고와 진한 치즈 풍미를 시원하게 즐길 수 있는 블렌디드 음료</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="juiceade">
@@ -170,6 +362,19 @@
                         <p class="menu_title">애플망고 주스</p><br><hr>
                         <p class="menu_price">R | 6,300 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">새콤달콤한 애플망고를 듬뿍 넣어 갈아 만든 과일 주스</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td>><td>360</td></tr>
+                            <tr><td>열량 (kcal)</td><td>171</td></tr>
+                            <tr><td>당류 (g)</td><td>37</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>1(2%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>41(2%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items" data-type="tea">
@@ -178,6 +383,19 @@
                         <p class="menu_title">문경오미자 뱅쇼<br>(HOT ONLY)</p><br><hr>
                         <p class="menu_price">R | 6,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
                         <p class="menu_text">문경에서 자란 오미자의 새콤달콤함이 어우러진 논알콜 레드 뱅쇼</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td>><td>360</td></tr>
+                            <tr><td>열량 (kcal)</td><td>219</td></tr>
+                            <tr><td>당류 (g)</td><td>47</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>1(1%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>25(1%)</td></tr>
+                        </table>
                     </div>
                 </div>
                 <div class="menu_items_empty" style="visibility: hidden;"></div>
