@@ -133,7 +133,7 @@ label{position:relative;}
 <script>
 
 //회사명, 이메일, 제목, 내용 중 하나라도 입력하지 않으면 경고창 나오는 함수.
-/*document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
     let complete=document.getElementById('submitBtn');
 
 complete.addEventListener("click", (e)=>{
@@ -204,14 +204,14 @@ document.addEventListener('DOMContentLoaded', function(){
         let sixNum=document.getElementById('sixNum');
         let Check=finalCheck();
         sixNum.textContent=Check;
-    });*/
+    });
 
 //셀렉트로 메일 형식 선택하면 텍스트에 입력되고 메일로 간주되는 함수(미완)
 
 document.addEventListener('DOMContentLoaded', function(){
     let mailSpace=document.getElementById('email2');//이메일이 표시되는 부분
     let mailSelect=document.getElementById('emailChoose');//셀렉트
-mailSpace.addEventListener("change",function(){
+mailSelect.addEventListener("change",function(){
     mailSpace.textContent=mailSelect.value;
     mailSpace.value=mailSelect.value;
 })
@@ -223,7 +223,7 @@ mailSpace.addEventListener("change",function(){
 
     
 //#fileRoute 안에 내가 선택한 파일 경로가 출력된다.
-/*function DIYfileBtn(){
+function DIYfileBtn(){
     let DIYBtn=document.getElementById('fileBtn');//원래 input file. 여기 이름이 표시됨
     let DIYText=document.getElementById('fileName');//여기에 표시하고 싶다.
 
@@ -234,7 +234,7 @@ mailSpace.addEventListener("change",function(){
     }
     document.addEventListener('DOMContentLoaded', function(){
         DIYfileBtn();
-    });*/
+    });
 
 
 

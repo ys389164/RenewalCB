@@ -1,0 +1,64 @@
+@font-face{
+    font-family: 'MICEGothic';
+    src:
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+    }
+    @keyframes move{
+        0%{transform:translateY(0px);}
+        33%{transform:translateY(-280px);}
+        66%{transform:translateY(-560px);}
+        100%{transform:translateY(-840px);}
+    }
+    body{
+    display:inline-block;
+    text-align:center;
+    font-family:'MICEGothic';
+    font-size:18px;
+    }
+    h3{
+    font-size:24px;
+    color:midnightblue;
+    }
+    div{
+    display:block;
+    height:300px;
+    }
+    span{
+    font-size: 18px;
+    font-weight:bold;
+    color:midnightblue;
+    }
+    table{
+    text-align: left;
+    }
+    tr td{
+    font-size: 18px;
+    padding-bottom:40px;
+    padding-top:40px;
+    }
+    img{
+    width:350px; 
+    height:280px;
+    }
+    #moving{
+    position:absolute;
+    bottom:200px;
+    left:480px;
+    width:350px; 
+    height:280px;
+    overflow:hidden;
+    float:right;
+    }
+    #cafeMap{
+    float:left;
+    margin-right:10px;
+    }
+    #plant, #plant2,
+    #plant3, #plant4{
+    float:right;
+    animation-name:move;
+    animation-duration:16s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    }
