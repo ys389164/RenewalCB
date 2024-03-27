@@ -3,7 +3,13 @@ $(function(){
     const menuItems = $('.menu_items');
     const menuEmpty = $('.menu_items_empty');
 
-    checkboxes.on('change', function() {
+    // 전체 버튼에 대한 클릭 이벤트 핸들러 추가
+    $('#select_food input[type="radio"][value="all"]').click(function() {
+        menuItems.show(); // 모든 메뉴 항목 보이기
+        menuEmpty.hide(); // 빈 메뉴 항목 숨기기
+    });
+
+    checkboxes.not('[value="all"]').on('change', function() {
         const selectedCoffees = checkboxes.filter(':checked').map(function() {
             return this.value;
         }).get();
@@ -21,7 +27,6 @@ $(function(){
         menuEmpty.hide(); // 모든 빈 메뉴 항목 숨기기
         menuEmpty.slice(0, emptyMenuCount).show(); // 선택된 유형의 메뉴 개수에 맞게 빈 메뉴 항목 보이기
     });
-
 
     $(".nutrient_info").hide();
     
@@ -43,6 +48,5 @@ $(function(){
             $(".info").fadeOut();
             $(".nutrient_info").fadeOut(); // 영양 성분 정보도 숨기기
         }        
-    });    
-
+    });   
 });
