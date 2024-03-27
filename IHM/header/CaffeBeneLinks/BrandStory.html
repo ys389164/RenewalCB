@@ -4,61 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<script src="common/callHTML.js"></script>
 <style>
 @font-face {
 font-family: "MICEGothic";
 src:url("MICEGothicRegular/WebFonts/MICEGothic.woff") format("woff"),
     url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format("woff2");
 }
+
 body{
+    display:inline-block;
     text-align: center;
     font-family:'MICEGothic';
     font-size: 20px;
-    overflow:hidden;
+    overflow-x:hidden;
+    justify-content: center;
 }
-@keyframes slide{
-    0%{}
-    25%{}
-    50%{}
-    75%{}
-    100%{}
+
+@keyframes slideA{
+    0%{transform:translateY(0px);}
+    12%{transform:translateY(-820px);}
+    24%{transform:translateY(-820px);}
+    36%{transform:translateY(-1640px);}
+    48%{transform:translateY(-1640px);}
+    60%{transform:translateY(-2460px);}
+    72%{transform:translateY(-2460px);}
+    84%{transform:translateY(-3280px);}
+    100%{transform:translateY(-3280px);}
 }
+
+@keyframes slideB{
+    0%{transform:translateY(0px);}
+    17%{transform:translateY(-820px);}
+    35%{transform:translateY(-820px);}
+    52%{transform:translateY(-1640px);}
+    70%{transform:translateY(-1640px);}
+    87%{transform:translateY(-2460px);}
+    100%{transform:translateY(-2460px);}
+}
+
 #allTopPic{/*중간 배너. 스르륵 넘어간다*/
-    /*position:absolute;
-    right:33%;
     width:2560px;
     height:820px;
-    overflow:hidden;*/
-    display: block;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  width: 1920px;
-  height: 123px;
-
-  animation-name: slide;
-  animation-duration: ;
-  animation-iteration-count:infinite;
-  animation-timing-function: ease-in-out;
-  animation-direction: normal;
-}
-div{
-    width:700px;
-    height:400px;
+    top:300px;
+    overflow:hidden;
 }
 #TopPic1, #TopPic2, 
-#TopPic3, #TopPic4{
-    display:flex;
+#TopPic3, #TopPic4,
+#TopPic5{
     width:2560px;
     height:820px;
     text-align: center;
+    animation-name:slideA ;
+    animation-duration: 23s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /*animation-name:slideA, slideB, SlideC, SlideD; 
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out infinite;
+    animation-iteration-count: infinite;
+    animation-delay:2s ;*/
+    
 }
 #TopPic1{
     background-image: url("projectimages/BrandStory/railway.jpg");
-    justify-content: center;
-    align-items:center;
 } 
 #TopPic2{
     background-image: url("projectimages/BrandStory/playingChildren.jpg");
@@ -69,26 +77,18 @@ div{
 #TopPic4{
     background-image: url("projectimages/BrandStory/caffebeneHelloagain.jpg");
 }
+#TopPic5{
+    background-image: url("projectimages/BrandStory/railway.jpg");
+}
 
 #TopComment1, #TopComment2, 
-#TopComment3, #TopComment4{
+#TopComment3, #TopComment4,
+#TopComment5{
+    display:inline-block;
+    transform:translateY(600px);
     color:skyblue; 
     font-size:50px;
     font-weight:bold;
-}
-#TopComment1{
-    opacity:1;
-    
-}
-
-#TopComment2{
-    opacity:0;
-}
-#TopComment3{
-    opacity:0;
-}
-#TopComment4{
-    opacity:0;
 }
 
 #boldWord{
@@ -102,14 +102,23 @@ div{
 
 #allBottomPic{
     width:2560px;
-    height:820;
+    height:820px;
+    margin-bottom:50px;
+    overflow:hidden;
 }
 
 #BottomPic1,
 #BottomPic2
-#BottomPic3{
-    
-}
+#BottomPic3,
+#BottomPic4{
+    text-align: center;
+    width:2560px;
+    height:820px;
+    animation-name:slideB;
+    animation-duration: 23s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    }
 #BottomPic1{
     background-image: url("projectimages/BrandStory/benecatEchobag.jpg");
 }
@@ -119,38 +128,57 @@ div{
 #BottomPic3{
     background-image: url("projectimages/BrandStory/coffeePressing.jpg");
 }
+#BottomPic4{
+    background-image: url("projectimages/BrandStory/benecatEchobag.jpg");
+}
 
 #BottomComment1,
 #BottomComment2,
-#BottomComment3{
+#BottomComment3,
+#BottomComment4{
+    display:inline-block;
+    transform:translateY(600px);
     font-size:50px;
     font-weight:bold;
     color:pink;
 }
 
-#story1{
-    text-align:center; 
-    line-height:2em;
-    width:1021px;
-    height:200px;
-}
 #story2{
-    display:flex;
-    align-items: center;
-    text-align:left;
+    margin-top:1200px;
+    margin-bottom:400px;
     line-height:2em;
-    width:350px;
+    width:2560px;
+    height:600px;
+}
+#MiddlePic1{
+    width:620px;
+    height:400px;
+}
+
+#poem2, #poem1{
+    display:inline-block;
+    text-align:left;
+    width:620px;
     height:200px;
 }
 #story3{
-    display:flex;
+    display:inline-block;
+    justify-content: center;
     align-items: center;
+    margin-bottom:50px;
+    width:2560px;
+    height:700px;
+}
+
+#poem3{
+    display:inline-block;
     text-align:left;
     line-height:2em;
-    width:350px;
+    width:500px;
     height:550px;
 }
-.story4{
+#story4{
+    display:block;
     text-align:center;
     line-height:2em;
     width:709px;
@@ -158,7 +186,7 @@ div{
 </style>
 </head>
 <body>
-    <header id="header" class="header"></header>
+
 <div id="allTopPic">
     <div id="TopPic1">
         <span id="TopComment1">우리 동네에는 [오래된 기찻길]이 있습니다.</span>
@@ -172,80 +200,68 @@ div{
     <div id="TopPic4">
         <span id="TopComment4">우리 동네에는 [&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]가 있습니다.</span>
     </div>
+    <div id="TopPic5">
+        <span id="TopComment5">우리 동네에는 [오래된 기찻길]이 있습니다.</span>
+    </div>
 </div>
     
-    
-    
-    
-<div id="story1">
-    동네마다 알게 모르게<br>
-    우리 곁을 둘러싸고 있는<br>
-
-    <span class="bigWord">정겨운 것들이 있습니다.</span>
-</div>
-    
-
-    <img id="MiddlePic1" src="projectimages/BrandStory/apartmentLightground.jpg">
-
 <div id="story2">
-    오래된 세탁소, 아이들 웃음 소리처럼-<br>
-    없으면, 서운하고<br>
-    있으면, 더 없이 좋은 그런 것들이요
+    <p id="poem1">동네마다 알게 모르게<br>
+        우리 곁을 둘러싸고 있는<br>
+        <span class="bigWord">정겨운 것들이 있습니다.</span></p>
+    <img id="MiddlePic1" src="projectimages/BrandStory/apartmentLightground.jpg">
+    <p id="poem2">오래된 세탁소, 아이들 웃음 소리처럼-<br>
+        없으면, 서운하고<br>
+        있으면, 더 없이 좋은 그런 것들이요</p>
 </div>
-
-    <img id="MiddlePic2" src="projectimages/BrandStory/nostalgiaNarrowway.jpg">
-    
+  
 <div id="story3">
+    <img id="MiddlePic2" src="projectimages/BrandStory/nostalgiaNarrowway.jpg">
     우리도 그런 존재가 되려고 합니다.<br><br>
 
-    화려한 랜드마크는 아니더라도<br>
-    누구나 편하게 드나들 수 있는 곳<br><br>
-
-    언제나 활짝 열려있는<br>
-    동네 사랑방 같은 곳이 되려고 합니다.<br><br>
-
-    우리 동네의 자랑이 되고 싶습니다.<br>
-    나의 정다운 이웃, 당신을 기다리고 있습니다.
+        화려한 랜드마크는 아니더라도<br>
+        누구나 편하게 드나들 수 있는 곳<br><br>
+    
+        언제나 활짝 열려있는<br>
+        동네 사랑방 같은 곳이 되려고 합니다.<br><br>
+    
+        우리 동네의 자랑이 되고 싶습니다.<br>
+        나의 정다운 이웃, 당신을 기다리고 있습니다.
 </div>
     
 <div id="allBottomPic">
     <div id="BottomPic1">
-        <img src="projectimages/BrandStory/benecatEchobag.jpg">
         <span id="BottomComment1">카페베네에는 [우리의 이야기]가 있습니다.</span>
     </div>
     <div id="BottomPic2">
-        <img src="projectimages/BrandStory/cafeCeiling.jpg">
         <span id="BottomComment2">카페베네에는 [따뜻한 배려]가 있습니다.</span>
     </div>
     <div id="BottomPic3">
-        <img src="projectimages/BrandStory/coffeePressing.jpg">
         <span id="BottomComment3">카페베네에는 [소중한 진심]이 있습니다.</span>
+    </div>
+    <div id="BottomPic4">
+        <span id="BottomComment4">카페베네에는 [우리의 이야기]가 있습니다.</span>
     </div>
 </div>
 <!-- 이미지가 주제와 연관성이 없음. 슬라이드로 넘어가기보다는 따로 두는 게 더 나아보임. 어떻게? -->
 
-<div class="story4">
-    <p id="boldWord">2008년부터 지금까지<br>
-    카페베네는 대한민국 대표 토종 커피브랜드로 많은 사랑을 받아왔습니다.</p><br><br>
-
-    ‘배려’와 ‘진정성’으로<br>
-    소중한 오늘의 이야기를 만들어가는 곳<br>
-    가장 나다운 시간을 보낼 수 있는 곳<br>
-    누구에게나 소중한 진심을 다하는 곳이 되겠습니다.
-</div>
+<div id="story4">
+    <p id="poem4"><p id="boldWord">2008년부터 지금까지<br>
+        카페베네는 대한민국 대표 토종 커피브랜드로 많은 사랑을 받아왔습니다.</p><br><br>
     
+        ‘배려’와 ‘진정성’으로<br>
+        소중한 오늘의 이야기를 만들어가는 곳<br>
+        가장 나다운 시간을 보낼 수 있는 곳<br>
+        누구에게나 소중한 진심을 다하는 곳이 되겠습니다.</p>
 
-    <img id="EndPic" src="projectimages/BrandStory/eveningCoffee.jpg">
+        <img id="EndPic" src="projectimages/BrandStory/eveningCoffee.jpg">
 
-
-
-<div class="story4">
-    <span class="bigWord">우리동네_카페베네</span>
-    그래서, 우리의 내일이<br>
-    오늘보다 조금 더 빛날 수 있도록<br><br>
-    
-    누구에게나 열려있는 공간<br>
-    머물고 싶은 편안한 아지트가 되겠습니다.
+        <p id="poem5"><span class="bigWord">우리동네_카페베네</span><br>
+        그래서, 우리의 내일이<br>
+        오늘보다 조금 더 빛날 수 있도록<br><br><br>
+        
+        누구에게나 열려있는 공간<br>
+        머물고 싶은 편안한 아지트가 되겠습니다.</p>
 </div>
 
     
