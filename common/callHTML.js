@@ -8,7 +8,6 @@ function loadHeader() {
 
         const scriptTag = document.createElement('script');
         scriptTag.setAttribute('src', '/IHM/header/header.js');
-        console.log(scriptTag);
         document.querySelector('body').appendChild(scriptTag);
     }
 }
@@ -22,6 +21,7 @@ function loadFooter() {
         const scriptTag = document.createElement('script');
         scriptTag.setAttribute('src', '/IHM/footer/footer.js');
         document.querySelector('body').appendChild(scriptTag);
+        console.log(xhr.response);
     }
 }
 document.addEventListener('DOMContentLoaded', function() {
