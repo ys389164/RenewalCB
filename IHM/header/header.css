@@ -1,13 +1,14 @@
 @font-face {
   font-family: "MICEGothicBold";
-  src: url("MICEGothicBold/WebFonts/MICEGothic\ Bold.woff") format("woff"),
-    url("MICEGothicBold/WebFonts/MICEGothic\ Bold.woff2") format("woff2");
+  src: url("/IHM/header/MICEGothicBold/WebFonts/MICEGothic\ Bold.woff") format("woff"),
+    url("/IHM/header/MICEGothicBold/WebFonts/MICEGothic\ Bold.woff2") format("woff2");
 }
 * {
   margin: 0;
   padding: 0;
 }
 header {
+  font-family:'MICEGothicBold';
   display: block;
   background-color: white;
   position: sticky;
@@ -49,7 +50,6 @@ nav {
   margin: 0px;
   background-color: paleturquoise;
   border: 2px solid lightgray;
-  opacity: 0.7;
   display: none;
   overflow: hidden;
   transition: top 0.3s ease-in-out;

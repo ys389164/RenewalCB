@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>policy benecard 카드정책</title>
-
+<link rel="stylesheet" href="/IHM/header/header.css">
+<link rel="stylesheet" href="/IHM/footer/footer.css">
+<link rel="stylesheet" href="/IHM/footerPages/userPolicyBenecard/userPolicyBenecard.css">
+<script src="/common/callHTML.js"></script>
 </head>
 <body>
-<link href="footerLinksCss/userPolicyBenecardCss.css" type="text/css" rel="stylesheet">
-<h4>이용약관</h4>
+
+<header id="header" class="header"></header>
+
+<div id="wholePolicy">
+    <h4>이용약관</h4>
 <hr>
 
 <table>
-    <tr><td id="tdOne"><a href="userPolicyBenecard.html">베네카드 이용약관</a></td>
-        <td id="tdTwo"><a href="userPolicyPlaceInfo.html">위치정보 이용약관</a></td>
-        <td id="tdThree"><a href="userPolicyContent.html">영상처리방침 및 관리지침</a></td></tr>
+    <tr><td id="tdOne"><a href="/IHM/footerPages/userPolicyBenecard/userPolicyBenecardLinked.html">베네카드 이용약관</a></td>
+        <td id="tdTwo"><a href="/IHM/footerPages/userPolicyPlaceInfo/userPolicyPlaceInfoLinked.html">위치정보 이용약관</a></td>
+        <td id="tdThree"><a href="/IHM/footerPages/userPolicyContent/userPolicyContentLinked.html">영상처리방침 및 관리지침</a></td></tr>
 </table>
 
 <h5>[제1장 총칙]</h5>
@@ -25,7 +31,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 규정하는 것을 목적으로 합니다.
 
 <h6>제2조 용어의 정의</h6>
-<ul>
+<ul class="policy">
     <li>이 약관에서 사용하는 용어는 다음과 같이 정의합니다.</li>
     <li>‘Bene Card’란 회사가 정의한 기술사양에 따라 
         회사가 인증한 Chip 또는 Application을 내장하고 
@@ -72,7 +78,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제3조 약관의 효력 및 변경 등</h6>
-<ul>
+<ul class="policy">
     <li>본 약관은 그 내용을 회사가 홈페이지에 게시하고, 
         고객이 Bene Card를 충전 후 소지 또는 정당한 방법으로 소지하여 사용함으로써 
         그 효력이 발생됩니다.</li>
@@ -100,7 +106,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 
 <h5>[제2장 Bene Card 서비스]</h5>
 <h6>제5조 목적별 이용</h6>
-<ul>
+<ul class="policy">
     <li>선불전자지급수단으로의 Bene Card
         <ol type="a">
             <li>고객은 국내 카페베네 특수상권 및 일부매장을 제외한 매장 어디에서나 
@@ -134,7 +140,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제6조 표시사항 등</h6>
-<ul>
+<ul class="policy">
     <li>발행자 : 카페베네</li>
     <li>구매가격 : ‘Bene Card’는 별도의 카드 구매가격이 없는 충전식 상품권입니다.</li>
     <li>유효기간 : 
@@ -163,7 +169,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제7조 Reward Program 참여</h6>
-<ul>
+<ul class="policy">
     <li>Reward Program에 참여하고자 하는 회원은 본 약관에 동의하고 
         회사가 발급한 ‘Bene Card’를 회사의 모바일 애플리케이션에 등록하거나 
         모바일 애플리케이션에 가입함으로써 참여할 수 있습니다.
@@ -173,7 +179,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제8조 회원 탈퇴 및 자격 상실</h6>
-<ul>
+<ul class="policy">
     <li>회원은 언제든지 홈페이지를 통해 회원 탈퇴를 요청할 수 있으며, 
         회사는 회원의 요청에 따라 조속히 회원 탈퇴에 필요한 제반 절차를 수행합니다. 
         (단, 회원이 탈퇴를 요청할 때에는 회사의 홈페이지에 등록된 회원의 모든 카드가 
@@ -204,7 +210,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제9조 카드의 이용 및 관리</h6>
-<ul>
+<ul class="policy">
     <li>회원이 회사 ‘Bene Card’의 적립 ‘베네 머그’에 따른 혜택을 이용하고자 할 경우에는 
         반드시 Bene Card를 제시하는 것을 원칙으로 합니다. 
         단, 여기에서 ‘Bene Card를 제시한다’ 함은 ‘Bene Card’를 회사에 보여주는 행위,
@@ -217,7 +223,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
     </ul> 
 
 <h6>제10조 충전</h6>
-<ul>
+<ul class="policy">
     <li>‘Bene Card’의 충전은 회사의 모바일 애플리케이션에 회원가입을 통해 
         ‘Bene Card’가 발행된 후이거나, 매장에서 구입한 ‘Bene Card’를 회사의 모바일 애플리케이션에 등록 후 
         현금 또는 회사가 현금과 동일하게 인정하는 금전적 가치(신용카드 등)로 결제하는 방법 
@@ -238,7 +244,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul> 
 
 <h6>제11조 환급</h6>
-<ul>
+<ul class="policy">
     <li>고객이 ‘Bene Card’에 충전된 잔액의 환급을 요청하는 때에는 
         회사는 ‘Bene Card’의 상태에 따라 다음 각 호에 명시된 절차에 의거하여 
         환급 처리를 합니다.</li>
@@ -280,7 +286,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
     </ul>
 
 <h6>제12조 청약철회 </h6>
-<ul>
+<ul class="policy">
     <li>회사의 모바일 애플리케이션을 통한 충전을 청약한 회원은 
         청약 후 결제가 완료된 날로부터 7일 이내에는 그 청약의 철회를 할 수 있습니다.</li>
     <li>회사는 제1항의 청약철회를 수신한 날부터 
@@ -297,7 +303,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제13조 ‘베네 머그’ 적립 및 등급별 혜택</h6>
-<ul>
+<ul class="policy">
     <li>상품을 구입한 회원은 회사가 정한 아래와 같은 적립 기준에 따라 
         ‘베네 머그’를 부여 받게 됩니다. 
         ‘Bene Card’로 회사가 정한 기준에 따라 결제 시 
@@ -326,7 +332,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul> 
 
 <h6>제14조 ‘베네 머그’의 유효기간 및 소멸</h6>
-<ul>
+<ul class="policy">
     <li>‘베네 머그’의 유효기간은 적립 일로부터 등급 선정일 전일이며, 
         최상위 등급이 되면 ‘베네 머그’의 유효기간은 등급 선정일로부터 1년이 됩니다.</li>
     <li>‘Bene Card’로 결제 시 적립된 ‘베네 머그’는 해당 결제를 최소하실 경우 
@@ -334,7 +340,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul> 
 
 <h6>제15조 고객의 의무</h6>
-<ul>
+<ul class="policy">
     <li>고객은 이 약관에서 규정하는 사항과 이용안내 또는 공지사항 등을 통하여 
         회사가 제공하는 사항을 준수하여야 하며, 
         기타 회사의 업무에 방해되는 행위를 하여서는 안됩니다.</li>
@@ -344,7 +350,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
     </ul> 
 
 <h6>제16조 휴면계정 관리</h6>
-<ul>
+<ul class="policy">
     <li>회사는 회원이 회사의 모바일 애플리케이션 또는 홈페이지에 12개월 이상 로그인 하지 않고 
         계정에 등록된 ‘Bene Card’로 12개월 이상 거래내역(최초 충전, 재충전, 결제 등 모든 거래 포함)이 없는 경우, 
         휴면계정으로 간주하고 회사가 제공하는 서비스 이용을 
@@ -355,7 +361,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul>
 
 <h6>제17조 회원탈퇴와 ‘베네 머그’의 소멸 처리</h6>
-<ul>
+<ul class="policy">
     <li>본 약관 제8조 제1항에 정해진 방법으로 회원 탈퇴 시 
         회원 탈퇴 요청일 현재까지 적립된 ‘베네 머그’는 자동으로 소멸되며, 
         재가입시 소멸된 ‘베네 머그’는 복원되지 않습니다.</li>
@@ -373,7 +379,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 
 <h5>[제3장 거래내역 정보]</h5>
 <h6>제19조 거래내역의 수집</h6>
-<ul>
+<ul class="policy">
     <li>회사는 고객이 ‘Bene Card’를 통해 서비스 이용 및 제품 또는 상품 구매 시 
         필요한 최소한의 거래내역 정보(카드 번호, 거래 일시, 거래 상품, 거래 금액, 단말기 및 매장 정보 등)를 수집합니다.</li>
     <li>고객의 계속적인 ‘Bene Card’사용은 
@@ -382,7 +388,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul> 
 
 <h6>제20조 거래내역의 제공</h6>
-<ul>
+<ul class="policy">
     <li>회원은 회사의 모바일 애플리케이션과 홈페이지를 통해 
         거래 내역을 확인할 수 있습니다.</li>
     <li>회사는 관련법령에 의거하여 회원과의 거래내역을 거래가 발생한 날로부터 
@@ -403,7 +409,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 </ul> 
 
 <h6>제21조 거래내역의 정정</h6>
-<ul>
+<ul class="policy">
     <li>고객은 본인이 이용한 거래와 관련된 오류를 발견하는 경우 
         소명할 수 있는 자료를 갖추고 회사가 정한 절차를 거쳐, 
         해당 거래에 대한 정정을 요청할 수 있습니다.</li>
@@ -413,7 +419,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 
 <h5>[제4장 개인정보 보호]</h5>
 <h6>제22조 개인 정보 보호</h6>
-<ul>
+<ul class="policy">
     <li>회사는 고객의 정보 수집 시 정상적인 서비스를 위한 최소한의 정보를 수집하며,
         고객의 개인식별이 가능한 개인정보를 수집하는 때에는 
         반드시 해당 고객의 동의를 받습니다.</li>
@@ -444,9 +450,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 
 <h5>[제5장 기타]</h5>
 <h6>제23조 책임 소재</h6>
-<ul>
-    <li></li>
-    <li></li>
+<ul class="policy">
     <li>회사는 고객이 ‘Bene Card’ 서비스 이용 중 발생한 손해에 대하여 
         배상 할 책임을 집니다. 
         단, 본 약관에 별도 명시된 경우 및 다음 각 호의 사유에 해당하는 경우는 제외합니다.</li>
@@ -473,7 +477,7 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 별도의 지급보증이 되어있지 않습니다
 
 <h6>제25조 분쟁 해결</h6>
-<ul>
+<ul class="policy">
     <li>회사는 고객에게 손해가 발생하거나 회사와 고객간 분쟁이 발생하는 경우 
         손해 배상 등 분쟁처리를 위해 고객상담센터를 설치, 운영합니다.</li>
     <li>회사는 고객으로부터 제출되는 불만사항 및 의견은 
@@ -486,10 +490,14 @@ Bene Card를 구입 또는 정당한 방법으로 소지한 고객이
 <h6>제26조 관할 법원</h6>
 ‘Bene Card’서비스 및 본 약관과 관련한 제반 분쟁 및 소송은 
 회사의 본점 소재지를 관할하는 법원 또는 민사소송법상의 관할 법원을 
-제1심 관할 법원으로 합니다.
+제1심 관할 법원으로 합니다.<br><br>
 
-<부칙>
+<부칙><br>
 본 이용약관은 2020년 6월 일부터 시행합니다
+</div>
+
+
+<footer id="footer" class="footer"></footer>
 
 </body>
 </html>
