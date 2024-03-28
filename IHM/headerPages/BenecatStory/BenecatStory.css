@@ -1,0 +1,256 @@
+@font-face {
+    font-family: "MICEGothic";
+    src:url("MICEGothicRegular/WebFonts/MICEGothic.woff") format("woff"),
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format("woff2");
+}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family:'MICEGothic';
+    overflow-x: hidden;
+}
+
+#bigLetters{
+    font-size:48px;
+    color:midnightblue;
+}
+
+
+/* 베네캣 프로필 */
+
+#profileBack{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightcyan;
+    width:1920px;
+    height:600px;
+}
+#BenecatProfile{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:250x;
+    height:224px;
+    right:20%;
+}
+#profileTitle{
+    font-weight:bold;
+}
+#BenecatData{
+    width:460px;
+    height:250px;
+    margin-left:20px;
+}
+tr{
+    
+    line-height:50px;
+}
+ul{
+    width:410px;
+    padding:0px;
+    margin:0px;
+}
+ul li{
+    display:block;
+    line-height:50px;
+    list-style-type:none;
+}
+.name{
+    font-weight:bold;
+    padding:5px;
+    color:white;
+    background-color:gray;
+    border-radius:10px;
+}
+
+/* 오전 6시. 첫 번째. */
+#amSix{
+    width:1300px;
+    height:873px;
+    margin-bottom:100px;
+    background-image:url("projectimages/BenecatStory/BenecatFirst.jpg");
+}
+#startTravel{
+    display:inline-block;
+    transform:translate(100px,100px);
+    font-size:20px;
+    line-height:2em;
+}
+#firstCat{
+    display:inline-block;
+    transform:translate(800px,700px);
+}
+#six{
+    display:inline-block;
+    transform:translate(-600px,-10px);
+    font-weight:bold;}
+
+.time{
+    font-weight:bold;
+    text-shadow:0px 0px black;
+}
+
+/* 오전 9시. 두 번째랑 세 번째. */
+.Traveling{
+    width:350px;
+    padding-left:30px;
+    line-height:2em;
+}
+#amNine{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+    height: 685px;
+    margin: 200px;
+    /* width:1020px;
+    height:685px; */
+}
+#amNineSecond{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 1420px;
+    height: 685px;
+    margin:200px;
+    /* width:1020px;
+    height:685px; */
+}
+#nineSecondTravel{
+    display:inline-block;
+    transform:translateY(50px);
+    height:685px;
+}
+#nine{
+    display:inline-block;
+    transform:translate(-500px,340px);
+}
+#nine2{
+    display:inline-block;
+    transform:translate(-630px,300px);
+}
+#secondTableCat{
+    display:inline-block;
+    transform:translate(-300px,950px);
+}
+#secondHouseCat{
+    display:inline-block;
+    transform:translate(130px,715px);
+}
+#thirdLayingCat{
+    display:inline-block;
+    transform:translate(-200px,900px);
+}
+#thirdHuntingCat{
+    display:inline-block;
+    transform:translate(360px,850px);
+}
+
+/* 오후 세 시. 네 번째. */
+#pmThree{
+    display:flex;
+    flex-direction: column;
+    margin:100px;
+    /* width:920px;
+    height:618px; */
+}
+#three{
+    display:inline-block;
+    transform:translate(-440px,230px);
+}
+#threeTravel{
+    display:inline-block;
+    width: 920px;
+    transform:translateX(100px);
+}
+#fourthHelloCat{
+    display:inline-block;
+    transform:translate(-200px,760px);
+}
+#fourthDoorCat{
+    display:inline-block;
+    transform:translate(350px,470px);
+}
+
+/* 오후 여섯 시. 다섯 번째. */
+#pmSix{
+    width:1385px;
+    height:923px;
+    margin:100px;
+    background-image:url("projectimages/BenecatStory/BenecatFifth.jpg");
+}
+#six2{
+    display:inline-block;
+    transform:translate(-650px,270px);
+}
+#whiteWord{
+    display:inline-block;
+    transform:translate(400px,400px);
+    line-height:2em;
+    color:white;
+}
+#fifthStairCat{
+    display:inline-block;
+    transform:translate(60px,400px);
+}
+#fifthFishingCat{
+    display:inline-block;
+    transform:translate(580px,720px);
+}
+
+/* 오후 10시. 마지막. 집으로. */
+#pmTen{
+    display:flex;
+    flex-direction: column;
+    width:894px;
+    height:598px;
+    margin:100px;
+}
+/* #ten{
+    display:inline-block;
+    transform:translate(-630px,300px);
+} */
+#endTravel{
+    width:894px;
+    text-align:center;
+    margin-bottom:100px;
+}
+#sixthCoffeeCat{
+    display:inline-block;
+    transform:translate(-270px,625px);
+}
+
+/* 제일 마지막. 시. 삼색 고양이. */
+#benecatLife{
+    display:flex;
+    width:1500px;
+    height:975px;
+    text-align: left;
+}
+#benecatPoem{
+    display:inline-block;
+    transform:translateX(-30px);
+    width:260px;
+    height:975px;
+    line-height:2em;
+}
+#threeColorCat{
+    display:inline-block;
+    transform:translateX(300px);
+    width:498px;
+    height:710px;
+}
+#wallPic{
+    display:inline-block;
+    transform:translate(-300px,630px);
+    width:441px;
+    height:265px;
+}
+#lastCoffeeCat{
+    display:inline-block;
+    z-index:99;
+    transform:translate(-200px,700px);

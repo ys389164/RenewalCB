@@ -1,0 +1,47 @@
+@font-face{
+    font-family: 'MICEGothic';
+    src:
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');}
+    body{
+    font-family:'MICEGothic';
+    font-size:18px;
+    }
+    h4{
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    color:midnightblue;
+    }
+    h5{
+    font-size: 25px;
+    color:lightseagreen;
+    }
+    h6{
+    font-size:20px;
+    color:darkcyan;
+    }
+    td{
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    width:500px;
+    height:100px;
+    }
+    ul>li{
+    list-style-type: square;
+    }
+    li{
+    padding-bottom:10px;
+    }
+    #tdThree{
+    border-bottom:10px solid midnightblue;
+    }
+    table{
+    border-bottom:1px solid black; 
+    text-align: center;
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    }

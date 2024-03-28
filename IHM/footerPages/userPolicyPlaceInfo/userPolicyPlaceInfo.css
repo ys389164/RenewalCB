@@ -1,0 +1,56 @@
+@font-face{
+    font-family: 'MICEGothic';
+    src:
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+    }
+    body{
+    font-family:'MICEGothic';
+    font-size:18px;
+    }
+    h4{
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+    color:midnightblue;
+    }
+    h6{
+    font-size:20px;
+    color:darkcyan;
+    }
+    li{padding-bottom:10px;
+    }
+    ul > li{
+    counter-increment: custom-counter;
+    list-style-type:none;}
+    ul > li:before{content:counter(custom-counter)")"
+    }
+    ol li{list-style-type:lower-alpha;}
+    #companyInfo>li, #companyInfo2>li{
+    list-style-type: none;
+    }
+    table{
+    border-bottom:1px solid black; 
+    text-align: center;
+    }
+    th{
+    background-color:rgb(65, 65, 109);
+    color:white;
+    }
+    td{
+    list-style-type: none;
+    text-align: center;
+    vertical-align: middle;
+    width:500px;
+    height:100px;
+    }
+    .storeService{
+    text-align: left;
+    }
+    #tdTwo{
+    border-bottom:10px solid midnightblue;
+    }
+    a{
+    text-decoration:none;
+    color:black;
+    }

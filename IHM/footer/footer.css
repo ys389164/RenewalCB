@@ -15,7 +15,7 @@ footer {
 a{text-decoration: none;}
 #goUp{/*여기야!*/
   cursor:pointer;
-  border-radius: 50%;
+  border-radius: 25%;
   border:5px solid lightseagreen;
   display:none;
   position:fixed;
