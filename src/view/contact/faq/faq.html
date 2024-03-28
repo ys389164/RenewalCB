@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+
+    <main>
+      <div class="banner">
+        <h2>Advice of opening a franchise store</h2>
+      </div>
+
+      <article class="subContentContainer">
+        <section class="subTitle">
+          <h3>상담신청 및 FAQ</h3>
+        </section>
+        <section class="pageTabs">
+          <ul>
+            <li><a href="../contact/contact.html">가맹점 상담신청</a></li>
+            <li><a href="../business/business.html">창업설명회 상담신청</a></li>
+            <li class="checkedPage"><a href="#self">FAQ</a></li>
+          </ul>
+        </section>
+
+        <section class="subContents">
+          <div class="questionList">
+            <ul id="qaList">
+            </ul>
+          </div>
+
+          <div class="paging">
+            <button type="button" onclick="createDOM(1)">1</button>
+            <button type="button" onclick="createDOM(2)">2</button>
+          </div>
+          
+        </section>
+      </article>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <script src="paging.js"></script>
+    <script src="/common/callHTML.js"></script>
+  </body>
+</html>

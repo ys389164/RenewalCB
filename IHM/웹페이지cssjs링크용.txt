@@ -1,6 +1,0 @@
-<link rel="stylesheet" href="/IHM/header/header.css">
-    <link rel="stylesheet" href="/IHM/footer/footer.css">
-
-    <script src="/common/callHTML.js"></script>
-
-다른 웹페이지 만들 때 이걸 붙여넣기

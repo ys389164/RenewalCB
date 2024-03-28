@@ -1,0 +1,197 @@
+<!-- 
+    width: 1920px 
+    height: 100vh 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="/src/style/reset.css">
+    <link rel="stylesheet" href="beverage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- swiper css -->
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+</head>
+
+<body>
+    <header id="header" class="header"></header>
+    
+    <main id="fullpage">
+        <section class="section">
+            <div id="menu_top">
+                <p id="top_text">BEVERAGE</p>
+                <p id="bottom_text">한 잔으로 즐기는 하루치의 여유</p>
+            </div>
+            <div class="menu_select">  
+                <a href="../new/new.html" class="menu_selector"><p class="menu_types"><br><br>신메뉴<br><br></p></a>
+                <a href="../coffee/coffee.html" class="menu_selector"><p class="menu_types"><br><br>커피<br><br></p></a>
+                <a href="../beverage/beverage.html" class="menu_selector" style="border-bottom: 3px solid black;"><p class="menu_types"><br><br>음료<br><br></p></a>
+                <a href="../food/food.html" class="menu_selector"><p class="menu_types"><br><br>푸드<br><br></p></a>
+                <!-- <a href="">MD</a>
+                <a href="">Retail</a> -->
+            </div>
+            <div id="select_beverage">
+                <form>
+                    <input type="radio" id="latte" name="beverage" value="latte" onclick="handleCoffeeChange('latte')">
+                    <label for="espresso">라떼</label>
+
+                    <input type="radio" id="frappeno" name="beverage" value="frappeno" onclick="handleCoffeeChange('frappeno')">
+                    <label for="coldbrew">프라페노</label>
+
+                    <input type="radio" id="juiceade" name="beverage" value="juiceade" onclick="handleCoffeeChange('juiceade')">
+                    <label for="decaffein">주스&에이드</label>
+
+                    <input type="radio" id="tea" name="beverage" value="tea" onclick="handleCoffeeChange('tea')">
+                    <label for="decaffein">티</label>
+                </form>
+            </div>
+            <div id="menu">
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20240220994528.png"><br><span>딸기 우유 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">딸기 우유 프라페노</p><br><hr>
+                        <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">시즌 스테디셀러 '논산딸기 순수우유 케이크' 음료 버전으로 상큼한 딸기와 달콤한 밀크쉐이크를 함께 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20240220470602.png"><br><span>딸기 쿠키앤크림 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">딸기 쿠키앤크림 프라페노</p><br><hr>
+                        <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">상큼한 딸기와 달콤한 쿠키앤크림의 조화와 바삭하게 씹히는 쿠키를 함께 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="latte">
+                    <img src="/assets/images/drink/20240220875379.png"><br><span>논산 생딸기 라떼</span><br>
+                    <div class="info">
+                        <p class="menu_title">논산 생딸기 라떼</p><br><hr>
+                        <p class="menu_price">R | 6,900 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">논산 생딸기 과육을 가득 올려 딸기 본연의 상큼함을 즐길 수 있는 딸기 라떼</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20240220479595.png"><br><span>논산 생딸기 주스</span><br>
+                    <div class="info">
+                        <p class="menu_title">논산 생딸기 주스</p><br><hr>
+                        <p class="menu_price">R | 6,700 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">신선한 논산 생딸기를 듬뿍 넣어 갈아 만든 딸기 주스</p>
+                    </div>
+                </div>
+
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20240220994528.png"><br><span>키위 망고 젤라또 에이드</span><br>
+                    <div class="info">
+                        <p class="menu_title">키위 망고 젤라또 에이드</p><br><hr>
+                        <p class="menu_price">R | 6,500 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">상큼한 키위와 새콤달콤한 망고 젤라또가 어우러진 청량 가득한 젤라또 에이드</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20240220125476.png"><br><span>모히또 에이드</span><br>
+                    <div class="info">
+                        <p class="menu_title">모히또 에이드</p><br><hr>
+                        <p class="menu_price">R | 6,300 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">상큼한 레몬, 라임과 상쾌한 민트 향이 가득한 무알콜 모히또 에이드</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20240220769065.png"><br><span>문경오미자 샹그리아 에이드</span><br>
+                    <div class="info">
+                        <p class="menu_title">문경오미자<br>샹그리아 에이드</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">문경에서 자란 오미자의 새콤달콤함이 어우러진 레드 뱅쇼를 청량감 있게 즐길 수 있는 에이드</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20240220710984.png"><br><span>제주청귤 에이드</span><br>
+                    <div class="info">
+                        <p class="menu_title">제주청귤 에이드</p><br><hr>
+                        <p class="menu_price">R | 5,800 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">제주에서 자란 청귤의 상큼함을 청량감 있게 즐길 수 있는 에이드</p>
+                    </div>
+                </div>
+
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20230711977037.png"><br><span>우리배 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">우리배 프라페노</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">국산 배로 만들어 더욱 신선하고 청량감 있게 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20230711735389.png"><br><span>성주참외 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">성주참외 프라페노</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">경북 성주 참외 본연의 신선함을 100% 그대로 갈아 담아 시원하고 달달한 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20230711472941.png"><br><span>논산수박 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">논산수박 프라페노</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">달콤하게 잘 익은 충남 논산 수박을 통째로 갈은 시원한 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="latte">
+                    <img src="/assets/images/drink/20230302798232.png"><br><span>애플망고 연유 보틀 라떼</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 연유 보틀 라떼</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">새콤달콤한 애플망고와 달콤한 연유를 함께 즐길 수 있는 애플망고 연유 라떼</p>
+                    </div>
+                </div>
+
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20230302362212.png"><br><span>애플망고 리얼 요거트 젤라또 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 리얼<br>요거트 젤라또 프라페노</p><br><hr>
+                        <p class="menu_price">R | 0,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">새콤달콤한 애플망고와 리얼 요거트, 요거트 젤라또가 어우러진 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="frappeno">
+                    <img src="/assets/images/drink/20230302302735.png"><br><span>애플망고 치즈 젤라또 프라페노</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 치즈<br>젤라또 프라페노</p><br><hr>
+                        <p class="menu_price">R | 6,700 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">망고 젤라또와 필라델피아 치즈 케이크 큐브를 더해 새콤달콤한 애플망고와 진한 치즈 풍미를 시원하게 즐길 수 있는 블렌디드 음료</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="juiceade">
+                    <img src="/assets/images/drink/20230302708760.png"><br><span>애플망고 주스</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 주스</p><br><hr>
+                        <p class="menu_price">R | 6,300 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">새콤달콤한 애플망고를 듬뿍 넣어 갈아 만든 과일 주스</p>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="tea">
+                    <img src="/assets/images/drink/20221116247727.png"><br><span>문경오미자 뱅쇼(HOT ONLY)</span><br>
+                    <div class="info">
+                        <p class="menu_title">문경오미자 뱅쇼<br>(HOT ONLY)</p><br><hr>
+                        <p class="menu_price">R | 6,000 &nbsp;&nbsp; L | 0,000</p><hr><br>
+                        <p class="menu_text">문경에서 자란 오미자의 새콤달콤함이 어우러진 논알콜 레드 뱅쇼</p>
+                    </div>
+                </div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper js -->
+    <script src="beverage.js"></script>
+    <script src="/common/callHTML.js"></script>
+</body>
+
+</html>

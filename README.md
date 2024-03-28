@@ -38,4 +38,4 @@
 <br><br>
 프로젝트 바로가기 링크
 
-## [카페베네 리뉴얼 바로가기](https://ys389164.github.io/RenewalCB/)
+## [카페베네 리뉴얼 바로가기](https://ys389164.github.io/)

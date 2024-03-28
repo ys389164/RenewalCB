@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/style/reset.css">
+        <link rel="stylesheet" href="./store.css" />
+        <link rel="stylesheet" href="/src/style/header.css" />
+        <link rel="stylesheet" href="/src/style/footer.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <title>CAFFEBENE</title>
+    </head>
+
+    <body>
+        <header id="header" class="header"></header>
+        <main>
+            <section class="banner">
+                <h2>국내 매장 찾기</h2>
+            </section>
+            <section class="subContetContainer">
+                <div class="map_wrap">
+                    <div id="map"></div>
+                    <div id="menu_wrap" class="bg_white">
+                        <div class="option">
+                            <div> 키워드 : <input type="text" value="" id="keyword" size="15" />
+                                <button class="storeSearchBtn" type="button" onclick="searchStoreList()"> 검색하기 </button>
+                            </div>
+                        </div>
+                        <hr />
+                        <ul id="placesList"></ul>
+                        <div class="pagination">
+                            <button type="button" class="prevEvt" onclick="setPagenation('prev')"> prev </button>
+                            <div class="pagingNumWrap">
+                                <div class="page-item active" data-value="1">
+                                    <a class="page-link active" href="#" onclick="pageBtnEvt(1)">1</a>
+                                </div>
+                                <div class="page-item" data-value="2">
+                                    <a class="page-link" href="#" onclick="pageBtnEvt(2)">2</a>
+                                </div>
+                                <div class="page-item" data-value="3">
+                                    <a class="page-link" href="#" onclick="pageBtnEvt(3)">3</a>
+                                </div>
+                                <div class="page-item" data-value="4">
+                                    <a class="page-link" href="#" onclick="pageBtnEvt(4)">4</a>
+                                </div>
+                                <div class="page-item" data-value="5">
+                                    <a class="page-link" href="#" onclick="pageBtnEvt(5)">5</a>
+                                </div>
+                            </div>
+                            <button type="button" class="nextEvt" onclick="setPagenation('next')"> next </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer" class="footer"></footer>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0fff768840dc0ef65e4e909dd6d6711&libraries=services"></script>
+        <script src="/common/callHTML.js"></script>
+        <script src="./store.js"></script>
+        <script src="./map.js"></script>
+    </body>
+
+</html>
