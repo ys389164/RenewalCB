@@ -1,0 +1,90 @@
+
+@font-face{
+font-family: 'MICEGothic';
+src:
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+    url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+}
+@keyframes move{
+    0%{transform:translateY(0px);}
+    16%{transform:translateY(0px);}
+    32%{transform:translateY(-370px);}
+    48%{transform:translateY(-370px);}
+    64%{transform:translateY(-740px);}
+    80%{transform:translateY(-740px);}
+    100%{transform:translateY(-1110px);}
+}
+
+body{
+display:inline-block;
+text-align:center;
+font-family:'MICEGothic';
+font-size:18px;
+overflow-x:hidden;
+}
+#logoTopImg{
+width:157px; 
+height:80px;}
+h3{
+font-size:24px;
+color:midnightblue;
+}
+div{
+display:block;
+/* height:300px; */
+}
+span{
+font-size: 18px;
+font-weight:bold;
+color:midnightblue;
+}
+table{
+text-align: left;
+}
+#caffebeneCompany{
+text-align: center;
+}
+tr td{
+font-size: 18px;
+padding-bottom:40px;
+padding-top:40px;
+}
+#moving{
+position:absolute;
+display:inline-block;
+transform:translate(50px,-400px);
+width:350px; 
+height:370px;
+overflow:hidden;
+}
+#cafeMap{
+float:left;
+margin-right:10px;
+}
+#plant, #plant2,
+#plant3, #plant4{
+float:right;
+width:350px;
+height:370px;
+animation-name:move;
+animation-duration:16s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+
+/*조정용 */
+footer{
+    transform:translateY(600px);
+}
+
+#comeHereContent,
+#plantContent{
+    width:1000px;
+    height:350px;
+}
+
+#comeHereContent{
+    transform:translate(460px,50px);
+}
+
+
