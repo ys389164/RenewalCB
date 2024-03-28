@@ -4,18 +4,18 @@ $(function(){
     const menuEmpty = $('.menu_items_empty');
 
     checkboxes.on('change', function() {
-        if ($(this).prop('id') === 'all') {
-            // '전체' 체크박스가 선택된 경우
+        if ($(this).prop('id') === 'all') { // '전체' 체크박스가 선택된 경우
             if ($(this).prop('checked')) {
                 checkboxes.not($(this)).prop('checked', false); // 다른 체크박스 해제
                 menuItems.show(); // 모든 메뉴 항목 표시
                 menuEmpty.hide();
             }
         }
-        else if ($(this).prop('id') === 'espresso') {
+        else if ($(this).prop('id') === 'espresso') { // '에스프레소' 체크박스가 선택된 경우
             if ($(this).prop('checked')) {
                 checkboxes.not($(this)).prop('checked', false); // 다른 체크박스 해제
 
+                // 선택된 커피 유형에 해당하는 메뉴 아이템 보이기
                 const selectedCoffees = checkboxes.filter(':checked').map(function() {
                     return this.value;
                 }).get();
@@ -33,10 +33,9 @@ $(function(){
                 menuEmpty.slice(0, emptyMenuCount).show();
             }
         }
-        else {
-            // '전체' 체크박스가 선택되지 않은 경우
+        else { 
             if ($(this).prop('checked')) {
-                $('#all').prop('checked', false); // '전체' 체크박스 해제
+                $('#all').prop('checked', false);
                 $('#espresso').prop('checked', false);
             }
             
@@ -77,7 +76,7 @@ $(function(){
     $(document).on("click", function(event){
         if (!$(event.target).closest('.menu_items').length) {
             $(".info").fadeOut();
-            $(".nutrient_info").fadeOut(); // 영양 성분 정보도 숨기기
+            $(".nutrient_info").fadeOut();
         }        
     });    
 });

@@ -14,16 +14,17 @@
 
 <body>
     <header id="header" class="header"></header>
-    <div class="swiper mySwiper">
+    <div class="swiper mainSwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="swiper mySwiper2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide new"><img src="../imgs/banner/20240220243205.jpg"></div>
-                    <div class="swiper-slide new"><img src="../imgs/banner/20230816239199.jpg"></div>
-                    <div class="swiper-slide new"><img src="../imgs/banner/20230816576456.jpg"></div>
+                <div class="swiper seasonMenuSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide new"><img src="../imgs/banner/20240220243205.jpg"></div>
+                        <div class="swiper-slide new"><img src="../imgs/banner/20230816239199.jpg"></div>
+                        <div class="swiper-slide new"><img src="../imgs/banner/20230816576456.jpg"></div>
+                    </div>
                 </div>
-                </div>
+                <div class="blinking">아래로 스크롤하세요!</div>
             </div>
 
             <div class="swiper-slide">
@@ -42,22 +43,22 @@
                 </div>
                 <div class="swiper newMenuSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span></div>
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span></div>
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span></div>
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span></div>
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span></div>
-                        <div class="swiper-slide newMenu" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span></div>
+                        <div class="swiper-slide newMenu" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span></div>
                     </div>
                 </div>
                 <div class="swiper newMenuSwiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span></div>
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span></div>
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span></div>
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span></div>
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span></div>
-                        <div class="swiper-slide newMenu2" onclick="redirectToMenuPage('../menu/new.html')"><img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220470602.png"><span>딸기 쿠키앤크림 프라페노</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220875379.png"><span>논산 생딸기 라떼</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220479595.png"><span>논산 생딸기 주스</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/food/20240220566258.png"><span>딸기 생크림 케이크</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/food/20240220255156.png"><span>논산딸기 순수우유 케이크</span></div>
+                        <div class="swiper-slide newMenu2" onclick="moveToPage('../menu/new.html')"><img src="../imgs/drink/20240220994528.png"><span>딸기 우유 프라페노</span></div>
                     </div>
                 </div>
             </div>
@@ -67,13 +68,13 @@
                     <div id="text3_title">Friendly & Refreshing & Slow Life</div>
                     <div id="text3_content">누구나 편하게 드나들 수 있는 곳<br>언제나 활짝 열려있는 동네 사랑방 같은 곳에서<br>나의 정다운 이웃, 당신을 기다리고 있습니다</div>
                 </div>
-                <div id="text4" onclick="moveToPage1()"></div>
+                <div id="text4" onclick="moveToPage('../../YS/contact/contact/contact.html')"></div>
                 <div id="text4_title">가맹 안내</div>
                 <div id="text4_content">가맹점 개설을 위한 절차를<br>자세하게 알려드립니다</div>
-                <div id="text5" onclick="moveToPage2()"></div>
+                <div id="text5" onclick="moveToPage('../../YS/brand/B2BConsulting/b2b.html')"></div>
                 <div id="text5_title">B2B 컨설팅</div>
                 <div id="text5_content">사내카페 및 기타 B2B카페<br>솔루션을 제공해드립니다</div>
-                <div class="swiper mySwiper3" id="startup_section">
+                <div class="swiper startupSwiper" id="startup_section">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide startup">
                             <img src="../imgs/startup/wish-sd1-1.jpg">
