@@ -1,18 +1,32 @@
 /*여기서부터는 footer*/
-html{scroll-behavior:smooth;}/*나중에 헤더 부분에 추가할 것*/
+html{
+    scroll-behavior:smooth;
+}/*나중에 헤더 부분에 추가할 것*/
+.footerMembersWrap{
+    width: 1920px;
+    display: flex;
+    flex-direction: row;
+}/*윤솔씨가 추가 */
 .footerMembers{
-    display:inline-block;
+    /* display:inline-block;
     vertical-align:top;
     margin-left:8%;
-    margin-right:8%;}
+    margin-right:8%; */
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+}
 footer {
     display:inline-block;
     vertical-align: bottom;
     text-align:center;
     background-color: white;
     font-weight: bold;
-    width:1920px;}
-a{text-decoration: none;}
+    width:1920px;
+}
+a{
+    text-decoration: none;
+}
 #goUp{/*여기야!*/
   cursor:pointer;
   border-radius: 25%;
@@ -22,19 +36,28 @@ a{text-decoration: none;}
   right:20px;
   bottom:100px;
   }
-hr{display:block; top:20px;}
+hr{
+    display:block; top:20px;
+}
 #footFive li{
     list-style-type:none;
-    text-align: left;
+    /* text-align: left;
     color: midnightblue;
-    padding: 10px; width:320px;}
+    padding: 10px; width:320px; */
+    text-align:right;
+    color:midnightblue;
+    padding: 10px;
+    width: 320px;
+}
 #companyInfo li{
     list-style-type:none; 
     text-align:left;
-    padding-bottom:10px;}
+    padding-bottom:10px;
+}
 #logoTwo {
     text-align: center;
-    margin-right: 20px;}
+    margin-right: 20px;
+}
 #forCustomerService {
     color: #00a090;
     font-weight: bold;}
@@ -43,12 +66,17 @@ hr{display:block; top:20px;}
     height: 100;
     font-size: 12px;
     padding: 10px;}
-#copyright { color: lightgray;}
+#copyright { 
+    color: lightgray;
+}
 .hyperlink {
     display: inline-block;
     margin:5px;
     width:32px; 
-    height:38px;}
+    height:38px;
+}
 #sns{
     text-align:center;
-    padding-right:77px;}
+    /* padding-right:77px; */
+    margin: 0 auto;
+}
