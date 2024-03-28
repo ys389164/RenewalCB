@@ -1,30 +1,30 @@
 function loadHeader() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/IHM/header/header.html', true);
+    xhr.open('GET', '/src/view/header/header.html', true);
     xhr.send();
 
     xhr.onload = () => {
         document.getElementById('header').innerHTML = xhr.responseText;
 
         const scriptTag = document.createElement('script');
-        scriptTag.setAttribute('src', '/IHM/header/header.js');
+        scriptTag.setAttribute('src', '/src/view/header/header.js');
         document.querySelector('body').appendChild(scriptTag);
     }
 }
 function loadFooter() {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', '/IHM/footer/footer.html', true);
+    xhr.open('GET', '/src/view/footer/footer.html', true);
     xhr.send();
 
     xhr.onload = () => {
         document.getElementById('footer').innerHTML = xhr.response;
         const scriptTag = document.createElement('script');
-        scriptTag.setAttribute('src', '/IHM/footer/footer.js');
+        scriptTag.setAttribute('src', '/src/view/footer/footer.js');
         document.querySelector('body').appendChild(scriptTag);
-        console.log(xhr.response);
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
+
+window.addEventListener('load',()=>{
     loadHeader();
     loadFooter();
-});
+})

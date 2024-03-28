@@ -1,0 +1,423 @@
+<!-- 
+    width: 1920px 
+    height: 100vh 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="/src/style/reset.css">
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> <!-- swiper css -->
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+</head>
+
+<body>
+    <header id="header" class="header"></header>
+    
+    <main id="fullpage">
+        <section class="section">
+            <div id="menu_top">
+                <p id="top_text">FOOD</p>
+                <p id="bottom_text">든든한 베네 푸드와 함께 쉬어가기</p>
+                <!-- <p id="menu_warning">
+                    - 카페베네 에스프레소는 R size(2 shot) 기준 147mg, 콜드브루 시그니처 블렌드는 R size(45-60ml) 기준 143-191mg, 콜드브루 블루밍 블렌드는 R size(45-60ml) 기준 135-179mg, 콜드브루 디카페인은 R size(45-60ml) 기준 8-11mg의 카페인이 함유되어 있습니다. 
+                     <br>- 카페인 1일 섭취 권고량은 '성인 400mg 이하, 임산부 300mg 이하, 청소년 체중kg당 2.5mg 이하'이므로 참고하여 섭취에 주의하여 주시기 바랍니다.
+                 </p>  -->
+            </div>
+            <div class="menu_select">  
+                <a href="../new/new.html" class="menu_selector"><p class="menu_types"><br><br>신메뉴<br><br></p></a>
+                <a href="../coffee/coffee.html" class="menu_selector"><p class="menu_types"><br><br>커피<br><br></p></a>
+                <a href="../beverage/beverage.html" class="menu_selector"><p class="menu_types"><br><br>음료<br><br></p></a>
+                <a href="../food/food.html" class="menu_selector"  style="border-bottom: 3px solid black;"><p class="menu_types"><br><br>푸드<br><br></p></a>
+                <!-- <a href="">MD</a>
+                <a href="">Retail</a> -->
+            </div>
+            <div id="select_food">
+                <form>
+                    <input type="radio" id="bakery" name="food" value="bakery">
+                    <label for="espresso">베이커리</label>
+                    <input type="radio" id="cake" name="food" value="cake">
+                    <label for="coldbrew">케이크</label>
+                    <input type="radio" id="sandwich" name="food" value="sandwich">
+                    <label for="decaffein">샌드위치</label>
+                    <input type="radio" id="bagelcreamcheese" name="food" value="bagelcreamcheese">
+                    <label for="decaffein">베이글&크림치즈</label>
+                    <input type="radio" id="gelato&affogato" name="food" value="gelatoaffogato">
+                    <label for="decaffein">젤라또&아보가토</label>
+                    <input type="radio" id="bingsu" name="food" value="bingsu">
+                    <label for="decaffein">빙수</label>
+                </form>
+            </div>
+            <div id="menu">
+                <!-- 1번째 줄 -->
+                <div class="menu_items" data-type="cake">
+                    <img src="/assets/images/food/20240220255156.png"><br><span>논산딸기 순수우유 케이크</span><br>
+                    <div class="info">
+                        <p class="menu_title">논산딸기 순수우유 케이크</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">신선한 논산 생딸기와 부드럽고 진한 우유 크림이 어우러진 순수우유 케이크</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bingsu">
+                    <img src="/assets/images/food/20230711789509.png"><br><span>베리베리 그릭요거트 빙수</span><br>
+                    <div class="info">
+                        <p class="menu_title">베리베리 그릭요거트 빙수</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">진한 그릭요거트 베이스에 상큼한 딸기와 믹스베리(블랙베리, 라즈베리, 블루베리), 요거트 젤라또, 요거트 빅구슬 아이스크림이 가득 올라간 새콤달콤한 젤라또 빙수</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bingsu">
+                    <img src="/assets/images/food/20230302800850.png"><br><span>애플망고 눈꽃빙수</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 눈꽃빙수</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">달콤한 애플망고 베이스에 상큼한 애플망고 과육, 망고 젤라또, 필라델피아 치즈케이크 큐브가 가득 토핑된 젤라또 눈꽃빙수</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>696</td></tr>
+                            <tr><td>열량 (kcal)</td><td>784</td></tr>
+                            <tr><td>당류 (g)</td><td>119</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>13(23%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>12(83%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>266(13%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bingsu">
+                    <img src="/assets/images/food/20230302984664.png"><br><span>애플망고 빙수(1인)</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 빙수(1인)</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">달콤한 애플망고 베이스에 상큼한 애플망고 과육, 망고 젤라또,필라델피아 치즈케이크 큐브가 가득 토핑된 1인 젤라또 빙수</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>344</td></tr>
+                            <tr><td>열량 (kcal)</td><td>272</td></tr>
+                            <tr><td>당류 (g)</td><td>46</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>4(7%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>3.7(25%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>91(5%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 2번째 줄 -->
+                <div class="menu_items" data-type="bingsu">
+                    <img src="/assets/images/food/20230302398833.png"><br><span>애플망고 빙수</span><br>
+                    <div class="info">
+                        <p class="menu_title">애플망고 빙수</p><br><hr>
+                        <p class="menu_price">12,900</p><hr><br>
+                        <p class="menu_text">달콤한 애플망고 베이스에 상큼한 애플망고 과육, 망고 젤라또,필라델피아 치즈케이크 큐브가 가득 토핑된 클래식 젤라또 빙수</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>842</td></tr>
+                            <tr><td>열량 (kcal)</td><td>609</td></tr>
+                            <tr><td>당류 (g)</td><td>96</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>7(13%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>9(62%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>208(10%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="cake">
+                    <img src="/assets/images/food/20230111118638.png"><br><span>순우유 롤</span><br>
+                    <div class="info">
+                        <p class="menu_title">순우유 롤</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">촉촉한 롤케이크 안에 부드러운 우유 크림이 가득 차 있는 케이크</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>1개(91g)</td></tr>
+                            <tr><td>열량 (kcal)</td><td>396</td></tr>
+                            <tr><td>당류 (g)</td><td>28</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>5(9%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>13(88%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>66(3%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bakery">
+                    <img src="/assets/images/food/20230111235431.png"><br><span>소보로빵</span><br>
+                    <div class="info">
+                        <p class="menu_title">소보로빵</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">빵의 촉촉한 식감과 소보로의 고소한 풍미가 특징인 소보로빵</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="sandwich">
+                    <img src="/assets/images/food/20221017628706.png"><br><span>할라피뇨 치킨 샌드위치</span><br>
+                    <div class="info">
+                        <p class="menu_title">할라피뇨 치킨 샌드위치</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">쫀득한 치아바타 사이에 치킨과 썬드라이 토마토, 할라피뇨, 고소한 모짜렐라치즈가 어우러진 담백 매콤한 샌드위치</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>194</td></tr>
+                            <tr><td>열량 (kcal)</td><td>480</td></tr>
+                            <tr><td>당류 (g)</td><td>5</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>29(53%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>6(40%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>850(43%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 3번째 줄 -->
+                <div class="menu_items" data-type="sandwich">
+                    <img src="/assets/images/food/20221017851957.png"><br><span>미트볼 칠리 치즈 샌드위치</span><br>
+                    <div class="info">
+                        <p class="menu_title">미트볼 칠리 치즈 샌드위치</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">겉은 바삭하고 속은 부드러운 바게트 사이에 미트볼와 매콤한 칠리소스, 고소한 모짜렐라치즈가 조화로운 샌드위치</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>233</td></tr>
+                            <tr><td>열량 (kcal)</td><td>570</td></tr>
+                            <tr><td>당류 (g)</td><td>14</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>26(47%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>9(60%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>1,140(57%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bakery">
+                    <img src="/assets/images/food/20221017223159.png"><br><span>오레오 스모어 쿠키</span><br>
+                    <div class="info">
+                        <p class="menu_title">오레오 스모어 쿠키</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">통으로 올린 오레오의 달콤한 맛과 마시멜로우의 쫀득한 식감이 어우러진 쿠키</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>100</td></tr>
+                            <tr><td>열량 (kcal)</td><td>435</td></tr>
+                            <tr><td>당류 (g)</td><td>27</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>7(13%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>2.3(15%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>218(11%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bakery">
+                    <img src="/assets/images/food/20221017813006.png"><br><span>비스코프 스모어 쿠키</span><br>
+                    <div class="info">
+                        <p class="menu_title">비스코프 스모어 쿠키</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">통으로 올린 비스코프의 진한 맛과 마시멜로우의 쫀득한 식감이 어우러진 쿠키</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>95</td></tr>
+                            <tr><td>열량 (kcal)</td><td>453</td></tr>
+                            <tr><td>당류 (g)</td><td>26</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>5(9%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>1(7%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>259(13%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bakery">
+                    <img src="/assets/images/food/20221017460020.png"><br><span>소금빵</span><br>
+                    <div class="info">
+                        <p class="menu_title">소금빵</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">버터의 고소한 풍미와 소금의 짭조름함이 더해진 소금빵</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>75</td></tr>
+                            <tr><td>열량 (kcal)</td><td>248</td></tr>
+                            <tr><td>당류 (g)</td><td>4</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>6(11%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>695(35%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 4번째 줄 -->
+                <div class="menu_items" data-type="gelatoaffogato">
+                    <img src="/assets/images/food/20220610719628.png"><br><span>흑임자 젤라또</span><br>
+                    <div class="info">
+                        <p class="menu_title">흑임자 젤라또</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">흑임자의 고소함과 달콤함을 담은 쫀득한 식감의 흑임자 젤라또</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>싱글</td><td>더블</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1개 (g/ml)</td><td>1컵(90g)</td><td>1컵(180g)</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="gelatoaffogato">
+                    <img src="/assets/images/food/20220610156387.png"><br><span>제주한라봉 젤라또</span><br>
+                    <div class="info">
+                        <p class="menu_title">제주한라봉 젤라또</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">제주산 한라봉 알갱이가 살아 있는 카페베네 제주한라봉 베이스로 만들어 더욱 새콤달콤한 제주한라봉 젤라또</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>싱글</td><td>더블</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1개 (g/ml)</td><td>1컵(90g)</td><td>1컵(180g)</td></tr>
+                            <tr><td>열량 (kcal)</td><td>126</td><td>252</td></tr>
+                            <tr><td>당류 (g)</td><td>26</td><td>51</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>1(1%)</td><td>1(1%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>1.2(8%)</td><td>2.4(16%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>42(2%)</td><td>84(4%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="bakery">
+                    <img src="/assets/images/food/20220520391961.png"><br><span>마카롱</span><br>
+                    <div class="info">
+                        <p class="menu_title">마카롱</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">쫀득한 꼬끄 사이에 필링이 가득 들어간 뚱카롱<br>(황치즈/다크초코/퐁/순우유/쿠앤크 5종)</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>40</td></tr>
+                            <tr><td>열량 (kcal)</td><td>165</td></tr>
+                            <tr><td>당류 (g)</td><td>9</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>3(5%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>4.4(29%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>98(5%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu_items" data-type="cake">
+                    <img src="/assets/images/food/20220520214257.png"><br><span>흑임자 갸또 쇼콜라</span><br>
+                    <div class="info">
+                        <p class="menu_title">흑임자 갸또 쇼콜라</p><br><hr>
+                        <p class="menu_price">0,000</p><hr><br>
+                        <p class="menu_text">꾸덕한 갸또 쇼콜라 위에 흑임자 초코가나슈와 생크림이 레이어드된 흑임자의 풍미가 가득한 케이크</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3" style="border-bottom: 1px solid black;">열량 및 영양성분</th></tr>
+                            <tr><td>1회 제공량 1개 (g/ml)</td><td>121</td></tr>
+                            <tr><td>열량 (kcal)</td><td>389</td></tr>
+                            <tr><td>당류 (g)</td><td>27</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>6(11%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>16(108%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>311(16%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="menu_items" data-type="espresso">
+                    <img src="/assets/images/coffee/20220831979442.png"><br><span>흑임자 크림 라떼(ICED)</span><br>
+                    <div class="info">
+                        <p class="menu_title">흑임자 크림 라떼(ICED)</p><br><hr>
+                        <p class="menu_price">R | 5,600 &nbsp;&nbsp; L | 6,100</p><hr><br>
+                        <p class="menu_text">에스프레소와 국산 흑임자 크림의 고소함이 어우러진 스페셜 커피</p>
+                        <div class="nutrient"><span class="menu_nutrient">열량 및 영양성분</span></div>
+                    </div>
+                    <div class="nutrient_info">
+                        <table>
+                            <tr><th colspan="3">열량 및 영양성분</th></tr>
+                            <tr><td></td><td>R</td><td>L</td></tr>
+                            <tr style="border-top: 1px solid black;"><td>1회 제공량 1잔 (ml)</td><td>0</td><td>0</td></tr>
+                            <tr><td>열량 (kcal)</td><td>0</td><td>0</td></tr>
+                            <tr><td>당류 (g)</td><td>0</td><td>0</td></tr>
+                            <tr><td>단백질 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>포화지방 (g)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                            <tr><td>나트륨 (mg)<br>(%영양소 기준치)</td><td>0(0%)</td><td>0(0%)</td></tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+                <div class="menu_items_empty" style="visibility: hidden;"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- swiper js -->
+    <script src="food.js"></script>
+    <script src="/common/callHTML.js"></script>
+</body>
+
+</html>

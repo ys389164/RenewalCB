@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="/src/style/reset.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+  </head>
+
+  <body>
+    <header id="header" class="header"></header>
+    <main>
+      <div class="banner">
+        <h2>Advice of opening a franchise store</h2>
+      </div>
+      <article class="subContentContainer">
+        <section class="subTitle">
+          <h3>상담신청 및 FAQ</h3>
+        </section>
+        <section class="pageTabs">
+          <ul>
+            <li class="checkedPage"><a href="#self">가맹점 상담신청</a></li>
+            <li><a href="../business/business.html">창업설명회 상담신청</a></li>
+            <li><a href="../faq/faq.html">FAQ</a></li>
+          </ul>
+        </section>
+        <section class="submissionFormWrap">
+          <form action="" class="submissionForm">
+            <div class="submitF">
+              <table class="submissionTable">
+                <tbody>
+                  <tr>
+                    <th>이름</th>
+                    <td>
+                      <input type="text" title="이름" id="name" class="name">
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>연락처</th>
+                    <td>
+                      <select title="연락처" id="tell1" class="tel">
+                        <option value="선택">선택</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select>
+                      <span class="span">-</span>
+                      <input type="text" title="연락처" id="tell2" class="tel" maxlength="4">
+                      <span class="span">-</span>
+                      <input type="text" title="연락처" id="tell3" class="tel" maxlength="4">
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>이메일</th>
+                    <td>
+                      <input type="text" title="이메일" id="email1" class="email" maxlength="20">
+                      @
+                      <input type="text" title="이메일" id="email2" class="email" maxlength="20">
+                      <select title="이메일" id="email3" class="email">
+                        <option value="직접입력">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="google.co.kr">google.co.kr</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="dreamwiz.com">dreamwiz.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>개설 희망 지역</th>
+                    <td>
+                      <select title="지역", id="area1", class="area">
+                        <option value="시/도">시/도</option>
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="인천광역시">인천광역시</option>
+                        <option value="대전광역시">대전광역시</option>
+                        <option value="광주광역시">광주광역시</option>
+                        <option value="대구광역시">대구광역시</option>
+                        <option value="울산광역시">울산광역시</option>
+                        <option value="부산광역시">부산광역시</option>
+                        <option value="세종특별자치시">세종특별자치시</option>
+                        <option value="경기도">경기도</option>
+                        <option value="강원도">강원도</option>
+                        <option value="충청남도">충청남도</option>
+                        <option value="충청북도">충청북도</option>
+                        <option value="전라남도">전라남도</option>
+                        <option value="전라북도">전라북도</option>
+                        <option value="경상남도">경상남도</option>
+                        <option value="경상북도">경상북도</option>
+                        <option value="제주도">제주도</option>
+                      </select>
+                      <select title="상세지역", id="area2", class="area">
+                        <option value="">구/군</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th>매장크기</th>
+                    <td>
+                      <div title="상세지역" id="radioWrap" class="radioWrap">
+                        <span class="radio"><input type="radio" title="매장크기" id="size1" name="size" value="1"><label for="size1">99m&#178;(30평)이상</label></span>
+                        <span class="radio"><input type="radio" title="매장크기" id="size2" name="size" value="2"><label for="size2">132m&#178;(40평)이상</label></span>
+                        <span class="radio"><input type="radio" title="매장크기" id="size3" name="size" value="3"><label for="size3">162m&#178;(50평)이상</label></span>
+                        <span class="radio"><input type="radio" title="매장크기" id="size4" name="size" value="4"><label for="size4">기타</label></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>문의내용</th>
+                    <td>
+                      <textarea title="내용" id="content" class="content" cols="30" rows="10" placeholder="문의글을 입력해주세요"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="guideWrap">
+              <h3>개인정보 수집 · 이용에 대한 안내</h3>
+              <div class="details">
+                <p> 원활한 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다. <br></p>
+                <p> 1. 개인정보의 수집 및 이용 목적<br />
+                  가맹점 개설에 관한 상담 서비스 제공을 위한 <br>본인 식별, 상담 내용 전달, 점포 오픈 관련 정보 안내, 의사 소통 경로 확보 및 기타
+                  원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다. <br><br></p>
+                <p> 2. 수집하는 개인정보의 항목<br />이름(한글/한문/영문), 성별, 연령, 휴대폰번호, 이메일주소 <br><br></p>
+                <p> 3. 개인정보의 보유 및 이용시간<br />개인정보의 수집목적 또는 제공받은 목적 달성 시 내규에 준하여 보관 및 파기합니다.<br><br></p>
+                <p> ※개인정보 수집, 이용에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부하실 경우 접수에 제한이 있습니다. </p>
+              </div>
+            </div>
+
+            <div class="agreeForm">
+              <div> 개인정보 수집,이용에 대한 동의를 하지 않을 경우, 원하시는 서비스를 제공 받으실 수 없습니다. </div>
+              
+              <div class="agreeAudio">
+                <span>
+                  
+                  <input type="radio" title="이용약관" id="agree" name="agree" value="Y">
+                  <label for="agree">동의합니다.</label>
+                </span>
+                <span>
+                  <input type="radio" title="이용약관" id="disagree" name="agree" value="N" />
+                  <label for="disagree">동의하지 않습니다.</label>
+                </span>
+              </div>
+            </div>
+            <div class="transmissionBtn">
+              <button id="submit" >신청</button>
+            </div>
+          </form>
+        </section>
+        <section class="contactInfo">
+          <table class="contactTable">
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>연락처</th>
+                <th>이메일주소</th>
+                <th>담당지역</th>
+                <th>카카오톡 오픈채팅</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>박혜연 과장</td>
+                <td>010-5329-7650</td>
+                <td>ppark@caffebene.co.kr</td>
+                <td>서울, 경기, 강원, 부산, 경남, 대구, 울산, 경북</td>
+                <td><img src="/assets/images/contact/consult_large_yellow_pc.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>기회만 부장</td>
+                <td>010-6438-0380</td>
+                <td>2721510@caffebene.co.kr</td>
+                <td>대전, 세종, 광주, 충청, 전라</td>
+               <td><img src="/assets/images/contact/consult_large_yellow_pc.png" alt=""></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+    <footer id="footer" footer></footer>
+
+    <script src="contact.js"></script>
+    <script src="/common/callHTML.js"></script>
+  </body>
+
+</html>

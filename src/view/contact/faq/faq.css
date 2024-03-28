@@ -1,0 +1,202 @@
+/* banner */
+main{
+  width: 1920px;
+}
+
+.banner {
+  width: 1920px;
+  background-color: #00a5b1;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  color: white;
+  font-size: 2em;
+}
+.subContentContainer {
+  width: 1190px;
+  height: auto;
+  margin: 0 auto;
+
+  padding-bottom: 120px;
+}
+
+.subContentContainer .subTitle {
+  display: flex;
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+.subContentContainer .subTitle h3 {
+  color: #3a466a;
+  font-size: 1.5em;
+  font-weight: 1000;
+  width: inherit;
+}
+
+/* navi */
+.subContentContainer .pageTabs {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.subContentContainer .pageTabs ul {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+}
+
+.subContentContainer .pageTabs ul li {
+  width: calc(100% / 3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subContentContainer .pageTabs ul li a {
+  padding: 30px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #444;
+  text-align: center;
+  width: 100%;
+}
+
+.subContentContainer .pageTabs ul li.checkedPage {
+  color: #3a466a;
+  border-bottom: 4px solid #3a466a;
+}
+
+/* questionList */
+/* Q 부분 */
+/* Q 부분 */
+.subContentContainer .subContents .questionList ul li{
+  line-height: 1.6;
+}
+.subContentContainer .subContents .questionList ul li button {
+  display: flex;
+  width: 100%;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.subContentContainer .subContents .questionList .qIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a466a;
+}
+
+/* A 부분 */
+.subContentContainer .subContents .questionList button + .answer{
+  overflow: hidden;
+  
+  width: 100%;
+  height: auto;
+  max-height: 0px;
+
+  background: rgb(242, 244, 249);
+
+  transition: 0.2s linear;
+}
+
+.subContentContainer .subContents .questionList button.on + .answer {
+  max-height: 200px;
+  box-shadow: inset 0px 1px 1px #00000080;
+}
+
+.subContentContainer .subContents .questionList .answer .answerWrap{
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+
+.subContentContainer .subContents .questionList .aIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #3a466a;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.subContentContainer .subContents .questionList .qText,
+.subContentContainer .subContents .questionList .aText {
+  color: rgb(68, 68, 68);
+  padding: 0px 0px 0px 30px;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+}
+
+
+/* 이미지 V 형태 */
+.subContentContainer .subContents .questionList .qText::after{
+  background: url('/assets/images/contact/ico-sel-arr.png') no-repeat 50% 50%;
+  background-size: 200%;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 30px;
+  border-radius: 0px;
+  position: absolute;
+  /* right: 10%; */
+  margin: -20px 0 0 1000px;
+}
+
+/* 클릭시 이미지 ^ 로 변경 */
+.subContentContainer .subContents .questionList button.on .qText::after{
+  background: url('/assets/images/contact/ico-faq-arr-on.png') no-repeat 50% 50%;
+}
+
+/* 페이징 부분 */
+.subContentContainer .subContents .paging{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.subContentContainer .subContents .paging button{
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
+
+  font-size: 1.5rem;
+}
+
+.subContentContainer .subContents .paging .firstPage{
+  background: url('/assets/images/contact/p-end.png') no-repeat 50% 50%;;
+}
+
+.subContentContainer .subContents .paging .prevPage{
+  background: url('/assets/images/contact/p-next.png') no-repeat 50% 50%;;
+}
+
+.subContentContainer .subContents .paging .nextPage{
+  background: url('/assets/images/contact/p-end.png') no-repeat 50% 50%;;
+}
+
+.subContentContainer .subContents .paging .lastPage{
+  background: url('/assets/images/contact/p-next.png') no-repeat 50% 50%;;
+}
+
+.subContentContainer .subContents .paging .firstPage,
+.subContentContainer .subContents .paging .prevPage{
+  transform: rotate(-180deg);
+}

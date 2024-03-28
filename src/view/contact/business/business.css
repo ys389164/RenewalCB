@@ -1,0 +1,310 @@
+/* banner */
+main{
+    width: 1920px;
+}
+
+.banner {
+    width: 1920px;
+    background-color: #00a5b1;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner h2 {
+    color: white;
+    font-size: 2em;
+  }
+  
+  .subContentContainer {
+    width: 1190px;
+    height: auto;
+    margin: 0 auto;
+    
+    padding-bottom: 120px;
+  }
+  
+  .subContentContainer .subTitle {
+    display: flex;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #444;
+    width: 100%;
+  }
+  .subContentContainer .subTitle h3 {
+    color: #3a466a;
+    font-size: 1.5em;
+    font-weight: 1000;
+    width: inherit;
+  }
+  
+  /* navi */
+  .subContentContainer .pageTabs{
+      position: relative;
+      width: 100%;
+      border-bottom: 1px solid #e8e8e8;
+  }
+  
+  .subContentContainer .pageTabs ul{
+      width: 900px;
+      margin: 0 auto;
+      display: flex;
+      height: 100%;
+  }
+  
+  .subContentContainer .pageTabs ul li{
+      width: calc(100%/3);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .subContentContainer .pageTabs ul li a{
+      padding:30px;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #444;
+      text-align: center;
+      width: 100%;
+  
+  }
+  
+  .subContentContainer .pageTabs ul li.checkedPage{
+      color: #3a466a;
+      border-bottom: 4px solid #3a466a;
+  }
+  
+  /* 제출 폼 양식 */
+  .subContentContainer .submissionFormWrap{
+      margin-top: 40px;
+      padding-bottom: 100px;
+  }
+  
+  .subContentContainer .submissionFormWrap .submissionTable{
+      width: 100%;
+      margin: 0 auto;
+  }
+  
+  .submissionTable tr{
+      border-top: 1px solid #f7f7f7;
+  }
+  
+  .submissionTable th{
+      width: 12%;
+      padding: 20px 0 20px 20px;
+      text-align: left;
+  }
+  
+  .submissionTable td{
+      width: auto;
+      padding-left: 0;
+      text-align: left;
+      padding: 20px 0 20px 30px;
+  }
+  .submissionTable th, td {
+      vertical-align: middle;
+  }
+  
+  .submissionTable td input[type=text]{
+      display: inline-block;
+      height: 40px;
+      padding: 10px;
+      font-size: 1.2rem;
+      color: #222;
+      box-sizing: border-box;
+      line-height: 18px;
+      width: 300px;
+  
+  }
+  
+  .submissionTable tr td select{
+      width: 300px;
+      padding: 10px 32px 10px 10px;
+      background: #f2f2f2 url('/assets/images/contact/ico-sel-arr.png') 100% 50% no-repeat;
+      appearance: none;
+      text-align: left;
+      font-size: 0.9rem;
+  }
+    .submissionTable td.addbox{
+    display: flex;
+    flex-direction: column;
+  }
+  /* 폼 양식 개별로 건들이는 부분 */
+  /* 전화번호 */
+  .submissionTable tr td .tel{
+      width: 82px;
+      text-align: center;
+  }
+  
+  .submissionTable tr td select.tel{
+      text-align: left;
+  }
+
+  .submissionTable td .span {
+      display: inline-block;
+      margin: 0 10px;
+      font-weight: 700;
+  }
+  
+  /* 주소 */
+  .submissionTable td.addbox div:first-child input {
+    width: 114px;
+}
+
+.submissionTable td.addbox div button {
+    min-width: 100px;
+    height: 40px;
+    padding: 8px 25px;
+    font-size: 14px;
+    background: #959595;
+    text-align: center;
+    color: #fff;
+}
+
+.submissionTable td.addbox div{
+    margin-bottom: 10px;
+}
+
+.submissionTable td.addbox .addhalf{
+    width: 600px;
+}
+
+/* 창업 예정지역 */
+  .submissionTable td .area {
+      margin-right: 10px;
+  }
+  
+  /* 보유점포 유무 */
+  .submissionTable td .radioWrap{
+      margin: 5px 0;
+  }
+  .submissionTable td .radioWrap .radio {
+      margin-right: 60px;
+      display: inline-block;
+  }
+
+  
+  .submissionTable td .radioWrap .radio input + label {
+    position: relative;
+    line-height: 22px;
+    color: #999;
+    cursor: pointer;
+}
+
+.submissionTable td .radioWrap .radio .RT {
+    color: #af2f2f;;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+.submissionTable td .RT{
+    color: #af2f2f;;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+  /* 기타문의 */
+  .submissionTable td textarea.content{
+      width: 100%;
+      border: 1px solid #cccccc;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      color: #222;
+  
+  }
+  .submissionTable input[type="text"], textarea, select {
+      background-color: #f2f2f2;
+      border: 0;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+      outline: 1px dotted black;
+  }
+  
+  input[type="radio"]:focus, input[type="radio"]:checked {
+      outline: none;
+  }
+  
+  
+  /* 동의 */
+  
+  .submissionForm .guideWrap{
+      padding-top: 60px;
+      border-top: 1px solid #f0f0f0;
+  }
+  
+  .submissionForm .guideWrap h3 {
+      font-size: 1rem;
+      margin-bottom: 20px;
+  }
+  
+  .submissionForm .guideWrap .details{
+      height: 200px;
+      padding: 20px 100px 20px 20px;
+      overflow: hidden;
+      overflow-y: scroll;
+      background: #f2f2f2;
+      font-size: 0.9rem;
+      color: #999;
+      line-height: 1.6;
+  }
+  
+  .submissionForm .agreeForm{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 30px 0;
+  }
+  
+  .submissionForm .agreeForm .agreeAudio input + label {
+      position: relative;
+      line-height: 22px;
+      color: #999;
+      cursor: pointer;
+      vertical-align: middle;
+  }
+  
+  .submissionForm .transmissionBtn{
+      margin-top: 50px;
+      text-align: center;
+  }
+  
+  .submissionForm .transmissionBtn button{
+      background: #3a466a;
+      width: 200px;
+      height: 50px;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+  }
+  
+  .contactInfo .contactTable{
+      width: 100%;
+      border-bottom: 1px solid #444;
+      border-spacing: 0;
+      text-align: center;
+  }
+  
+  .contactInfo .contactTable thead th{
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #b7b7b7;
+      font-size: 1rem;
+      padding: 20px 0;
+      vertical-align: middle;
+      font-weight: 500;
+  }
+  
+  .contactInfo .contactTable tbody td{
+      padding: 20px 0;
+      border-top: 1px solid #f0f0f0;
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+
+  .contactInfo .contactTable tbody td img{
+    width: 90px;
+}

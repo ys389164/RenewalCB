@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="/src/style/reset.css" />
+    <link rel="stylesheet" href="notice.css" />
+    <link rel="stylesheet" href="/src/style/header.css" />
+    <link rel="stylesheet" href="/src/style/footer.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header"></header>
+    <main>
+      <div class="banner">
+        <h2>공지사항</h2>
+      </div>
+      <article class="container">
+        <section class="subTitle">
+          <h3>Notices</h3>
+          <div class="searchBox">
+            <form id="sform" name="sform" action="contents.html">
+              <select id="selectSearch" class="selectSearch" name="sf">
+                <option value="title">제목</option>
+                <option value="content">내용</option>
+              </select>
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="inputText"
+                  class="inputText"
+                  name="ss"
+                  maxlength="20"
+                  placeholder="검색어를 입력하세요"
+                  value=""
+                />
+                <button
+                  type="button"
+                  id="searchBtn"
+                  class="searchBtn"
+                  onclick="searchValue()"
+                >
+                  검색
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        
+        <section class="pageList">
+          <ul class="pageListUlTag">
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+            <li>
+              <div class="pageItemWrap">
+                <img src="" alt="">
+                <div class="tab">1</div>
+                <div class="title">2</div>
+              </div>
+            </li>
+          </ul>
+      </section>
+      </article>
+    </main>
+    <footer id="footer" class="footer"></footer>
+    <script src="list.js"></script>
+    <script src="/common/callHTML.js"></script>
+  </body>
+</html>
