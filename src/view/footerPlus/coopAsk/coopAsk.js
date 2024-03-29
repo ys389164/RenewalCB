@@ -88,9 +88,9 @@ mailSelect.addEventListener("change",function(){
 
 
     
-//#fileRoute 안에 내가 선택한 파일 경로가 출력된다.
+//#fileRoute 안에 내가 선택한 파일 경로가 출력된다. onchange로
 function DIYfileBtn(){
-    let DIYBtn=document.getElementById('fileBtn');//원래 input file. 여기 이름이 표시됨
+    let DIYBtn=document.getElementById('fileSearch');//원래 input file. 여기 이름이 표시됨
     let DIYText=document.getElementById('fileName');//여기에 표시하고 싶다.
 
     DIYBtn.addEventListener("change",function(){
@@ -98,6 +98,6 @@ function DIYfileBtn(){
         DIYText.textContent=filefile;
     });
     }
-    document.addEventListener('DOMContentLoaded', function(){
-        DIYfileBtn();
-    });
+    // document.addEventListener('DOMContentLoaded', function(){
+    //     DIYfileBtn();
+    // });

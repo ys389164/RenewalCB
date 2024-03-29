@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>CAFFEBENE</title>
-    <link rel="stylesheet" href="/src/style/header.css">/
+    <link rel="stylesheet" href="/src/style/header.css">
     <link rel="stylesheet" href="/src/style/footer.css">
     <link rel="stylesheet" href="./coopAsk.css">
-    <script src="./coopAsk.js"></script>
-    <script src="/common/callHTML.js"></script>
+   
   </head>
 
-  <body>
+  <body onload="DIYfileBtn()">
+    <script src="./coopAsk.js"></script>
+    <script src="/common/callHTML.js"></script>
     
     
     <header id="header" class="header"></header>
@@ -68,16 +69,21 @@
                 <td class="name">내용</td>
                 <td class="text"><textarea rows="10"></textarea></td>
               </tr>
+
               <tr>
                 <td class="name">파일첨부</td>
                 <td class="text">
-                  <label><input id="fileSearch" type="file" /></label>
+                 <label>
+                    <div id="fileName"></div>
+                    <div id="BtnCover">찾아보기</div>
+                    <input id="fileSearch" type="file" /></label>
                   <p>
                     ※최저용량:10MB ※파일 양식: jpg, jpeg, png, gif, pdf, ppt, xls,
                     doc
                   </p>
                 </td>
               </tr>
+
               <tr>
                 <td class="name">자동등록방지</td>
                 <td class="text">
