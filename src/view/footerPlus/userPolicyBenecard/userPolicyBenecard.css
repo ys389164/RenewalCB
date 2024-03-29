@@ -1,11 +1,21 @@
 @font-face{
     font-family: 'MICEGothic';
     src:
-        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
-        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+        url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+    }
+    #userPolicyBundle{
+    display:inline-block;
+    transform:translate(300px,70px);
+    width:1300px;
+    height:100%;
+    }
+    footer{
+    display:block;
+    transform:translateY(100px);
     }
     body{
-    font-family:'MICEGothic';
+    font-family: 'MICEGothic';
     font-size:18px;
     line-height:2em;
     }
@@ -21,15 +31,21 @@
     }
     h6{
     font-size:20px;
+    padding-top:20px;
+    padding-bottom:10px;
     color:darkcyan;
     }
-    li{padding-bottom:10px;}
+    li{
+    padding-bottom:3px;
+    }
     .policy > li{
     counter-increment: custom-counter;
     list-style-type:none;
     }
-    .policy > li:before{content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
-    ol li{list-style-type:lower-alpha;
+    .policy > li:before{
+    content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
+    ol li{
+    list-style-type:lower-alpha;
     }
     table{
     border-bottom:1px solid black; 
