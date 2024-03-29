@@ -1,9 +1,17 @@
 $(function(){
+    $(".nutrient_info").hide();
+
     const checkboxes = $('#select_beverage input[type="radio"]');
     const menuItems = $('.menu_items');
     const menuEmpty = $('.menu_items_empty');
 
-    checkboxes.on('change', function() {
+    // 전체 버튼에 대한 클릭 이벤트 핸들러 추가
+    $('#select_beverage input[type="radio"][value="all"]').click(function() {
+        menuItems.show(); // 모든 메뉴 항목 보이기
+        menuEmpty.hide(); // 빈 메뉴 항목 숨기기
+    });
+
+    checkboxes.not('[value="all"]').on('change', function() {
         const selectedCoffees = checkboxes.filter(':checked').map(function() {
             return this.value;
         }).get();
@@ -22,27 +30,25 @@ $(function(){
         menuEmpty.slice(0, emptyMenuCount).show(); // 선택된 유형의 메뉴 개수에 맞게 빈 메뉴 항목 보이기
     });
 
-
-    $(".menu_items").click(function() {
-        var info = $(this).find(".info");
-        if (info.is(":visible")) {
-            info.fadeOut();
-        } else {
-            $(".info").fadeOut(); // 이미 열려 있는 정보가 있다면 모두 닫음
-            info.fadeIn();
-        }
-    });
-    $(".info").click(function() {
-        var info = $(this).find(".info");
-        if (info.is(":visible")) {
-            info.fadeOut();
-        } else {
-            $(".info").fadeOut(); // 이미 열려 있는 정보가 있다면 모두 닫음
-            info.fadeIn();
-        }
-    });
     
-    $(".menu_items .info").click(function(e) {
-        e.stopPropagation(); // 이미지 클릭으로 이벤트 전파 방지
+    
+    $(".menu_items").click(function() {
+        $(".info").not($(this).find(".info")).fadeOut();
+        $(this).find(".info").fadeToggle();
+        $(".nutrient_info").fadeOut();
     });
+
+    $(".menu_nutrient").click(function(event) {
+        event.stopPropagation(); // 이벤트 전파 방지
+        const nutrientInfo = $(this).closest(".menu_items").find(".nutrient_info");
+        nutrientInfo.fadeToggle();
+        $(this).find(".nutrient_info").fadeToggle();
+    });
+
+    $(document).on("click", function(event){
+        if (!$(event.target).closest('.menu_items').length) {
+            $(".info").fadeOut();
+            $(".nutrient_info").fadeOut(); // 영양 성분 정보도 숨기기
+        }        
+    });   
 });
