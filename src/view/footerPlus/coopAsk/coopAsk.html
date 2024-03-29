@@ -29,7 +29,7 @@
               <tr>
                 <td class="name">구분</td>
                 <td class="text">
-                  <select>
+                  <select onchange="emailSelect()">
                     <option value="" selected>선택</option>
                     <option value>협찬/광고</option>
                     <option value>제휴 이벤트</option>
@@ -47,7 +47,7 @@
                 <td class="name">이메일</td>
                 <td class="text">
                   <input type="email" placeholder="id" /> @<input
-                    type="email"
+                    type="email" id="email2"
                     placeholder="option value"
                   />
                   <select>

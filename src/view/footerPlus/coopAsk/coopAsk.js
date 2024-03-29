@@ -74,15 +74,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
 //셀렉트로 메일 형식 선택하면 텍스트에 입력되고 메일로 간주되는 함수(미완)
 
-document.addEventListener('DOMContentLoaded', function(){
-    let mailSpace=document.getElementById('email2');//이메일이 표시되는 부분
-    let mailSelect=document.getElementById('emailChoose');//셀렉트
-mailSelect.addEventListener("change",function(){
-    mailSpace.textContent=mailSelect.value;
-    mailSpace.value=mailSelect.value;
-})
+// document.addEventListener('DOMContentLoaded', function(){
+//     });
    
-    });
+    function emailSelect(){//select에 onchange 적용하는 걸로 노선변경
+        let mailSpace=document.getElementById('email2');//이메일이 표시되는 부분
+        let mailSelect=document.getElementById('emailChoose');//셀렉트
+        mailSpace.textContent=mailSelect.value;
+        mailSpace.value=mailSelect.value;
+    }
+// mailSelect.addEventListener("change",function(){
+//     mailSpace.textContent=mailSelect.value;
+//     mailSpace.value=mailSelect.value;
+// })
 
 
 
