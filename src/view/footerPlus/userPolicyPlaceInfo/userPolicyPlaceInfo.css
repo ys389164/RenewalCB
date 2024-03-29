@@ -35,7 +35,7 @@
     div> ul > li{
     counter-increment: custom-counter;
     list-style-type:none;}
-    div> ul > li:before{content:counter(custom-counter)")"
+    div> ul > li:before{content:counter(custom-counter)") "
     }
     ol li{
         list-style-type:lower-alpha;
