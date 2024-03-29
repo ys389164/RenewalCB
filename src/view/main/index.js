@@ -1,49 +1,16 @@
-var swiper = new Swiper(".mainSwiper", {
+var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   slidesPerView: 1,
+//   spaceBetween: 30,
   mousewheel: true,
-});
-
-var swiper2 = new Swiper(".seasonMenuSwiper", {
-  direction: "horizontal",
-  effect: "slide",
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
-var swiper3 = new Swiper(".newMenuSwiper", {
-effect: "flip",
-grabCursor: false,
-allowTouchMove: false,
-
-loop: true,
-autoplay: {
-  delay: 10000,
-  disableOnInteraction: false,
-},
-});
-
-var swiper4 = new Swiper(".newMenuSwiper2", {
-effect: "flip",
-grabCursor: false,
-allowTouchMove: false,
-
-loop: true,
-autoplay: {
-  delay: 10000,
-  disableOnInteraction: false,
-},
-});
-
-function moveToPage(url) {
-  window.location.href = url;
-}
-
-var swiper5 = new Swiper(".startupSwiper", {
+var swiper2 = new Swiper(".mySwiper2", {
+  direction: "horizontal",
   effect: "fade",
   centeredSlides: true,
   loop: true,
@@ -53,6 +20,52 @@ var swiper5 = new Swiper(".startupSwiper", {
   },
 });
 
+var swiper = new Swiper(".mySwiper3", {
+  effect: "fade",
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+function redirectToMenuPage(url) {
+    window.location.href = url;
+}
+
+var swiper5 = new Swiper(".newMenuSwiper", {
+  effect: "flip",
+  grabCursor: false,
+  allowTouchMove: false,
+
+  loop: true,
+  autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+  },
+});
+
+var swiper6 = new Swiper(".newMenuSwiper2", {
+  effect: "flip",
+  grabCursor: false,
+  allowTouchMove: false,
+
+  loop: true,
+  autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+  },
+});
+
+
+function redirectToMenuPage(url) {
+  window.location.href = url;
+}
 
 let observer = new IntersectionObserver((e)=>{
   e.forEach((s)=>{
@@ -145,6 +158,11 @@ let observer3 = new IntersectionObserver((e)=>{
 let slide3 = document.querySelector(".text3");
 observer3.observe(slide3);
 
+function moveToPage1() {
+  var url = "../../YS/contact/contact/contact.html";
+  window.location.href = url;
+}
+
 let observer4 = new IntersectionObserver((e)=>{
   e.forEach((s)=>{
     if(s.isIntersecting){
@@ -157,6 +175,11 @@ let observer4 = new IntersectionObserver((e)=>{
 })
 let slide4 = document.querySelector("#text4");
 observer4.observe(slide4);
+
+function moveToPage2() {
+  var url = "../../YS/brand/B2BConsulting/b2b.html";
+  window.location.href = url;
+}
 
 let observer5 = new IntersectionObserver((e)=>{
   e.forEach((s)=>{

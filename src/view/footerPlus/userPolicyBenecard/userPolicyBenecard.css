@@ -7,7 +7,6 @@
     body{
     font-family:'MICEGothic';
     font-size:18px;
-    line-height:2em;
     }
     h4{
     font-size:25px;
@@ -24,11 +23,11 @@
     color:darkcyan;
     }
     li{padding-bottom:10px;}
-    .policy > li{
+    ul > li{
     counter-increment: custom-counter;
     list-style-type:none;
     }
-    .policy > li:before{content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
+    ul > li:before{content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
     ol li{list-style-type:lower-alpha;
     }
     table{

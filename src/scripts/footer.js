@@ -16,7 +16,6 @@ function revealUp(){
 upBtn=document.getElementById('goUp');
 if(percentage()>=25){
   upBtn.style.display="block";
-  upBtn.style.transitionTimingFunction="ease-in-out";
   }else{
   upBtn.style.display="none";
   }
