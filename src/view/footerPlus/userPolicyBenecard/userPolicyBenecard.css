@@ -46,6 +46,7 @@
     content:counter(custom-counter)")"}/*화살표를 입력해야 바로 아래 자식요소에게만 적용된다.*/
     ol li{
     list-style-type:lower-alpha;
+    margin-left:40px;
     }
     table{
     border-bottom:1px solid black; 
