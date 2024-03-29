@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>CAFFEBENE</title>
-
-    <link rel="stylesheet" href="coopAsk.css">
+    <link rel="stylesheet" href="/src/style/header.css">
+    <link rel="stylesheet" href="/src/style/footer.css">
+    <link rel="stylesheet" href="./coopAsk.css">
+   
   </head>
 
-  <body>
-
+  <body onload="DIYfileBtn()">
+    <script src="./coopAsk.js"></script>
+    <script src="/common/callHTML.js"></script>
+    
+    
     <header id="header" class="header"></header>
     <main>
         
@@ -24,7 +29,7 @@
               <tr>
                 <td class="name">구분</td>
                 <td class="text">
-                  <select>
+                  <select onchange="emailSelect()">
                     <option value="" selected>선택</option>
                     <option value>협찬/광고</option>
                     <option value>제휴 이벤트</option>
@@ -42,7 +47,7 @@
                 <td class="name">이메일</td>
                 <td class="text">
                   <input type="email" placeholder="id" /> @<input
-                    type="email"
+                    type="email" id="email2"
                     placeholder="option value"
                   />
                   <select>
@@ -64,20 +69,25 @@
                 <td class="name">내용</td>
                 <td class="text"><textarea rows="10"></textarea></td>
               </tr>
+
               <tr>
                 <td class="name">파일첨부</td>
                 <td class="text">
-                  <label><input id="fileSearch" type="file" /></label>
+                 <label>
+                    <div id="fileName"></div>
+                    <div id="BtnCover">찾아보기</div>
+                    <input id="fileSearch" type="file" /></label>
                   <p>
                     ※최저용량:10MB ※파일 양식: jpg, jpeg, png, gif, pdf, ppt, xls,
                     doc
                   </p>
                 </td>
               </tr>
+
               <tr>
                 <td class="name">자동등록방지</td>
                 <td class="text">
-                  <div>codeNumbers()</div>
+                  <div id="sixNum">codeNumbers()</div>
                   <input type="password" />
                   <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p>
                 </td>

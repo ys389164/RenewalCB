@@ -1,12 +1,23 @@
 @font-face{
     font-family: 'MICEGothic';
     src:
-        url("MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
-        url("MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
+        url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
+        url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
     }
+    #userPolicyBundle{
+    display:inline-block;
+    transform:translate(300px,70px);
+    width:1300px;
+    height:100%;
+    }
+   footer{
+    display:block;
+    transform:translateY(100px);
+   }
     body{
-    font-family:'MICEGothic';
+    font-family: 'MICEGothic';
     font-size:18px;
+    line-height:2em;
     }
     h4{
     font-size:25px;
@@ -16,18 +27,22 @@
     }
     h6{
     font-size:20px;
+    padding-top:20px;
+    padding-bottom:10px;
     color:darkcyan;
     }
-    li{padding-bottom:10px;
-    }
-    ul > li{
+    
+    div> ul > li{
     counter-increment: custom-counter;
     list-style-type:none;}
-    ul > li:before{content:counter(custom-counter)")"
+    div> ul > li:before{content:counter(custom-counter)") "
     }
-    ol li{list-style-type:lower-alpha;}
+    ol li{
+        list-style-type:lower-alpha;
+        margin-left:40px;
+    }
     #companyInfo>li, #companyInfo2>li{
-    list-style-type: none;
+    list-style-type:circle;
     }
     table{
     border-bottom:1px solid black; 
