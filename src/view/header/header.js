@@ -17,7 +17,7 @@ function menuBar() {
   //아코디언 함수
   let upper = document.getElementById('topMenu');
   let lists = document.getElementById('listsCollection');
-  upper.addEventListener("mouseover", open);
+  upper.addEventListener("mouseover", upperOpen);
   upper.addEventListener("mouseout", fold);
   lists.addEventListener("mouseover", opencontinue);
   lists.addEventListener("mouseout", fold);
@@ -36,7 +36,7 @@ function topOriginal() {
 };
 
 //아코디언 함수+내려가 있는 리스트 박스에 마우스가 머무는 동안은 사라지지 않게 하는 함수.
-function open() {
+function upperOpen() {
   let listbox = document.getElementById("listsCollection");
 
   listbox.style.display = "block";
@@ -61,6 +61,4 @@ function fold() {
   listbox.style.transition = "height 300ms ease-in-out";
 };
 
-
-  menuBar();
-
+menuBar();

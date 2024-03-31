@@ -43,55 +43,6 @@ body {
     100% { opacity: 1; }
 }
 
-
-/* .blinking {
-    -webkit-animation: blink 0.5s ease-in-out infinite alternate;
-    -moz-animation: blink 0.5s ease-in-out infinite alternate;
-    animation: blink 0.5s ease-in-out infinite alternate;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-@-webkit-keyframes blink{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@-moz-keyframes blink{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes blink{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-} */
-
-/* .blinking{
-    -webkit-animation:blink 1.5s ease-in-out infinite alternate;
-    -moz-animation:blink 1.5s ease-in-out infinite alternate;
-    animation:blink 1.5s ease-in-out infinite alternate;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  @-webkit-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  @-moz-keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  @keyframes blink{
-    0% {opacity:0;}
-    100% {opacity:1;}
-  } */
-
 .seasonMenuSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;

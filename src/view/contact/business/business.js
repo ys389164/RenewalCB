@@ -23,6 +23,9 @@ submitBtn.addEventListener("click", (e) => {
     alert('제출되었습니다.');
     return;
   }
+  else{
+    e.preventDefault();
+  }
 })
 
 // 유효성 검사
@@ -51,12 +54,12 @@ function valCheck() {
   }
   // email
   if (!addrNumber.value) {
-    alert('이메일을 입력해주세요.');
+    alert('주소를 입력해주세요.');
     addrNumber.focus();
     return false;
   }
   if (!addrDetail.value) {
-    alert('이메일을 입력해주세요.');
+    alert('주소를 입력해주세요.');
     addrDetail.focus();
     return false;
   }
@@ -74,6 +77,7 @@ function valCheck() {
     area2.focus();
     return false;
   }
+
   //  보유점포 유무
   if (!haveStore.checked && !nonHave.checked) {
     alert('보유점포의 유/무를 선택해주세요.');

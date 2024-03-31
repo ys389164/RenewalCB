@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'MICEGothic Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 html{
   overflow-x: hidden;
 }
@@ -61,7 +68,6 @@ html{
 }
 #placesList li {
   list-style: none;
-  height: calc(100% / 5);
 }
 
 #placesList li .listItemWrap {
@@ -107,13 +113,16 @@ html{
   background-color: #00a5b1;
   height: 230px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.banner h2 {
   color: white;
   font-size: 2em;
+}
+
+.banner h3 {
+  padding-top: 20px;
+  font-size: 1.5rem;
 }
 
 /* 페이지 네이션 */

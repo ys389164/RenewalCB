@@ -8,6 +8,7 @@ let menuIdx = 0;
     xhr.send();
     xhr.onload=()=>{
         menuList= JSON.parse(xhr.response)
+        createContentsDOM(menuList.filter(item=>{ return Number(item.tabIdx) === menuIdx }))
     }
 })()
 
@@ -67,8 +68,8 @@ const searchValue = () => {
 
     if(inputTag.value.trim()){
         if(selectSearch.value === 'title'){
-            createContentsDOM(menuList.filter(item=>{ return Number(item.tabIdx) === menuIdx && item.title.includes(inputTag.value) }));
-            return;
+            return createContentsDOM(menuList.filter(item=>{ return Number(item.tabIdx) === menuIdx && item.title.includes(inputTag.value) }));
+            
         }
         if(selectSearch.value === 'content'){
             createContentsDOM(menuList.filter(filterItem=>{ 
@@ -83,6 +84,5 @@ const searchValue = () => {
 window.onload=()=>{
     setTimeout(()=>{
         onChangeMenuBtn();
-    createContentsDOM(menuList.filter(item=>{ return Number(item.tabIdx) === menuIdx }))
     }, 10);
 }

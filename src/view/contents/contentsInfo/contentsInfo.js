@@ -15,11 +15,12 @@ let menuInfo;
         // 해당 쿼리스트링 이용해서 json에서 일치하는 값만 뽑아오기
         for(let x=0; x<saveDataList.length; x++){
             if(saveDataList[x].seq === paramsSeq){
-                return menuInfo = saveDataList[x]
+                menuInfo = saveDataList[x]
+                break;
             }
         }
 
-
+        dataBinding();
     }
 })()
 
@@ -44,10 +45,4 @@ const bindingTypeOne = () => {
         contents.innerHTML += menuInfo.imgUrl[x]
         contents.innerHTML += menuInfo.contents[x] || ''
     }
-}
-
-window.onload=()=>{
-    setTimeout(()=>{
-        dataBinding();
-    }, 10);
 }

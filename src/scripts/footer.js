@@ -22,8 +22,6 @@ if(percentage()>=25){
   }
 };
 
-
-
 //revealUp 함수 안에 들어가는 함수. 현재 위치를 %로 바꾼다.
 function percentage(){
   pageHeight=document.documentElement.scrollHeight;

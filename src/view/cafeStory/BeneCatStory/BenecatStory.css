@@ -137,11 +137,11 @@ h3 {
 }
 #nine {
   display: inline-block;
-  transform: translate(-500px, 340px);
+  transform: translate(280px, 0px);
 }
 #nine2 {
   display: inline-block;
-  transform: translate(-630px, 300px);
+  transform: translate(575px, 200px);
 }
 #secondTableCat {
   transform: translate(570px, 680px);
@@ -168,7 +168,7 @@ h3 {
 }
 #three {
   display: inline-block;
-  transform: translate(-440px, 230px);
+  transform: translate(500px);
 }
 #threeTravel {
   width: 920px;
@@ -194,7 +194,7 @@ h3 {
 }
 #six2 {
   display: inline-block;
-  transform: translate(-650px, 270px);
+  transform: translate(270px);
 }
 #whiteWord {
   display: inline-block;

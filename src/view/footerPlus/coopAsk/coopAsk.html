@@ -1,106 +1,96 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <title>CAFFEBENE</title>
+    <link rel="stylesheet" href="/src/style/reset.css">
     <link rel="stylesheet" href="/src/style/header.css">
     <link rel="stylesheet" href="/src/style/footer.css">
     <link rel="stylesheet" href="./coopAsk.css">
-   
   </head>
 
-  <body onload="DIYfileBtn()">
-    <script src="./coopAsk.js"></script>
-    <script src="/common/callHTML.js"></script>
-    
-    
+  <body>
     <header id="header" class="header"></header>
     <main>
-        
-        <div id="bodyForm">
-          <h3>
-            제휴 문의
-            <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p>
-          </h3>
-          <hr />
-          <br />
-          <div id="form">
-            <table>
-              <tr>
-                <td class="name">구분</td>
-                <td class="text">
-                  <select onchange="emailSelect()">
-                    <option value="" selected>선택</option>
-                    <option value>협찬/광고</option>
-                    <option value>제휴 이벤트</option>
-                    <option value>거래처 입점 문의</option>
-                    <option value>물류/구매</option>
-                    <option value>부동산 점포 추천</option></select
-                  ><br />
-                </td>
-              </tr>
-              <tr>
-                <td class="name">회사명</td>
-                <td class="text"><input type="text" size="90" /><br /></td>
-              </tr>
-              <tr>
-                <td class="name">이메일</td>
-                <td class="text">
-                  <input type="email" placeholder="id" /> @<input
-                    type="email" id="email2"
-                    placeholder="option value"
-                  />
-                  <select>
-                    <option value="write" selected>직접 입력</option>
-                    <option value="naver.com">naver.com</option>
-                    <option value="gmail.com">gmail.com</option>
-                    <option value="daum.net">daum.net</option>
-                    <option value="hotmail.com">hotmail.com</option>
-                    <option value="nate.com">nate.com</option>
-                    <option value="hanmail.net">hanmail.net</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td class="name">제목</td>
-                <td class="text"><input type="text" /></td>
-              </tr>
-              <tr>
-                <td class="name">내용</td>
-                <td class="text"><textarea rows="10"></textarea></td>
-              </tr>
-
-              <tr>
-                <td class="name">파일첨부</td>
-                <td class="text">
-                 <label>
-                    <div id="fileName"></div>
-                    <div id="BtnCover">찾아보기</div>
-                    <input id="fileSearch" type="file" /></label>
-                  <p>
-                    ※최저용량:10MB ※파일 양식: jpg, jpeg, png, gif, pdf, ppt, xls,
-                    doc
-                  </p>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="name">자동등록방지</td>
-                <td class="text">
+      <div id="bodyForm">
+        <h3> 제휴 문의 <p>내용을 등록해 주시면 담당자가 확인 후 연락을 드립니다.</p>
+        </h3>
+        <hr />
+        <br />
+        <form id="form">
+          <table>
+            <tr>
+              <td class="name">구분</td>
+              <td class="text">
+                <select id="kindsQ">
+                  <option value="선택" selected>선택</option>
+                  <option value>협찬/광고</option>
+                  <option value>제휴 이벤트</option>
+                  <option value>거래처 입점 문의</option>
+                  <option value>물류/구매</option>
+                  <option value>부동산 점포 추천</option>
+                </select><br />
+              </td>
+            </tr>
+            <tr>
+              <td class="name">회사명</td>
+              <td class="text"><input id="company" type="text" size="90" /><br /></td>
+            </tr>
+            <tr>
+              <td class="name">이메일</td>
+              <td class="text">
+                <input id="email1" type="email" placeholder="id" /> @ <input id="email2" type="email"
+                  placeholder="option value" />
+                <select id="email3">
+                  <option value="write" selected>직접 입력</option>
+                  <option value="naver.com">naver.com</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="daum.net">daum.net</option>
+                  <option value="hotmail.com">hotmail.com</option>
+                  <option value="nate.com">nate.com</option>
+                  <option value="hanmail.net">hanmail.net</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">제목</td>
+              <td class="text"><input id="title" type="text" /></td>
+            </tr>
+            <tr>
+              <td class="name">내용</td>
+              <td class="text"><textarea id="content" rows="10"></textarea></td>
+            </tr>
+            <tr>
+              <td class="name">파일첨부</td>
+              <td class="text">
+                <label>
+                  <div id="fileName"></div>
+                  <div id="BtnCover">찾아보기</div>
+                  <input id="fileSearch" type="file" />
+                </label>
+                <p> ※최저용량:10MB ※파일 양식: jpg, jpeg, png, gif, pdf, ppt, xls, doc </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">자동등록방지</td>
+              <td class="text">
+                <div>
                   <div id="sixNum">codeNumbers()</div>
-                  <input type="password" />
-                  <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <br />
-          <div><input id="submitBtn" type="button" value="등록" /></div>
-        </div>
+                  <input id="userType" type="password" autocomplete="" />
+                </div>
+                <p>게시물의 자동등록 방지를 위해 문자를 동일하게 입력해주세요.</p>
+              </td>
+            </tr>
+          </table>
+        </form>
+        <br />
+        <div><input id="submitBtn" type="button" value="등록" /></div>
+      </div>
     </main>
-
     <footer id="footer" class="footer"></footer>
-
+    <script src="./coopAsk.js"></script>
     <script src="/common/callHTML.js"></script>
   </body>
+
 </html>

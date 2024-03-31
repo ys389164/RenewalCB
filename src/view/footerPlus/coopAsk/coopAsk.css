@@ -1,17 +1,20 @@
+body{
+  width: 1920px;
+}
+
 main {
-  width: 1190px;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  width: inherit;
+}
+
+main>*{
   margin: 0 auto;
 }
-@font-face{/*usb에 있던 파일*/
-  font-family: 'MICEGothic';
-  src:
-      url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff") format('woff'),
-      url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff2") format('woff2');
-  }
-body{
-  font-family: 'MICEGothic'
-}
+
+
 h3 {
+  line-height: 2rem;
   font-size: 24px;
   font-weight: bold;
   color: rgb(65, 65, 109);
@@ -61,11 +64,8 @@ input[type="email"] {
 }
 #fileSearch {
   cursor: pointer;
-  position:absolute;
-  width:100px;
-  height:30px;
-  left:400px;
-}/*밑에 네 줄은 원래 코드에서 복사한 다음 추가한 것들*/
+}
+
 #fileName{
   display:flex;
   align-items: center;
@@ -90,7 +90,6 @@ label{
   background-color: gray;
   z-index: 90;
 }
-/*fileName.BtnCover. 이거 없었는데 원래 코드에서 가져옴.*/
 #submitBtn {
   cursor: pointer;
   color: white;
@@ -100,15 +99,16 @@ label{
   background-color: rgb(65, 65, 109);
 }
 #sixNum{
-  font-size:15px;
-        letter-spacing:2px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        width:6em;
-        height:30px;
-        margin-right:10px;
-        text-align: center;
-        background-color: gray; 
-        color:white; 
+  background-color:gray;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 28px;
+  width: 50px;
+}
+.text:last-child div:first-child{
+  display: flex;
+  margin-bottom: 3px;
 }

@@ -25,6 +25,9 @@ submitBtn.addEventListener("click", (e) => {
     alert('제출되었습니다.');
     return;
   }
+  else{
+    e.preventDefault();
+  }
 })
 
 // json 받아오기
