@@ -35,9 +35,9 @@
     padding-bottom:10px;
     color:darkcyan;
     }
-    li{
+    /* li{
     padding-bottom:3px;
-    }
+    } */
     .policy > li{
     counter-increment: custom-counter;
     list-style-type:none;

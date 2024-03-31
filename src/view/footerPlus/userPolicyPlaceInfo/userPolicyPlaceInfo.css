@@ -32,16 +32,16 @@
     color:darkcyan;
     }
     
-    div> ul > li{
+    #userPolicyBundle>div> ul > li{
     counter-increment: custom-counter;
     list-style-type:none;}
-    div> ul > li:before{content:counter(custom-counter)") "
+    #userPolicyBundle>div> ul > li:before{content:counter(custom-counter)") "
     }
     ol li{
         list-style-type:lower-alpha;
         margin-left:40px;
     }
-    #companyInfo>li, #companyInfo2>li{
+    #companyInfo1>li, #companyInfo2>li{
     list-style-type:circle;
     }
     table{
