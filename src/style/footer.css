@@ -1,13 +1,20 @@
-/*여기서부터는 footer*/
 html {
   scroll-behavior: smooth;
-} /*나중에 헤더 부분에 추가할 것*/
-.footerMembers {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 8%;
-  margin-right: 8%;
 }
+
+.footerMembersWrap{
+  width: 1920px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footerMembers {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
 footer {
   display: inline-block;
   vertical-align: bottom;
@@ -34,8 +41,10 @@ hr {
   top: 20px;
 }
 #footFive li {
+  line-height: 1;
+  font-weight: bold;
   list-style-type: none;
-  text-align: left;
+  text-align: right;
   color: midnightblue;
   padding: 10px;
   width: 320px;
@@ -68,7 +77,10 @@ hr {
   width: 32px;
   height: 38px;
 }
+.snsWrap{
+  width: 1920px;
+}
 #sns {
+  margin: 0 auto;
   text-align: center;
-  padding-right: 77px;
 }

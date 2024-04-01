@@ -37,10 +37,10 @@
     padding-bottom:10px;
     color:darkcyan;
     }
-    li{padding-bottom:10px;}
+    /* li{padding-bottom:3px;} */
     ol{/*reset문제로 여기에 type 추가*/
         list-style-type:decimal;
-        margin-left: 20px;
+        margin-left:20px;/*0331추가*/
     }
     #patchDiv>ul>li{
     list-style-type:square;

@@ -41,6 +41,7 @@ hr {
   top: 20px;
 }
 #footFive li {
+  line-height: 1;
   list-style-type: none;
   text-align: right;
   color: midnightblue;
