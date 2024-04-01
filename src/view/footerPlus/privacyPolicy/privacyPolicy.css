@@ -13,12 +13,16 @@
    footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
    }
     /*위의 두 개는 추가한 부분*/
     body{
     font-family:'MICEGothic';
     font-size:18px;
-    line-height:1.5em;
+    /* line-height:1.5em; */
+    }
+    #patchDiv{
+    line-height:2em;
     }
     h4{
     font-size:25px;
@@ -38,7 +42,7 @@
         list-style-type:decimal;
         margin-left: 20px;
     }
-    ul>li{
+    #patchDiv>ul>li{
     list-style-type:square;
     margin-left:20px;
     }

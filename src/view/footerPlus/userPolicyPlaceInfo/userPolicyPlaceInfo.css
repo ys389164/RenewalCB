@@ -13,10 +13,14 @@
    footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
    }
     body{
     font-family: 'MICEGothic';
     font-size:18px;
+    /* line-height:2em; */
+    }
+    #userPolicyBundle{
     line-height:2em;
     }
     h4{
@@ -32,16 +36,20 @@
     color:darkcyan;
     }
     
-    div> ul > li{
+    #userPolicyBundle>div> ul > li{
     counter-increment: custom-counter;
-    list-style-type:none;}
-    div> ul > li:before{content:counter(custom-counter)") "
+    list-style-type:none;
+    }
+    #userPolicyBundle>div> ul > li:before{content:counter(custom-counter)") "
+    }
+    .footerMembers>ul>li{
+    font-weight:bold;
     }
     ol li{
         list-style-type:lower-alpha;
         margin-left:40px;
     }
-    #companyInfo>li, #companyInfo2>li{
+    #companyInfo1>li, #companyInfo2>li{
     list-style-type:circle;
     }
     table{

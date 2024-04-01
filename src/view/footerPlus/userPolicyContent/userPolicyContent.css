@@ -12,10 +12,14 @@
     footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
     }
     body{
     font-family:'MICEGothic';
     font-size:18px;
+    /* line-height:2em; */
+    }
+    #userPolicyBundle{
     line-height:2em;
     }
     h4{
@@ -45,7 +49,7 @@
     list-style-type:decimal;
     margin-left:20px;
     }
-    ul>li{
+    #userPolicyBundle>ul>li{
     list-style-type: square;
     margin-left:40px;
     }
