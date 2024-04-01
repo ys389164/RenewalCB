@@ -13,6 +13,7 @@
    footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
    }
     body{
     font-family: 'MICEGothic';
@@ -37,8 +38,12 @@
     
     #userPolicyBundle>div> ul > li{
     counter-increment: custom-counter;
-    list-style-type:none;}
+    list-style-type:none;
+    }
     #userPolicyBundle>div> ul > li:before{content:counter(custom-counter)") "
+    }
+    .footerMembers>ul>li{
+    font-weight:bold;
     }
     ol li{
         list-style-type:lower-alpha;

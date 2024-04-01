@@ -13,6 +13,7 @@
    footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
    }
     /*위의 두 개는 추가한 부분*/
     body{

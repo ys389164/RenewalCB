@@ -13,6 +13,7 @@
     footer{
     display:block;
     transform:translateY(100px);
+    font-weight:bold;
     }
     body{
     font-family: 'MICEGothic';
