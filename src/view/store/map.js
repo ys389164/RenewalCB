@@ -58,7 +58,7 @@ function placesSearchCB (data, status, pagination) {
 }
 // 지도에 마커를 표시하는 함수입니다
 function displayMarker(place) {
-    var imageSrc = "/assets/images/localStore/s-pin.png"; // 마커이미지의 주소입니다
+    var imageSrc = "/RenewalCB/assets/images/localStore/s-pin.png"; // 마커이미지의 주소입니다
     imageSize = new kakao.maps.Size(55, 70); // 마커이미지의 크기입니다
 
     // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
@@ -102,7 +102,7 @@ function displayMarker(place) {
 // Text를 경로로 바꾸기
 const changeIconPath = (iconArr) => {
     const newIconArr = ["휴게","회의","흡연","주차","와이파이","배달"];
-    const newIconPathArr = ["/assets/images/localStore/s-ico1.png","/assets/images/localStore/s-ico2.png","/assets/images/localStore/s-ico3.png","/assets/images/localStore/s-ico4.png","/assets/images/localStore/s-ico5.png","/assets/images/localStore/s-ico6.png"];
+    const newIconPathArr = ["/RenewalCB/assets/images/localStore/s-ico1.png","/RenewalCB/assets/images/localStore/s-ico2.png","/RenewalCB/assets/images/localStore/s-ico3.png","/RenewalCB/assets/images/localStore/s-ico4.png","/RenewalCB/assets/images/localStore/s-ico5.png","/RenewalCB/assets/images/localStore/s-ico6.png"];
 
     const resultArr= [];
     for(let x=0; x<iconArr.length; x++){

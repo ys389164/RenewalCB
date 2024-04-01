@@ -48,7 +48,7 @@ main{
     border: 1px solid #e2e2e2;
     font-size: 14px;
     color: #222;
-    background: #ffffff url('/assets/images/contents/ico-sel-arr.png') 100% 50% no-repeat;
+    background: #ffffff url('/RenewalCB/assets/images/contents/ico-sel-arr.png') 100% 50% no-repeat;
     appearance: none;
     box-sizing: border-box;
     margin-right: 10px;
@@ -70,7 +70,7 @@ main{
 .container .subTitle form .searchBtn{
     width: 36px;
     height: 36px;
-    background: url('/assets/images/contents/ico-ipt-sh.png') no-repeat 50% 50%;
+    background: url('/RenewalCB/assets/images/contents/ico-ipt-sh.png') no-repeat 50% 50%;
     font-size: 0;
     border: 0;
 }

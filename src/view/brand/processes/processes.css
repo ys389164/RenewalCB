@@ -38,7 +38,7 @@ main{
 
 /* 개설절차 */
 .openingProcedure {
-  background: url("/assets/images/processes/pg-bg-line.png") no-repeat 50% 70px;
+  background: url("/RenewalCB/assets/images/processes/pg-bg-line.png") no-repeat 50% 70px;
 }
 
 .openingProcedure .ProcedureLine {
@@ -86,7 +86,7 @@ main{
 
 .openingProcedure .ProcedureLine:not(.ProcedureLine2) .cir::before {
   position: absolute;
-  content: url("/assets/images/processes/cir-arr.png");
+  content: url("/RenewalCB/assets/images/processes/cir-arr.png");
   width: 30px;
   height: 30px;
   object-fit: cover;
@@ -97,7 +97,7 @@ main{
 
 .openingProcedure .ProcedureLine.ProcedureLine2 .cir::before {
   position: absolute;
-  content: url("/assets/images/processes/cir-arr.png");
+  content: url("/RenewalCB/assets/images/processes/cir-arr.png");
   width: 30px;
   height: 30px;
   object-fit: cover;
@@ -107,33 +107,33 @@ main{
 }
 
 .openingProcedure .ProcedureLine .cir1 {
-  background-image: url("/assets/images/processes/pg-ico1.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico1.png");
   background-color: #3a466a;
   color: #fff;
 }
 .openingProcedure .cir2 {
-  background-image: url("/assets/images/processes/pg-ico2.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico2.png");
 }
 .openingProcedure .cir3 {
-  background-image: url("/assets/images/processes/pg-ico3.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico3.png");
 }
 .openingProcedure .cir4 {
-  background-image: url("/assets/images/processes/pg-ico4.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico4.png");
 }
 .openingProcedure .cir5 {
-  background-image: url("/assets/images/processes/pg-ico5.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico5.png");
 }
 .openingProcedure .cir6 {
-  background-image: url("/assets/images/processes/pg-ico6.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico6.png");
 }
 .openingProcedure .cir7 {
-  background-image: url("/assets/images/processes/pg-ico7.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico7.png");
 }
 .openingProcedure .cir8 {
-  background-image: url("/assets/images/processes/pg-ico8.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico8.png");
 }
 .openingProcedure .ProcedureLine .cir9 {
-  background-image: url("/assets/images/processes/pg-ico9.png");
+  background-image: url("/RenewalCB/assets/images/processes/pg-ico9.png");
   color: #fff;
   background-color: #00a5b1;
   border: #00a5b1;

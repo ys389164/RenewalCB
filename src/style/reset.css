@@ -53,8 +53,8 @@ text-decoration: none;
 }
 @font-face {
 	font-family: "MICEGothic";
-	src: url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff") format("woff"),
-	  url("/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff2") format("woff2");
+	src: url("/RenewalCB/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff") format("woff"),
+	  url("/RenewalCB/assets/fonts/MICEGothicRegular/WebFonts/MICEGothic.woff2") format("woff2");
   }
   
 

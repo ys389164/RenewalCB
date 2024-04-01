@@ -109,20 +109,20 @@ main{
 .subContent2 .services .back div {
   width: 120px;
   height: 120px;
-  background: #f2f2f2 url("/assets/images/B2B/b2b-ico1.png") no-repeat 50% 50%;
+  background: #f2f2f2 url("/RenewalCB/assets/images/B2B/b2b-ico1.png") no-repeat 50% 50%;
   border-radius: 50%;
 }
 
 .subContent2 .services .back .img2 {
-  background-image: url("/assets/images/B2B/b2b-ico2.png");
+  background-image: url("/RenewalCB/assets/images/B2B/b2b-ico2.png");
 }
 
 .subContent2 .services .back .img3 {
-  background-image: url("/assets/images/B2B/b2b-ico3.png");
+  background-image: url("/RenewalCB/assets/images/B2B/b2b-ico3.png");
 }
 
 .subContent2 .services .back .img4 {
-  background-image: url("/assets/images/B2B/b2b-ico4.png");
+  background-image: url("/RenewalCB/assets/images/B2B/b2b-ico4.png");
 }
 
 .subContent2 .services h4{
@@ -210,7 +210,7 @@ main{
 
 /* section4 개설절차 */
 .openingProcedure {
-  background: url("/assets/images/B2B/b2b-bg-line.png") no-repeat 80px 50px;
+  background: url("/RenewalCB/assets/images/B2B/b2b-bg-line.png") no-repeat 80px 50px;
 }
 
 .openingProcedure .ProcedureLine {
@@ -261,7 +261,7 @@ main{
 
 .openingProcedure .ProcedureLine:not(.ProcedureLine2) .cir::before {
   position: absolute;
-  content: url("/assets/images/B2B/cir-arr.png");
+  content: url("/RenewalCB/assets/images/B2B/cir-arr.png");
   width: 30px;
   height: 30px;
   object-fit: cover;
@@ -272,7 +272,7 @@ main{
 
 .openingProcedure .ProcedureLine.ProcedureLine2 .cir::before {
   position: absolute;
-  content: url("/assets/images/B2B/cir-arr.png");
+  content: url("/RenewalCB/assets/images/B2B/cir-arr.png");
   width: 30px;
   height: 30px;
   object-fit: cover;

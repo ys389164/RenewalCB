@@ -147,7 +147,7 @@ main{
 
 /* 이미지 V 형태 */
 .subContentContainer .subContents .questionList .qText::after{
-  background: url('/assets/images/contact/ico-sel-arr.png') no-repeat 50% 50%;
+  background: url('/RenewalCB/assets/images/contact/ico-sel-arr.png') no-repeat 50% 50%;
   background-size: 200%;
   display: block;
   content: '';
@@ -161,7 +161,7 @@ main{
 
 /* 클릭시 이미지 ^ 로 변경 */
 .subContentContainer .subContents .questionList button.on .qText::after{
-  background: url('/assets/images/contact/ico-faq-arr-on.png') no-repeat 50% 50%;
+  background: url('/RenewalCB/assets/images/contact/ico-faq-arr-on.png') no-repeat 50% 50%;
 }
 
 /* 페이징 부분 */
@@ -181,19 +181,19 @@ main{
 }
 
 .subContentContainer .subContents .paging .firstPage{
-  background: url('/assets/images/contact/p-end.png') no-repeat 50% 50%;;
+  background: url('/RenewalCB/assets/images/contact/p-end.png') no-repeat 50% 50%;;
 }
 
 .subContentContainer .subContents .paging .prevPage{
-  background: url('/assets/images/contact/p-next.png') no-repeat 50% 50%;;
+  background: url('/RenewalCB/assets/images/contact/p-next.png') no-repeat 50% 50%;;
 }
 
 .subContentContainer .subContents .paging .nextPage{
-  background: url('/assets/images/contact/p-end.png') no-repeat 50% 50%;;
+  background: url('/RenewalCB/assets/images/contact/p-end.png') no-repeat 50% 50%;;
 }
 
 .subContentContainer .subContents .paging .lastPage{
-  background: url('/assets/images/contact/p-next.png') no-repeat 50% 50%;;
+  background: url('/RenewalCB/assets/images/contact/p-next.png') no-repeat 50% 50%;;
 }
 
 .subContentContainer .subContents .paging .firstPage,

@@ -90,19 +90,19 @@ main {
 }
 /*div안에 배경으로 이미지를 채움*/
 #TopPic1 {
-  background-image: url("/assets/images/BrandStory/railway.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/railway.jpg");
 }
 #TopPic2 {
-  background-image: url("/assets/images/BrandStory/playingChildren.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/playingChildren.jpg");
 }
 #TopPic3 {
-  background-image: url("/assets/images/BrandStory/nightHighway.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/nightHighway.jpg");
 }
 #TopPic4 {
-  background-image: url("/assets/images/BrandStory/caffebeneHelloagain.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/caffebeneHelloagain.jpg");
 }
 #TopPic5 {
-  background-image: url("/assets/images/BrandStory/railway.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/railway.jpg");
 }
 /*움직이는 사진 안에 들어간 글씨*/
 #TopComment1,
@@ -195,16 +195,16 @@ main {
   animation-iteration-count: infinite;
 }
 #BottomPic1 {
-  background-image: url("/assets/images/BrandStory/benecatEchobag.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/benecatEchobag.jpg");
 }
 #BottomPic2 {
-  background-image: url("/assets/images/BrandStory/cafeCeiling.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/cafeCeiling.jpg");
 }
 #BottomPic3 {
-  background-image: url("/assets/images/BrandStory/coffeePressing.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/coffeePressing.jpg");
 }
 #BottomPic4 {
-  background-image: url("/assets/images/BrandStory/benecatEchobag.jpg");
+  background-image: url("/RenewalCB/assets/images/BrandStory/benecatEchobag.jpg");
 }
 /*움직이는 사진 안의 글씨*/
 #BottomComment1,
