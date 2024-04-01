@@ -16,6 +16,9 @@
     body{
     font-family:'MICEGothic';
     font-size:18px;
+    /* line-height:2em; */
+    }
+    #userPolicyBundle{
     line-height:2em;
     }
     h4{
